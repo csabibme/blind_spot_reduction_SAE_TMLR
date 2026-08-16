@@ -4,7 +4,7 @@
   "created_on": "2026-08-16",
   "paper": "A Symmetry-Matching Approach to Blind-Spot Reduction in Sparse Autoencoders",
   "openreview": "https://openreview.net/forum?id=NWWpKC9CZH",
-  "file_count": 255,
+  "file_count": 256,
   "files": [
     {
       "path": ".gitignore",
@@ -17,9 +17,14 @@
       "sha256": "496d1a76f49948cab015e7f95f3cceff8b343bb15abc677b7facbe6369d36021"
     },
     {
+      "path": "LICENSE",
+      "bytes": 1069,
+      "sha256": "ed6ec4c26d2b0e47df182e4359cacc4a1222060493ecac05d2c4b54a4e7fcdf2"
+    },
+    {
       "path": "README.md",
-      "bytes": 1870,
-      "sha256": "7eb5b59c799bc82bf4827ffed9a284634e5d65e9c1e5fd87b4a51d2de2fde135"
+      "bytes": 2107,
+      "sha256": "f24b82a6ee077f57c53e9cb9d6c5b1f783830fe5e7ed014b981fa6ff7230d4ad"
     },
     {
       "path": "REPRODUCIBILITY.md",

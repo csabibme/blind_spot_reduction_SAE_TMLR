@@ -42,3 +42,9 @@ python code/E17_exact_lower_tail_guarantee/verify_exact_lower_tail.py
 Large model checkpoints and activation/feature caches are intentionally
 excluded. Frozen result files are self-contained; full model reruns require the
 external artifacts described in `REPRODUCIBILITY.md`.
+
+## License
+
+The original software in this repository is released under the
+[MIT License](LICENSE). Bundled datasets and source-derived material may remain
+subject to their source-specific terms; see the corresponding data README files.
