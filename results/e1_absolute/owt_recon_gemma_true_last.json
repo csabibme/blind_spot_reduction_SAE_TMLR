@@ -1,0 +1,45 @@
+{
+  "profile": "gemma-2-2b",
+  "owt_cache": "<REPO_ROOT>",
+  "n_samples": 1000,
+  "seed": 42,
+  "h_norm_mean": 174.77737426757812,
+  "checkpoint_standard": "gemma-2-2b_standard_joint16_owt",
+  "checkpoint_vreg": "vreg_joint16_owt_true_last",
+  "checkpoint_standard_manifest_id": "gemma-2-2b_standard_joint16_owt",
+  "checkpoint_vreg_manifest_id": "gemma-2-2b_vreg_joint16_owt",
+  "checkpoint_standard_override_used": false,
+  "checkpoint_vreg_override_used": true,
+  "checkpoint_standard_path": "<REPO_ROOT>",
+  "checkpoint_vreg_path": "<REPO_ROOT>",
+  "standard": {
+    "mse": 0.055975478142499924,
+    "nmse": 0.001660626297203977,
+    "explained_variance": 0.9983394552210836,
+    "cosine_sim_mean": 0.9976671828686626,
+    "cosine_sim_min": 0.9946529715529012,
+    "cosine_sim_q05": 0.9963224396837854,
+    "L0_mean": 3666.529,
+    "code_norm_mean": 203.0695264556964,
+    "density_mean": 0.895148681640625,
+    "inactive_frac_mean": 0.104851318359375
+  },
+  "vreg": {
+    "mse": 0.0842343345284462,
+    "nmse": 0.002498982417963256,
+    "explained_variance": 0.9975011436557566,
+    "cosine_sim_mean": 0.9968262723370251,
+    "cosine_sim_min": 0.9913308794424592,
+    "cosine_sim_q05": 0.9952331076911318,
+    "L0_mean": 3694.506,
+    "code_norm_mean": 202.30507752505446,
+    "density_mean": 0.90197900390625,
+    "inactive_frac_mean": 0.09802099609375
+  },
+  "comparison": {
+    "mse_ratio": 1.504843501515097,
+    "nmse_ratio": 1.5048433357137538,
+    "ev_drop": 0.0008383115653269879,
+    "cos_drop": 0.0008409105316374843
+  }
+}

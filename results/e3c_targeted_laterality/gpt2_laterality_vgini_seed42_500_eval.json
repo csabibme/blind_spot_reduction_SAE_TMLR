@@ -1,0 +1,185 @@
+{
+  "experiment": "E3c_targeted_laterality_repair",
+  "analysis": "targeted_repair_probe_evaluation",
+  "status": "complete",
+  "split_json": "E3b_external_negation/results/openi_laterality_minimal_pair_split.json",
+  "split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+  "feature_cache_npz": "E3b_external_negation/results/feature_cache_laterality/gpt2_cadc6ce3f8c1ec8d_0726cab7bed0ce0e.npz",
+  "feature_cache_metadata": {
+    "profile": "gpt2",
+    "task_split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+    "model_id": "gpt2",
+    "layer": 12,
+    "dtype": "float16",
+    "hidden_batch_size": 16,
+    "max_length": 128,
+    "extraction_protocol": "true_last",
+    "standard_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt",
+    "vreg_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt",
+    "standard_checkpoint_sha256": "a00f184378e6e74885b792839e19213f08daab6b7eec65351b334744607719d8",
+    "vreg_checkpoint_sha256": "edf708cbb2c5933992f8bcacc7c8d53e477879cbc4270beae083143ebcf662e1",
+    "deduplication_unit": "split_template_text_label",
+    "deduplicated_examples": 914
+  },
+  "target_checkpoint": "E3c_targeted_laterality_repair/checkpoints/gpt2/gpt2_laterality_vgini_seed42_500",
+  "selection_metric": "pair_margin_l20",
+  "representations": {
+    "_omitted": "raw per-pair code arrays removed from supplementary (large dump). Headline deltas and CIs are in 'comparisons' and the companion .md. Regenerate via code/E3c_targeted_laterality_repair/."
+  },
+  "comparisons": {
+    "zero_shot_vreg_code_minus_standard": {
+      "n_test_reports": 50,
+      "n_test_pairs": 79,
+      "point": {
+        "standard": {
+          "probability_l20": 0.15780532505400605,
+          "logit_l20": 1.0398329147394998,
+          "geometric_l20": 0.9414032113841385,
+          "pairwise_accuracy": 0.9873417721518988,
+          "balanced_accuracy": 0.8291139240506329,
+          "macro_f1": 0.8282816085013887,
+          "auroc": 0.9171607114244512
+        },
+        "candidate": {
+          "probability_l20": 0.15996915918230206,
+          "logit_l20": 1.0021553266600574,
+          "geometric_l20": 0.9394651543262217,
+          "pairwise_accuracy": 0.9873417721518988,
+          "balanced_accuracy": 0.8734177215189873,
+          "macro_f1": 0.8733365400032067,
+          "auroc": 0.9112321743310366
+        },
+        "delta": {
+          "probability_l20": 0.002163834128296016,
+          "logit_l20": -0.03767758807944244,
+          "geometric_l20": -0.001938057057916831,
+          "pairwise_accuracy": 0.0,
+          "balanced_accuracy": 0.044303797468354444,
+          "macro_f1": 0.04505493150181805,
+          "auroc": -0.005928537093414565
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": -0.00011277932419532507,
+          "ci_low": -0.034295241858024385,
+          "ci_high": 0.030201795882240583,
+          "positive_fraction": 0.519
+        },
+        "logit_l20": {
+          "bootstrap_mean": -0.04233875495764452,
+          "ci_low": -0.18742366375656547,
+          "ci_high": 0.08194550901331106,
+          "positive_fraction": 0.274
+        },
+        "geometric_l20": {
+          "bootstrap_mean": -0.00540417218714909,
+          "ci_low": -0.13616121467221098,
+          "ci_high": 0.11146494091062545,
+          "positive_fraction": 0.487
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": 0.0447996725559465,
+          "ci_low": 0.0,
+          "ci_high": 0.08537456445993027,
+          "positive_fraction": 0.967
+        },
+        "macro_f1": {
+          "bootstrap_mean": 0.04563330435569724,
+          "ci_low": 0.00028477550104284157,
+          "ci_high": 0.0871145476233924,
+          "positive_fraction": 0.982
+        },
+        "auroc": {
+          "bootstrap_mean": -0.005416376689279152,
+          "ci_low": -0.027207289742997947,
+          "ci_high": 0.016228784845669003,
+          "positive_fraction": 0.313
+        }
+      }
+    },
+    "targeted_repair_code_minus_standard": {
+      "n_test_reports": 50,
+      "n_test_pairs": 79,
+      "point": {
+        "standard": {
+          "probability_l20": 0.15780532505400605,
+          "logit_l20": 1.0398329147394998,
+          "geometric_l20": 0.9414032113841385,
+          "pairwise_accuracy": 0.9873417721518988,
+          "balanced_accuracy": 0.8291139240506329,
+          "macro_f1": 0.8282816085013887,
+          "auroc": 0.9171607114244512
+        },
+        "candidate": {
+          "probability_l20": 0.14925252922348356,
+          "logit_l20": 1.2353564976221434,
+          "geometric_l20": 1.184460332223792,
+          "pairwise_accuracy": 0.9873417721518988,
+          "balanced_accuracy": 0.8164556962025317,
+          "macro_f1": 0.8163895011019835,
+          "auroc": 0.9125140201890722
+        },
+        "delta": {
+          "probability_l20": -0.008552795830522486,
+          "logit_l20": 0.1955235828826436,
+          "geometric_l20": 0.24305712083965358,
+          "pairwise_accuracy": 0.0,
+          "balanced_accuracy": -0.012658227848101222,
+          "macro_f1": -0.01189210739940516,
+          "auroc": -0.004646691235378975
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": -0.007960354196400279,
+          "ci_low": -0.0808939906536766,
+          "ci_high": 0.07502036381193371,
+          "positive_fraction": 0.417
+        },
+        "logit_l20": {
+          "bootstrap_mean": 0.1943678925645066,
+          "ci_low": -0.19125905269868085,
+          "ci_high": 0.5578461260802118,
+          "positive_fraction": 0.854
+        },
+        "geometric_l20": {
+          "bootstrap_mean": 0.2434535129830287,
+          "ci_low": -0.12464053249081991,
+          "ci_high": 0.5834342693067365,
+          "positive_fraction": 0.917
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": -0.0008813526306375604,
+          "ci_low": -0.03848684210526313,
+          "ci_high": 0.033333333333333326,
+          "positive_fraction": 0.344
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": -0.012929660926228003,
+          "ci_low": -0.059523809523809534,
+          "ci_high": 0.03246753246753242,
+          "positive_fraction": 0.248
+        },
+        "macro_f1": {
+          "bootstrap_mean": -0.012227523465191174,
+          "ci_low": -0.059222565785260445,
+          "ci_high": 0.03344077508843676,
+          "positive_fraction": 0.333
+        },
+        "auroc": {
+          "bootstrap_mean": -0.005312210299897605,
+          "ci_low": -0.04570789739620217,
+          "ci_high": 0.03640696615528365,
+          "positive_fraction": 0.398
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "experiment": "exp_dosage",
+  "dataset_json": "data/heldout_dosage_numeric_probe.json",
+  "dataset_sha256": "15da20853d441d8f0e7652a3121c965b806e7367117689f1ce99c18ef95d7d2c",
+  "profiles": {
+    "gpt2": {
+      "profile": "gpt2",
+      "feature_cache_path": "<REPO_ROOT>/FINAL/REVISION_2/exp_dosage/results/feature_cache/gpt2_15da20853d441d8f_78fb8b1b56fd5084.npz",
+      "run_metadata": {
+        "model_id": "gpt2",
+        "layer": 12,
+        "dtype": "float32",
+        "device": "mps",
+        "hidden_batch_size": 16,
+        "max_length": 128,
+        "extraction_protocol": "true_last",
+        "standard_checkpoint": {
+          "checkpoint_id": "gpt2_standard_joint16_owt",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt",
+          "sae_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt/sae.pt",
+          "sha256_sae_pt": "a00f184378e6e74885b792839e19213f08daab6b7eec65351b334744607719d8",
+          "manifest_sha256_sae_pt": "a00f184378e6e74885b792839e19213f08daab6b7eec65351b334744607719d8",
+          "override_used": false,
+          "meta_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt/meta.json"
+        },
+        "vreg_checkpoint": {
+          "checkpoint_id": "gpt2_vreg_joint16_owt",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt",
+          "sae_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt/sae.pt",
+          "sha256_sae_pt": "edf708cbb2c5933992f8bcacc7c8d53e477879cbc4270beae083143ebcf662e1",
+          "manifest_sha256_sae_pt": "edf708cbb2c5933992f8bcacc7c8d53e477879cbc4270beae083143ebcf662e1",
+          "override_used": false,
+          "meta_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt/meta.json"
+        }
+      }
+    },
+    "gemma-2-2b": {
+      "profile": "gemma-2-2b",
+      "feature_cache_path": "<REPO_ROOT>/FINAL/REVISION_2/exp_dosage/results/feature_cache/gemma-2-2b_15da20853d441d8f_78fb8b1b56fd5084.npz",
+      "run_metadata": {
+        "model_id": "google/gemma-2-2b",
+        "layer": 13,
+        "dtype": "float16",
+        "device": "mps",
+        "hidden_batch_size": 1,
+        "max_length": 128,
+        "extraction_protocol": "true_last",
+        "standard_checkpoint": {
+          "checkpoint_id": "gemma-2-2b_standard_joint16_owt",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/standard_joint16_owt",
+          "sae_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/standard_joint16_owt/sae.pt",
+          "sha256_sae_pt": "390d1e17ebb4d74c617e93e995a28bea41c7c768b66b7f28b7d884f846c3556d",
+          "manifest_sha256_sae_pt": "390d1e17ebb4d74c617e93e995a28bea41c7c768b66b7f28b7d884f846c3556d",
+          "override_used": false,
+          "meta_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/standard_joint16_owt/meta.json"
+        },
+        "vreg_checkpoint": {
+          "checkpoint_id": "gemma_e1r_vreg_override",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/REVISION_1/E1R_gemma_protocol_repair/checkpoints/gemma-2-2b/joint/vreg_joint16_owt_true_last",
+          "sae_path": "<REPO_ROOT>/FINAL/REVISION_1/E1R_gemma_protocol_repair/checkpoints/gemma-2-2b/joint/vreg_joint16_owt_true_last/sae.pt",
+          "sha256_sae_pt": "22c40386d99e3490f0284fbefab15890822a768058ba846fe273599213c9d032",
+          "manifest_sha256_sae_pt": null,
+          "override_used": true,
+          "meta_path": "<REPO_ROOT>/FINAL/REVISION_1/E1R_gemma_protocol_repair/checkpoints/gemma-2-2b/joint/vreg_joint16_owt_true_last/meta.json"
+        }
+      }
+    },
+    "qwen-2.5-3b": {
+      "profile": "qwen-2.5-3b",
+      "feature_cache_path": "<REPO_ROOT>/FINAL/REVISION_2/exp_dosage/results/feature_cache/qwen-2.5-3b_15da20853d441d8f_78fb8b1b56fd5084.npz",
+      "run_metadata": {
+        "model_id": "Qwen/Qwen2.5-3B",
+        "layer": 18,
+        "dtype": "float16",
+        "device": "mps",
+        "hidden_batch_size": 8,
+        "max_length": 128,
+        "extraction_protocol": "true_last",
+        "standard_checkpoint": {
+          "checkpoint_id": "qwen-2.5-3b_standard_joint16_owt",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt",
+          "sae_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt/sae.pt",
+          "sha256_sae_pt": "3bb65c319592777642f47cbbce2deacf42b8262890be69eeb92fb9259a9925d5",
+          "manifest_sha256_sae_pt": "3bb65c319592777642f47cbbce2deacf42b8262890be69eeb92fb9259a9925d5",
+          "override_used": false,
+          "meta_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt/meta.json"
+        },
+        "vreg_checkpoint": {
+          "checkpoint_id": "qwen-2.5-3b_vreg_joint16_owt",
+          "checkpoint_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt",
+          "sae_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt/sae.pt",
+          "sha256_sae_pt": "442710c76d8c4aa47e8c1377474d204d585c5470ba64b0fbdb0b98cf4d51e9d8",
+          "manifest_sha256_sae_pt": "442710c76d8c4aa47e8c1377474d204d585c5470ba64b0fbdb0b98cf4d51e9d8",
+          "override_used": false,
+          "meta_path": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt/meta.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "experiment": "rev3_preflight_headroom",
+  "gate": {
+    "hidden_informative_min": 0.7,
+    "standard_subceiling_max": 0.95
+  },
+  "split_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "families": {
+    "severity_change": {
+      "family": "severity_change",
+      "n_examples": 60,
+      "n_pairs": 30,
+      "profiles": {
+        "gpt2": {
+          "hidden": {
+            "auroc_mean": 0.9166666666666666,
+            "auroc_sd": 0.05555555555555553,
+            "ba_mean": 0.8166666666666667,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_standard_code": {
+            "auroc_mean": 0.9222222222222223,
+            "auroc_sd": 0.06431020501550125,
+            "ba_mean": 0.7666666666666666,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_vreg_code": {
+            "auroc_mean": 0.7666666666666667,
+            "auroc_sd": 0.09395296958493202,
+            "ba_mean": 0.6166666666666667,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "gate": {
+            "hidden_informative": true,
+            "standard_subceiling": true,
+            "headroom": true,
+            "delta_auroc_vreg_minus_standard": -0.15555555555555556
+          }
+        },
+        "gemma-2-2b": {
+          "hidden": {
+            "auroc_mean": 1.0,
+            "auroc_sd": 0.0,
+            "ba_mean": 0.9666666666666668,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_standard_code": {
+            "auroc_mean": 0.9944444444444445,
+            "auroc_sd": 0.011111111111111072,
+            "ba_mean": 0.95,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_vreg_code": {
+            "auroc_mean": 0.9333333333333333,
+            "auroc_sd": 0.13333333333333336,
+            "ba_mean": 0.9666666666666666,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "gate": {
+            "hidden_informative": true,
+            "standard_subceiling": false,
+            "headroom": false,
+            "delta_auroc_vreg_minus_standard": -0.061111111111111116
+          }
+        },
+        "qwen-2.5-3b": {
+          "hidden": {
+            "auroc_mean": 0.9722222222222223,
+            "auroc_sd": 0.0304290309725092,
+            "ba_mean": 0.9166666666666666,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_standard_code": {
+            "auroc_mean": 0.9833333333333334,
+            "auroc_sd": 0.02222222222222222,
+            "ba_mean": 0.95,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "sae_vreg_code": {
+            "auroc_mean": 0.9666666666666668,
+            "auroc_sd": 0.044444444444444425,
+            "ba_mean": 0.95,
+            "n_splits": 5,
+            "n_test_sides": 12
+          },
+          "gate": {
+            "hidden_informative": true,
+            "standard_subceiling": false,
+            "headroom": false,
+            "delta_auroc_vreg_minus_standard": -0.016666666666666607
+          }
+        }
+      }
+    }
+  }
+}

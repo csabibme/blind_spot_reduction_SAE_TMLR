@@ -1,0 +1,83 @@
+{
+  "profile": "gpt2",
+  "model_id": "gpt2",
+  "layer": 12,
+  "std_ckpt": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt",
+  "vreg_ckpt": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt",
+  "max_pairs": 300,
+  "families": {
+    "negation": {
+      "n_pairs": 300,
+      "n_reports": 270,
+      "L20_std": 0.015742,
+      "L20_vreg": 0.019957,
+      "delta_L20_s": 0.004215,
+      "delta_L20_ci": [
+        0.002981,
+        0.005311
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.423,
+      "V_gini_vreg": 0.4039,
+      "delta_mean_s": 0.010745,
+      "nmse_std": 7e-05,
+      "nmse_vreg": 0.000169
+    },
+    "laterality": {
+      "n_pairs": 300,
+      "n_reports": 279,
+      "L20_std": 0.002422,
+      "L20_vreg": 0.003368,
+      "delta_L20_s": 0.000945,
+      "delta_L20_ci": [
+        0.000814,
+        0.001074
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.6999,
+      "V_gini_vreg": 0.6646,
+      "delta_mean_s": 0.00205,
+      "nmse_std": 6.2e-05,
+      "nmse_vreg": 0.000161
+    },
+    "severity": {
+      "n_pairs": 300,
+      "n_reports": 291,
+      "L20_std": 0.004439,
+      "L20_vreg": 0.00767,
+      "delta_L20_s": 0.003231,
+      "delta_L20_ci": [
+        0.002696,
+        0.003846
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.6154,
+      "V_gini_vreg": 0.5772,
+      "delta_mean_s": 0.006763,
+      "nmse_std": 6.8e-05,
+      "nmse_vreg": 0.000178
+    },
+    "anatomical_direction": {
+      "n_pairs": 131,
+      "n_reports": 126,
+      "L20_std": 0.001742,
+      "L20_vreg": 0.002548,
+      "delta_L20_s": 0.000807,
+      "delta_L20_ci": [
+        0.000669,
+        0.000956
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.6442,
+      "V_gini_vreg": 0.5883,
+      "delta_mean_s": 0.001527,
+      "nmse_std": 5.9e-05,
+      "nmse_vreg": 0.000165
+    }
+  },
+  "macro": {
+    "mean_delta_L20_s": 0.002299,
+    "frac_families_positive": 1.0,
+    "n_families": 4
+  }
+}

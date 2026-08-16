@@ -1,0 +1,65 @@
+{
+  "phenomenon_V_gini": {
+    "standard": {
+      "train": {
+        "n_pairs": 84,
+        "V_gini": 0.2326,
+        "mean_sensitivity": 0.0711
+      },
+      "dev": {
+        "n_pairs": 24,
+        "V_gini": 0.23,
+        "mean_sensitivity": 0.053
+      },
+      "test": {
+        "n_pairs": 36,
+        "V_gini": 0.2726,
+        "mean_sensitivity": 0.0484
+      },
+      "all": {
+        "n_pairs": 144,
+        "V_gini": 0.2578,
+        "mean_sensitivity": 0.0624
+      }
+    },
+    "vreg": {
+      "train": {
+        "n_pairs": 84,
+        "V_gini": 0.0009,
+        "mean_sensitivity": 0.165
+      },
+      "dev": {
+        "n_pairs": 24,
+        "V_gini": 0.1518,
+        "mean_sensitivity": 0.1106
+      },
+      "test": {
+        "n_pairs": 36,
+        "V_gini": 0.2665,
+        "mean_sensitivity": 0.1062
+      },
+      "all": {
+        "n_pairs": 144,
+        "V_gini": 0.1297,
+        "mean_sensitivity": 0.1412
+      }
+    }
+  },
+  "owt_no_harm": {
+    "owt_n": 5000,
+    "standard": {
+      "mse": 3.3093,
+      "nmse": 5.4e-05,
+      "ev": 0.9997,
+      "cosine": 0.9999
+    },
+    "vreg": {
+      "mse": 3.183,
+      "nmse": 5.2e-05,
+      "ev": 0.9997,
+      "cosine": 0.9999
+    }
+  },
+  "std_ckpt": "<REPO_ROOT>/FINAL/REVISION_3/dedicated_gpt2/checkpoints/negation_standard",
+  "vreg_ckpt": "<REPO_ROOT>/FINAL/REVISION_3/dedicated_gpt2/checkpoints/negation_vreg"
+}

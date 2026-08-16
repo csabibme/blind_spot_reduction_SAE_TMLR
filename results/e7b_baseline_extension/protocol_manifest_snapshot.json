@@ -1,0 +1,9 @@
+{
+  "freeze_id": "E7B_BASELINE_FREEZE_V1",
+  "manifest": "<REPO_ROOT>",
+  "manifest_sha256": "05d91e9503c9bba0b8ec75b97a3770a3baca10df9c6cc08e7fd69088c6fbc988",
+  "freeze_doc": "<REPO_ROOT>",
+  "freeze_doc_sha256": "9990d45fcc4647f0fb3aa7140bb9ffa23d732f37cc2e2cf79bd5652789f23855",
+  "main_goal": "<REPO_ROOT>",
+  "main_goal_sha256": "f7c6a2939405cd23e2a76afa87d00c11e95b3042a71830a39238190521c93680"
+}

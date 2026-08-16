@@ -1,0 +1,2530 @@
+{
+  "experiment": "E3c_targeted_laterality_repair",
+  "analysis": "direct_geometry_and_fidelity_audit",
+  "status": "complete",
+  "split_json": "E3b_external_negation/results/openi_laterality_minimal_pair_split.json",
+  "split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+  "feature_cache_npz": "E3b_external_negation/results/feature_cache_laterality/qwen-2.5-3b_cadc6ce3f8c1ec8d_0726cab7bed0ce0e.npz",
+  "feature_cache_metadata": {
+    "profile": "qwen-2.5-3b",
+    "task_split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+    "model_id": "Qwen/Qwen2.5-3B",
+    "layer": 18,
+    "dtype": "float16",
+    "hidden_batch_size": 16,
+    "max_length": 128,
+    "extraction_protocol": "true_last",
+    "standard_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt",
+    "vreg_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt",
+    "standard_checkpoint_sha256": "3bb65c319592777642f47cbbce2deacf42b8262890be69eeb92fb9259a9925d5",
+    "vreg_checkpoint_sha256": "442710c76d8c4aa47e8c1377474d204d585c5470ba64b0fbdb0b98cf4d51e9d8",
+    "deduplication_unit": "split_template_text_label",
+    "deduplicated_examples": 914
+  },
+  "profile": "qwen-2.5-3b",
+  "standard_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt",
+  "vreg_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt",
+  "target_checkpoint": "E3c_targeted_laterality_repair/checkpoints/qwen-2.5-3b/qwen_laterality_certificate_rel002_seed42",
+  "owt_cache": "../tmlr_revision/prepare/experiment_101_hybrid_owt/data/owt_cache_qwen_l18_25k.pt",
+  "representations": {
+    "splits": {
+      "train": {
+        "n_pairs": 298
+      },
+      "dev": {
+        "n_pairs": 80
+      },
+      "test": {
+        "n_pairs": 79
+      }
+    },
+    "standard": {
+      "geometry": {
+        "train": {
+          "summary": {
+            "n_pairs": 298,
+            "distance_mean": 5.492007515574461,
+            "distance_median": 3.115346312522888,
+            "distance_l20": 1.5401843905448913,
+            "relative_distance_mean": 0.06698910586360916,
+            "relative_distance_median": 0.03867409750819206,
+            "relative_distance_l20": 0.019259463250637054,
+            "mean_pair_code_norm": 81.93409805809891,
+            "median_pair_code_norm": 81.27558898925781
+          },
+          "rows": []
+        },
+        "dev": {
+          "summary": {
+            "n_pairs": 80,
+            "distance_mean": 4.327391064167022,
+            "distance_median": 2.928238868713379,
+            "distance_l20": 1.4874117895960808,
+            "relative_distance_mean": 0.05276846637716517,
+            "relative_distance_median": 0.03565196134150028,
+            "relative_distance_l20": 0.01863825152395293,
+            "mean_pair_code_norm": 82.02816572189332,
+            "median_pair_code_norm": 81.46165084838867
+          },
+          "rows": []
+        },
+        "test": {
+          "summary": {
+            "n_pairs": 79,
+            "distance_mean": 6.611807028704051,
+            "distance_median": 3.3987016677856445,
+            "distance_l20": 1.5905704908072948,
+            "relative_distance_mean": 0.07968846241695972,
+            "relative_distance_median": 0.04362446814775467,
+            "relative_distance_l20": 0.01958954066503793,
+            "mean_pair_code_norm": 82.49561280842069,
+            "median_pair_code_norm": 81.88349533081055
+          },
+          "rows": [
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00386",
+              "report_id": "1361",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 3.9581615924835205,
+              "relative_distance": 0.04812668636441231,
+              "left_code_norm": 81.8615951538086,
+              "right_code_norm": 82.62767028808594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00388",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 7.914910316467285,
+              "relative_distance": 0.09189801663160324,
+              "left_code_norm": 85.52444458007812,
+              "right_code_norm": 86.7297592163086
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00399",
+              "report_id": "9",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 3.3859174251556396,
+              "relative_distance": 0.04110194370150566,
+              "left_code_norm": 82.59512329101562,
+              "right_code_norm": 82.16193389892578
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00428",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.4691877365112305,
+              "relative_distance": 0.050434261560440063,
+              "left_code_norm": 88.61015319824219,
+              "right_code_norm": 88.61808013916016
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00430",
+              "report_id": "4",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.299330234527588,
+              "relative_distance": 0.0550701804459095,
+              "left_code_norm": 77.87522888183594,
+              "right_code_norm": 78.26482391357422
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00433",
+              "report_id": "184",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 7.059243202209473,
+              "relative_distance": 0.08549823611974716,
+              "left_code_norm": 81.42079162597656,
+              "right_code_norm": 83.71110534667969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00380",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 20.134502410888672,
+              "relative_distance": 0.23880338668823242,
+              "left_code_norm": 80.60935974121094,
+              "right_code_norm": 88.0189208984375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00384",
+              "report_id": "2684",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.243318557739258,
+              "relative_distance": 0.027465274557471275,
+              "left_code_norm": 82.0465316772461,
+              "right_code_norm": 81.31019592285156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00387",
+              "report_id": "3277",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.2389187812805176,
+              "relative_distance": 0.037744566798210144,
+              "left_code_norm": 86.02584075927734,
+              "right_code_norm": 85.59720611572266
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00391",
+              "report_id": "3097",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.328432321548462,
+              "relative_distance": 0.04165665805339813,
+              "left_code_norm": 80.29560089111328,
+              "right_code_norm": 79.50753021240234
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00395",
+              "report_id": "2219",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 23.385456085205078,
+              "relative_distance": 0.2872820198535919,
+              "left_code_norm": 83.43608093261719,
+              "right_code_norm": 79.3687973022461
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00400",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 22.896987915039062,
+              "relative_distance": 0.25666460394859314,
+              "left_code_norm": 88.96959686279297,
+              "right_code_norm": 89.4499282836914
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00402",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 15.122607231140137,
+              "relative_distance": 0.19560405611991882,
+              "left_code_norm": 77.58831024169922,
+              "right_code_norm": 77.03636932373047
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00403",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 21.807191848754883,
+              "relative_distance": 0.25212275981903076,
+              "left_code_norm": 89.38079071044922,
+              "right_code_norm": 83.60789489746094
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00405",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 25.624046325683594,
+              "relative_distance": 0.306342214345932,
+              "left_code_norm": 86.6218490600586,
+              "right_code_norm": 80.66850280761719
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00408",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 1.6937021017074585,
+              "relative_distance": 0.021249869838356972,
+              "left_code_norm": 79.78068542480469,
+              "right_code_norm": 79.62755584716797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00409",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 6.295223236083984,
+              "relative_distance": 0.07572515308856964,
+              "left_code_norm": 82.83439636230469,
+              "right_code_norm": 83.4306411743164
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00411",
+              "report_id": "3985",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 1.8398545980453491,
+              "relative_distance": 0.02288045734167099,
+              "left_code_norm": 80.67173767089844,
+              "right_code_norm": 80.15150451660156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00415",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 0.7312601208686829,
+              "relative_distance": 0.009577837772667408,
+              "left_code_norm": 76.32130432128906,
+              "right_code_norm": 76.3770751953125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00417",
+              "report_id": "3490",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.473914384841919,
+              "relative_distance": 0.028544962406158447,
+              "left_code_norm": 86.91499328613281,
+              "right_code_norm": 86.41957092285156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00421",
+              "report_id": "2126",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 13.037965774536133,
+              "relative_distance": 0.14261044561862946,
+              "left_code_norm": 92.88862609863281,
+              "right_code_norm": 89.95864868164062
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00422",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 4.167712211608887,
+              "relative_distance": 0.04589969292283058,
+              "left_code_norm": 90.55770111083984,
+              "right_code_norm": 91.04317474365234
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00441",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 7.697612762451172,
+              "relative_distance": 0.095084547996521,
+              "left_code_norm": 81.69637298583984,
+              "right_code_norm": 80.21453094482422
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00455",
+              "report_id": "1947",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 4.646064758300781,
+              "relative_distance": 0.05772501602768898,
+              "left_code_norm": 80.37149047851562,
+              "right_code_norm": 80.60082244873047
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00392",
+              "report_id": "3652",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 4.405014991760254,
+              "relative_distance": 0.050700362771749496,
+              "left_code_norm": 86.30713653564453,
+              "right_code_norm": 87.45945739746094
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00427",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 1.7832525968551636,
+              "relative_distance": 0.02337001822888851,
+              "left_code_norm": 76.39590454101562,
+              "right_code_norm": 76.21438598632812
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00434",
+              "report_id": "3840",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 2.297738790512085,
+              "relative_distance": 0.027701571583747864,
+              "left_code_norm": 83.19790649414062,
+              "right_code_norm": 82.69440460205078
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00447",
+              "report_id": "3575",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 3.103119134902954,
+              "relative_distance": 0.039025574922561646,
+              "left_code_norm": 79.89999389648438,
+              "right_code_norm": 79.13003540039062
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00398",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 5.408252716064453,
+              "relative_distance": 0.06343457847833633,
+              "left_code_norm": 84.63227844238281,
+              "right_code_norm": 85.88206481933594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00407",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 23.698688507080078,
+              "relative_distance": 0.2941843271255493,
+              "left_code_norm": 77.49386596679688,
+              "right_code_norm": 83.6207046508789
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00450",
+              "report_id": "3462",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 22.412519454956055,
+              "relative_distance": 0.2656744420528412,
+              "left_code_norm": 87.77912139892578,
+              "right_code_norm": 80.94256591796875
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00378",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.2995972633361816,
+              "relative_distance": 0.040457405149936676,
+              "left_code_norm": 81.95824432373047,
+              "right_code_norm": 81.15637969970703
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00381",
+              "report_id": "3559",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.0014796257019043,
+              "relative_distance": 0.012010321021080017,
+              "left_code_norm": 83.44499969482422,
+              "right_code_norm": 83.32483673095703
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00383",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.3490796089172363,
+              "relative_distance": 0.042323969304561615,
+              "left_code_norm": 79.55628967285156,
+              "right_code_norm": 78.70294952392578
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00390",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 0.7658882141113281,
+              "relative_distance": 0.009825238026678562,
+              "left_code_norm": 77.96471405029297,
+              "right_code_norm": 77.93750762939453
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00396",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.9027029275894165,
+              "relative_distance": 0.02076798863708973,
+              "left_code_norm": 91.5684585571289,
+              "right_code_norm": 91.6657485961914
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00401",
+              "report_id": "908",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.6782467365264893,
+              "relative_distance": 0.031485773622989655,
+              "left_code_norm": 84.97757720947266,
+              "right_code_norm": 85.14667510986328
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00404",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 26.706783294677734,
+              "relative_distance": 0.3338676691055298,
+              "left_code_norm": 81.22843170166016,
+              "right_code_norm": 78.75580596923828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00418",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.058558225631714,
+              "relative_distance": 0.038386546075344086,
+              "left_code_norm": 79.772216796875,
+              "right_code_norm": 79.5835189819336
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00426",
+              "report_id": "1103",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.5195422172546387,
+              "relative_distance": 0.03302238509058952,
+              "left_code_norm": 76.58612060546875,
+              "right_code_norm": 76.00990295410156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00429",
+              "report_id": "2043",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.006621837615967,
+              "relative_distance": 0.02545335702598095,
+              "left_code_norm": 79.0075454711914,
+              "right_code_norm": 78.6629638671875
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00437",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.514308214187622,
+              "relative_distance": 0.03229104354977608,
+              "left_code_norm": 77.84191131591797,
+              "right_code_norm": 77.88599395751953
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00443",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.3987016677856445,
+              "relative_distance": 0.04362446814775467,
+              "left_code_norm": 77.83269500732422,
+              "right_code_norm": 77.98360443115234
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00446",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.6198352575302124,
+              "relative_distance": 0.020621076226234436,
+              "left_code_norm": 78.34326934814453,
+              "right_code_norm": 78.76155090332031
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00454",
+              "report_id": "2333",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.2882096767425537,
+              "relative_distance": 0.027944698929786682,
+              "left_code_norm": 82.253173828125,
+              "right_code_norm": 81.5138168334961
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00382",
+              "report_id": "1339",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.7368197441101074,
+              "relative_distance": 0.04443953186273575,
+              "left_code_norm": 83.84693908691406,
+              "right_code_norm": 84.32853698730469
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00385",
+              "report_id": "500",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.5531907081604004,
+              "relative_distance": 0.033655498176813126,
+              "left_code_norm": 76.09136962890625,
+              "right_code_norm": 75.63365173339844
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00389",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.165112018585205,
+              "relative_distance": 0.040016062557697296,
+              "left_code_norm": 79.28980255126953,
+              "right_code_norm": 78.90226745605469
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00406",
+              "report_id": "3086",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.1087849140167236,
+              "relative_distance": 0.037402890622615814,
+              "left_code_norm": 82.8870620727539,
+              "right_code_norm": 83.34527587890625
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00410",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.7366478443145752,
+              "relative_distance": 0.02050148881971836,
+              "left_code_norm": 84.88433837890625,
+              "right_code_norm": 84.53240203857422
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00412",
+              "report_id": "3213",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.661207437515259,
+              "relative_distance": 0.03231268376111984,
+              "left_code_norm": 82.38368225097656,
+              "right_code_norm": 82.332275390625
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00413",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.415330648422241,
+              "relative_distance": 0.03194400295615196,
+              "left_code_norm": 75.98239135742188,
+              "right_code_norm": 75.24040222167969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00416",
+              "report_id": "2003",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 13.667640686035156,
+              "relative_distance": 0.15305638313293457,
+              "left_code_norm": 89.63826751708984,
+              "right_code_norm": 88.95787811279297
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00420",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 9.52746868133545,
+              "relative_distance": 0.10392121225595474,
+              "left_code_norm": 90.911865234375,
+              "right_code_norm": 92.44760131835938
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00425",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.330275535583496,
+              "relative_distance": 0.040177710354328156,
+              "left_code_norm": 82.25909423828125,
+              "right_code_norm": 83.51817321777344
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00432",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.54392671585083,
+              "relative_distance": 0.029935158789157867,
+              "left_code_norm": 84.96453094482422,
+              "right_code_norm": 84.99793243408203
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00435",
+              "report_id": "838",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.236342906951904,
+              "relative_distance": 0.051825396716594696,
+              "left_code_norm": 80.96598052978516,
+              "right_code_norm": 82.51923370361328
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00438",
+              "report_id": "2690",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.0745890140533447,
+              "relative_distance": 0.024543749168515205,
+              "left_code_norm": 84.59566497802734,
+              "right_code_norm": 84.4566650390625
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00439",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 6.13505220413208,
+              "relative_distance": 0.069161556661129,
+              "left_code_norm": 88.99624633789062,
+              "right_code_norm": 88.41596221923828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00442",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.235708236694336,
+              "relative_distance": 0.04923197254538536,
+              "left_code_norm": 86.36885833740234,
+              "right_code_norm": 85.70259094238281
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00444",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.8792104721069336,
+              "relative_distance": 0.049291763454675674,
+              "left_code_norm": 78.95845794677734,
+              "right_code_norm": 78.439453125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00445",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.8428871631622314,
+              "relative_distance": 0.049136027693748474,
+              "left_code_norm": 78.36809539794922,
+              "right_code_norm": 78.05021667480469
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00449",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 10.643753051757812,
+              "relative_distance": 0.11928949505090714,
+              "left_code_norm": 90.4216537475586,
+              "right_code_norm": 88.03083801269531
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00451",
+              "report_id": "1940",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.601369857788086,
+              "relative_distance": 0.019877951592206955,
+              "left_code_norm": 80.56137084960938,
+              "right_code_norm": 80.55884552001953
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00452",
+              "report_id": "388",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 5.1486992835998535,
+              "relative_distance": 0.059677548706531525,
+              "left_code_norm": 86.41614532470703,
+              "right_code_norm": 86.13447570800781
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00456",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 9.06467056274414,
+              "relative_distance": 0.0979272797703743,
+              "left_code_norm": 94.21273040771484,
+              "right_code_norm": 90.91791534423828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00393",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 4.37005615234375,
+              "relative_distance": 0.05146441236138344,
+              "left_code_norm": 85.11687469482422,
+              "right_code_norm": 84.71139526367188
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00397",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 28.38636589050293,
+              "relative_distance": 0.3602354824542999,
+              "left_code_norm": 77.2943344116211,
+              "right_code_norm": 80.30461120605469
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00424",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 3.6204402446746826,
+              "relative_distance": 0.04480855166912079,
+              "left_code_norm": 80.88006591796875,
+              "right_code_norm": 80.71587371826172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00440",
+              "report_id": "3579",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.6359689235687256,
+              "relative_distance": 0.030205387622117996,
+              "left_code_norm": 87.5926742553711,
+              "right_code_norm": 86.94366455078125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00453",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.6961381435394287,
+              "relative_distance": 0.033789269626140594,
+              "left_code_norm": 79.67472076416016,
+              "right_code_norm": 79.9107437133789
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00379",
+              "report_id": "3120",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 3.6450743675231934,
+              "relative_distance": 0.04535910114645958,
+              "left_code_norm": 80.7671890258789,
+              "right_code_norm": 79.95355987548828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00394",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.329653263092041,
+              "relative_distance": 0.016568956896662712,
+              "left_code_norm": 80.25953674316406,
+              "right_code_norm": 80.23979187011719
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00414",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.6039048433303833,
+              "relative_distance": 0.01888878643512726,
+              "left_code_norm": 84.98465728759766,
+              "right_code_norm": 84.84147644042969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00419",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.911361813545227,
+              "relative_distance": 0.02219855599105358,
+              "left_code_norm": 85.88092803955078,
+              "right_code_norm": 86.32504272460938
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00423",
+              "report_id": "1385",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 7.462045669555664,
+              "relative_distance": 0.09861356019973755,
+              "left_code_norm": 76.25273895263672,
+              "right_code_norm": 75.08639526367188
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00431",
+              "report_id": "907",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 3.687497854232788,
+              "relative_distance": 0.046393513679504395,
+              "left_code_norm": 79.40630340576172,
+              "right_code_norm": 79.55978393554688
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00436",
+              "report_id": "541",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 28.158893585205078,
+              "relative_distance": 0.3531549274921417,
+              "left_code_norm": 81.86329650878906,
+              "right_code_norm": 77.6072006225586
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00448",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.8470039367675781,
+              "relative_distance": 0.025096997618675232,
+              "left_code_norm": 73.5810546875,
+              "right_code_norm": 73.60819244384766
+            }
+          ]
+        }
+      },
+      "fidelity_openi": {
+        "train": {
+          "mse": 0.016195500269532204,
+          "nmse": 0.007918167504239404,
+          "explained_variance": 0.9920813879082085,
+          "cosine_mean": 0.9963353477441802,
+          "code_norm_mean": 81.93409807579927,
+          "L0_mean": 3309.2751677852348,
+          "density_mean": 0.8079285077600671
+        },
+        "dev": {
+          "mse": 0.016973165795207024,
+          "nmse": 0.008289091388526145,
+          "explained_variance": 0.9917106049883756,
+          "cosine_mean": 0.9961774588933128,
+          "code_norm_mean": 82.02816563671935,
+          "L0_mean": 3301.90625,
+          "density_mean": 0.8061294555664062
+        },
+        "test": {
+          "mse": 0.016139468178153038,
+          "nmse": 0.007861647965315561,
+          "explained_variance": 0.9921377472905389,
+          "cosine_mean": 0.9963523229454688,
+          "code_norm_mean": 82.49561269020582,
+          "L0_mean": 3312.1835443037976,
+          "density_mean": 0.8086385606210443
+        }
+      },
+      "fidelity_owt": {
+        "mse": 0.14990942180156708,
+        "nmse": 0.0015638140500475002,
+        "explained_variance": 0.9984362208519758,
+        "cosine_mean": 0.9981157372458391,
+        "code_norm_mean": 129.22905629494272,
+        "L0_mean": 3365.273,
+        "density_mean": 0.821599853515625
+      }
+    },
+    "zero_shot_vreg": {
+      "geometry": {
+        "train": {
+          "summary": {
+            "n_pairs": 298,
+            "distance_mean": 4.892356510130351,
+            "distance_median": 2.707316279411316,
+            "distance_l20": 1.3207233746846516,
+            "relative_distance_mean": 0.0844443075440124,
+            "relative_distance_median": 0.04785723425447941,
+            "relative_distance_l20": 0.024307394850378236,
+            "mean_pair_code_norm": 56.613779304811615,
+            "median_pair_code_norm": 55.578959465026855
+          },
+          "rows": []
+        },
+        "dev": {
+          "summary": {
+            "n_pairs": 80,
+            "distance_mean": 3.7448673747479915,
+            "distance_median": 2.4380418062210083,
+            "distance_l20": 1.2909630350768566,
+            "relative_distance_mean": 0.06583437452791259,
+            "relative_distance_median": 0.045038796961307526,
+            "relative_distance_l20": 0.022897995950188488,
+            "mean_pair_code_norm": 56.899666380882266,
+            "median_pair_code_norm": 55.53283214569092
+          },
+          "rows": []
+        },
+        "test": {
+          "summary": {
+            "n_pairs": 79,
+            "distance_mean": 5.99240719517575,
+            "distance_median": 3.0995662212371826,
+            "distance_l20": 1.445205144584179,
+            "relative_distance_mean": 0.10098477502506745,
+            "relative_distance_median": 0.055413976311683655,
+            "relative_distance_l20": 0.02610138978343457,
+            "mean_pair_code_norm": 57.46901784969282,
+            "median_pair_code_norm": 56.19351577758789
+          },
+          "rows": [
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00386",
+              "report_id": "1361",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 3.5179553031921387,
+              "relative_distance": 0.05873182415962219,
+              "left_code_norm": 60.02727127075195,
+              "right_code_norm": 59.76996612548828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00388",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 6.6983418464660645,
+              "relative_distance": 0.10003568977117538,
+              "left_code_norm": 67.2984848022461,
+              "right_code_norm": 66.62054443359375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00399",
+              "report_id": "9",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 2.9348466396331787,
+              "relative_distance": 0.053490836173295975,
+              "left_code_norm": 54.59672927856445,
+              "right_code_norm": 55.13595962524414
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00428",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.2005839347839355,
+              "relative_distance": 0.07490405440330505,
+              "left_code_norm": 55.52553176879883,
+              "right_code_norm": 56.633522033691406
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00430",
+              "report_id": "4",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 3.9039969444274902,
+              "relative_distance": 0.0724840983748436,
+              "left_code_norm": 54.084495544433594,
+              "right_code_norm": 53.63560104370117
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00433",
+              "report_id": "184",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 5.761359691619873,
+              "relative_distance": 0.10855981707572937,
+              "left_code_norm": 53.31144714355469,
+              "right_code_norm": 52.83021926879883
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00380",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 15.376534461975098,
+              "relative_distance": 0.26185402274131775,
+              "left_code_norm": 58.09264373779297,
+              "right_code_norm": 59.350921630859375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00384",
+              "report_id": "2684",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 1.939986228942871,
+              "relative_distance": 0.037536270916461945,
+              "left_code_norm": 51.89850616455078,
+              "right_code_norm": 51.46744155883789
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00387",
+              "report_id": "3277",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.0240042209625244,
+              "relative_distance": 0.05547083541750908,
+              "left_code_norm": 54.06889343261719,
+              "right_code_norm": 54.961524963378906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00391",
+              "report_id": "3097",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.838421106338501,
+              "relative_distance": 0.04921264946460724,
+              "left_code_norm": 57.252288818359375,
+              "right_code_norm": 58.10103225708008
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00395",
+              "report_id": "2219",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 22.585466384887695,
+              "relative_distance": 0.4011302888393402,
+              "left_code_norm": 57.6069450378418,
+              "right_code_norm": 55.00218963623047
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00400",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 26.539175033569336,
+              "relative_distance": 0.3105924725532532,
+              "left_code_norm": 91.13194274902344,
+              "right_code_norm": 79.76193237304688
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00402",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 15.150261878967285,
+              "relative_distance": 0.2696087062358856,
+              "left_code_norm": 53.599761962890625,
+              "right_code_norm": 58.787269592285156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00403",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 18.31649398803711,
+              "relative_distance": 0.31284740567207336,
+              "left_code_norm": 58.45290756225586,
+              "right_code_norm": 58.64247512817383
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00405",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 23.3375244140625,
+              "relative_distance": 0.38798946142196655,
+              "left_code_norm": 56.92283630371094,
+              "right_code_norm": 63.376953125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00408",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 1.6164590120315552,
+              "relative_distance": 0.026906900107860565,
+              "left_code_norm": 60.17100143432617,
+              "right_code_norm": 59.98101043701172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00409",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 5.707751750946045,
+              "relative_distance": 0.10397066920995712,
+              "left_code_norm": 54.0885009765625,
+              "right_code_norm": 55.7069206237793
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00411",
+              "report_id": "3985",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 1.7280423641204834,
+              "relative_distance": 0.031539492309093475,
+              "left_code_norm": 55.06480026245117,
+              "right_code_norm": 54.51478958129883
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00415",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 0.70853590965271,
+              "relative_distance": 0.011530691757798195,
+              "left_code_norm": 61.391090393066406,
+              "right_code_norm": 61.50455856323242
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00417",
+              "report_id": "3490",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.181325912475586,
+              "relative_distance": 0.0414845235645771,
+              "left_code_norm": 52.66950988769531,
+              "right_code_norm": 52.49384689331055
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00421",
+              "report_id": "2126",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 10.432805061340332,
+              "relative_distance": 0.1881164312362671,
+              "left_code_norm": 54.59377670288086,
+              "right_code_norm": 56.32482147216797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00422",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.416370391845703,
+              "relative_distance": 0.05921240523457527,
+              "left_code_norm": 57.30325698852539,
+              "right_code_norm": 58.090476989746094
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00441",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 6.917665958404541,
+              "relative_distance": 0.13009601831436157,
+              "left_code_norm": 52.80966567993164,
+              "right_code_norm": 53.53740692138672
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00455",
+              "report_id": "1947",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 5.04293155670166,
+              "relative_distance": 0.09495028853416443,
+              "left_code_norm": 52.06758117675781,
+              "right_code_norm": 54.15497970581055
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00392",
+              "report_id": "3652",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 3.273881673812866,
+              "relative_distance": 0.055413976311683655,
+              "left_code_norm": 58.8385009765625,
+              "right_code_norm": 59.322364807128906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00427",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 1.5330804586410522,
+              "relative_distance": 0.028761232271790504,
+              "left_code_norm": 53.17620086669922,
+              "right_code_norm": 53.43122100830078
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00434",
+              "report_id": "3840",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 2.067434310913086,
+              "relative_distance": 0.03572263941168785,
+              "left_code_norm": 57.72303771972656,
+              "right_code_norm": 58.02621841430664
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00447",
+              "report_id": "3575",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 2.7982187271118164,
+              "relative_distance": 0.04823324456810951,
+              "left_code_norm": 57.92703628540039,
+              "right_code_norm": 58.10159683227539
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00398",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 4.753690719604492,
+              "relative_distance": 0.071706123650074,
+              "left_code_norm": 66.21989440917969,
+              "right_code_norm": 66.36824798583984
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00407",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 18.84355354309082,
+              "relative_distance": 0.2840965688228607,
+              "left_code_norm": 69.30117797851562,
+              "right_code_norm": 63.35480499267578
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00450",
+              "report_id": "3462",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 19.424169540405273,
+              "relative_distance": 0.31577029824256897,
+              "left_code_norm": 63.307247161865234,
+              "right_code_norm": 59.71995544433594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00378",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.0995662212371826,
+              "relative_distance": 0.05441822111606598,
+              "left_code_norm": 56.46571350097656,
+              "right_code_norm": 57.450767517089844
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00381",
+              "report_id": "3559",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.016347050666809,
+              "relative_distance": 0.019994117319583893,
+              "left_code_norm": 50.99334716796875,
+              "right_code_norm": 50.671260833740234
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00383",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.367175579071045,
+              "relative_distance": 0.04580653831362724,
+              "left_code_norm": 51.49968338012695,
+              "right_code_norm": 51.85567855834961
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00390",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 0.6319863796234131,
+              "relative_distance": 0.013020465150475502,
+              "left_code_norm": 48.551910400390625,
+              "right_code_norm": 48.52394104003906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00396",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.6620043516159058,
+              "relative_distance": 0.03143717348575592,
+              "left_code_norm": 52.84988021850586,
+              "right_code_norm": 52.885093688964844
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00401",
+              "report_id": "908",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.082028388977051,
+              "relative_distance": 0.03799115866422653,
+              "left_code_norm": 54.90961456298828,
+              "right_code_norm": 54.69633102416992
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00404",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 25.192724227905273,
+              "relative_distance": 0.45033910870552063,
+              "left_code_norm": 58.41767883300781,
+              "right_code_norm": 53.465675354003906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00418",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.348209857940674,
+              "relative_distance": 0.041365060955286026,
+              "left_code_norm": 56.71833801269531,
+              "right_code_norm": 56.817562103271484
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00426",
+              "report_id": "1103",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.811017632484436,
+              "relative_distance": 0.034497324377298355,
+              "left_code_norm": 52.626991271972656,
+              "right_code_norm": 52.36767578125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00429",
+              "report_id": "2043",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.7480353116989136,
+              "relative_distance": 0.03275081142783165,
+              "left_code_norm": 53.24443435668945,
+              "right_code_norm": 53.503170013427734
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00437",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.085484027862549,
+              "relative_distance": 0.041829273104667664,
+              "left_code_norm": 50.09687042236328,
+              "right_code_norm": 49.61722946166992
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00443",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.6578731536865234,
+              "relative_distance": 0.06482819467782974,
+              "left_code_norm": 56.92754364013672,
+              "right_code_norm": 55.92067337036133
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00446",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.6254647970199585,
+              "relative_distance": 0.02765672840178013,
+              "left_code_norm": 58.57370376586914,
+              "right_code_norm": 58.97199249267578
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00454",
+              "report_id": "2333",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.8938236236572266,
+              "relative_distance": 0.0366414450109005,
+              "left_code_norm": 51.65732955932617,
+              "right_code_norm": 51.71324157714844
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00382",
+              "report_id": "1339",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.378774642944336,
+              "relative_distance": 0.05503391847014427,
+              "left_code_norm": 61.33995056152344,
+              "right_code_norm": 61.44886016845703
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00385",
+              "report_id": "500",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.964078664779663,
+              "relative_distance": 0.03233177587389946,
+              "left_code_norm": 60.77737808227539,
+              "right_code_norm": 60.71788024902344
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00389",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.8751380443573,
+              "relative_distance": 0.050537265837192535,
+              "left_code_norm": 56.7447624206543,
+              "right_code_norm": 57.03812789916992
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00406",
+              "report_id": "3086",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.9150490760803223,
+              "relative_distance": 0.05636849254369736,
+              "left_code_norm": 51.77621078491211,
+              "right_code_norm": 51.65210723876953
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00410",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.7304348945617676,
+              "relative_distance": 0.026103902608156204,
+              "left_code_norm": 66.53455352783203,
+              "right_code_norm": 66.0459976196289
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00412",
+              "report_id": "3213",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.958450198173523,
+              "relative_distance": 0.036899760365486145,
+              "left_code_norm": 53.174381256103516,
+              "right_code_norm": 52.97536849975586
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00413",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.00188946723938,
+              "relative_distance": 0.04085255414247513,
+              "left_code_norm": 49.08103942871094,
+              "right_code_norm": 48.92455291748047
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00416",
+              "report_id": "2003",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 12.96092414855957,
+              "relative_distance": 0.23138970136642456,
+              "left_code_norm": 53.90325927734375,
+              "right_code_norm": 58.12354278564453
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00420",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 11.615659713745117,
+              "relative_distance": 0.1365416944026947,
+              "left_code_norm": 82.79953002929688,
+              "right_code_norm": 87.34130859375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00425",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.1945252418518066,
+              "relative_distance": 0.06869933009147644,
+              "left_code_norm": 46.259788513183594,
+              "right_code_norm": 46.74040222167969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00432",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.9443325996398926,
+              "relative_distance": 0.036948565393686295,
+              "left_code_norm": 52.613563537597656,
+              "right_code_norm": 52.631797790527344
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00435",
+              "report_id": "838",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.6631150245666504,
+              "relative_distance": 0.060798414051532745,
+              "left_code_norm": 59.99555587768555,
+              "right_code_norm": 60.504798889160156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00438",
+              "report_id": "2690",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.5410140752792358,
+              "relative_distance": 0.030262881889939308,
+              "left_code_norm": 51.04439163208008,
+              "right_code_norm": 50.797462463378906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00439",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 5.207153797149658,
+              "relative_distance": 0.07875950634479523,
+              "left_code_norm": 65.65843963623047,
+              "right_code_norm": 66.5707778930664
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00442",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.579479217529297,
+              "relative_distance": 0.05192027986049652,
+              "left_code_norm": 68.78932189941406,
+              "right_code_norm": 69.09434509277344
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00444",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.6610376834869385,
+              "relative_distance": 0.06113411486148834,
+              "left_code_norm": 60.6558952331543,
+              "right_code_norm": 59.11479949951172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00445",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.051574945449829,
+              "relative_distance": 0.05203642696142197,
+              "left_code_norm": 58.59123611450195,
+              "right_code_norm": 58.694862365722656
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00449",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 9.285435676574707,
+              "relative_distance": 0.15261229872703552,
+              "left_code_norm": 60.60063552856445,
+              "right_code_norm": 61.085968017578125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00451",
+              "report_id": "1940",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.5471612215042114,
+              "relative_distance": 0.026975354179739952,
+              "left_code_norm": 57.12910461425781,
+              "right_code_norm": 57.580142974853516
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00452",
+              "report_id": "388",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 5.2047529220581055,
+              "relative_distance": 0.07640141248703003,
+              "left_code_norm": 67.83189392089844,
+              "right_code_norm": 68.41565704345703
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00456",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 7.56293249130249,
+              "relative_distance": 0.11133681982755661,
+              "left_code_norm": 68.56340026855469,
+              "right_code_norm": 67.29341888427734
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00393",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 3.760763168334961,
+              "relative_distance": 0.06805562973022461,
+              "left_code_norm": 55.414695739746094,
+              "right_code_norm": 55.10556411743164
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00397",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 25.731258392333984,
+              "relative_distance": 0.43257761001586914,
+              "left_code_norm": 60.713253021240234,
+              "right_code_norm": 58.253883361816406
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00424",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 3.0488505363464355,
+              "relative_distance": 0.06327283382415771,
+              "left_code_norm": 48.62760925292969,
+              "right_code_norm": 47.74394607543945
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00440",
+              "report_id": "3579",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.6894965171813965,
+              "relative_distance": 0.03645620122551918,
+              "left_code_norm": 74.11644744873047,
+              "right_code_norm": 73.43028259277344
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00453",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.3243000507354736,
+              "relative_distance": 0.043940894305706024,
+              "left_code_norm": 52.73269271850586,
+              "right_code_norm": 53.059417724609375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00379",
+              "report_id": "3120",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 4.2064104080200195,
+              "relative_distance": 0.08133231848478317,
+              "left_code_norm": 52.30841064453125,
+              "right_code_norm": 51.12920379638672
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00394",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.2737369537353516,
+              "relative_distance": 0.02336190454661846,
+              "left_code_norm": 54.645198822021484,
+              "right_code_norm": 54.39873504638672
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00414",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.3448536396026611,
+              "relative_distance": 0.024591151624917984,
+              "left_code_norm": 54.540802001953125,
+              "right_code_norm": 54.83623504638672
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00419",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.6051082611083984,
+              "relative_distance": 0.030397653579711914,
+              "left_code_norm": 52.86927795410156,
+              "right_code_norm": 52.73809814453125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00423",
+              "report_id": "1385",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 6.042690753936768,
+              "relative_distance": 0.11973507702350616,
+              "left_code_norm": 49.97665786743164,
+              "right_code_norm": 50.95768737792969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00431",
+              "report_id": "907",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 3.756941318511963,
+              "relative_distance": 0.07272057235240936,
+              "left_code_norm": 51.16061782836914,
+              "right_code_norm": 52.1647834777832
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00436",
+              "report_id": "541",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 26.938093185424805,
+              "relative_distance": 0.45684847235679626,
+              "left_code_norm": 60.88010025024414,
+              "right_code_norm": 57.05000305175781
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00448",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 2.042141914367676,
+              "relative_distance": 0.03602688014507294,
+              "left_code_norm": 56.34680938720703,
+              "right_code_norm": 57.02086639404297
+            }
+          ]
+        }
+      },
+      "fidelity_openi": {
+        "train": {
+          "mse": 0.25402507185935974,
+          "nmse": 0.1241957872423306,
+          "explained_variance": 0.8757939428064021,
+          "cosine_mean": 0.9510823963495547,
+          "code_norm_mean": 56.61377933360446,
+          "L0_mean": 1990.253355704698,
+          "density_mean": 0.48590169817009227
+        },
+        "dev": {
+          "mse": 0.27453747391700745,
+          "nmse": 0.13407434999829573,
+          "explained_variance": 0.8659186397268549,
+          "cosine_mean": 0.9455680010419971,
+          "code_norm_mean": 56.89966632095066,
+          "L0_mean": 1932.59375,
+          "density_mean": 0.47182464599609375
+        },
+        "test": {
+          "mse": 0.24562107026576996,
+          "nmse": 0.11964372872055011,
+          "explained_variance": 0.8803447085209799,
+          "cosine_mean": 0.9526704809701753,
+          "code_norm_mean": 57.46901761823429,
+          "L0_mean": 2016.3417721518988,
+          "density_mean": 0.49227094046677217
+        }
+      },
+      "geometry_delta_vs_standard": {
+        "train": {
+          "distance": {
+            "tail_size": 60,
+            "tail_delta_mean": -0.19449489514033,
+            "all_pair_delta_mean": -0.5996510054441107,
+            "all_pair_delta_median": -0.38154029846191406,
+            "fraction_improved": 0.1342281879194631
+          },
+          "relative_distance": {
+            "tail_size": 60,
+            "tail_delta_mean": 0.005258312184984485,
+            "all_pair_delta_mean": 0.017455201680403227,
+            "all_pair_delta_median": 0.010673388838768005,
+            "fraction_improved": 0.9731543624161074
+          }
+        },
+        "dev": {
+          "distance": {
+            "tail_size": 16,
+            "tail_delta_mean": -0.1612250693142414,
+            "all_pair_delta_mean": -0.5825236894190311,
+            "all_pair_delta_median": -0.33617323637008667,
+            "fraction_improved": 0.125
+          },
+          "relative_distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.004855873296037316,
+            "all_pair_delta_mean": 0.013065908150747419,
+            "all_pair_delta_median": 0.008838210254907608,
+            "fraction_improved": 0.9625
+          }
+        },
+        "test": {
+          "distance": {
+            "tail_size": 16,
+            "tail_delta_mean": -0.13092007860541344,
+            "all_pair_delta_mean": -0.6193998335283014,
+            "all_pair_delta_median": -0.41344118118286133,
+            "fraction_improved": 0.1518987341772152
+          },
+          "relative_distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.006742793135344982,
+            "all_pair_delta_mean": 0.021296312608107736,
+            "all_pair_delta_median": 0.010594386607408524,
+            "fraction_improved": 0.9746835443037974
+          }
+        }
+      },
+      "fidelity_owt": {
+        "mse": 0.1278764009475708,
+        "nmse": 0.0013339716057623318,
+        "explained_variance": 0.9986660229927066,
+        "cosine_mean": 0.9983581147599913,
+        "code_norm_mean": 133.1178904182905,
+        "L0_mean": 3364.796,
+        "density_mean": 0.8214833984375
+      }
+    },
+    "targeted": {
+      "geometry": {
+        "train": {
+          "summary": {
+            "n_pairs": 298,
+            "distance_mean": 4.730755583351891,
+            "distance_median": 3.7517586946487427,
+            "distance_l20": 1.8181553910175958,
+            "relative_distance_mean": 0.06559712856682955,
+            "relative_distance_median": 0.05473433621227741,
+            "relative_distance_l20": 0.02686331815396746,
+            "mean_pair_code_norm": 70.60295392362863,
+            "median_pair_code_norm": 70.01174354553223
+          },
+          "rows": []
+        },
+        "dev": {
+          "summary": {
+            "n_pairs": 80,
+            "distance_mean": 4.153830328583718,
+            "distance_median": 3.344392776489258,
+            "distance_l20": 1.7015512138605118,
+            "relative_distance_mean": 0.058582168945576996,
+            "relative_distance_median": 0.04929293878376484,
+            "relative_distance_l20": 0.02434112102491781,
+            "mean_pair_code_norm": 70.14022178649903,
+            "median_pair_code_norm": 69.69521713256836
+          },
+          "rows": []
+        },
+        "test": {
+          "summary": {
+            "n_pairs": 79,
+            "distance_mean": 5.82686912334418,
+            "distance_median": 4.19833517074585,
+            "distance_l20": 1.8955792523920536,
+            "relative_distance_mean": 0.07971170166200853,
+            "relative_distance_median": 0.059012241661548615,
+            "relative_distance_l20": 0.02766573679400608,
+            "mean_pair_code_norm": 70.8656714234171,
+            "median_pair_code_norm": 69.46011734008789
+          },
+          "rows": [
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00386",
+              "report_id": "1361",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 3.979818820953369,
+              "relative_distance": 0.058308206498622894,
+              "left_code_norm": 67.94027709960938,
+              "right_code_norm": 68.56946563720703
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00388",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 7.675291538238525,
+              "relative_distance": 0.10061518102884293,
+              "left_code_norm": 75.50923156738281,
+              "right_code_norm": 77.05803680419922
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00399",
+              "report_id": "9",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.787582874298096,
+              "relative_distance": 0.06924519687891006,
+              "left_code_norm": 68.983154296875,
+              "right_code_norm": 69.29597473144531
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00428",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.569060802459717,
+              "relative_distance": 0.059012241661548615,
+              "left_code_norm": 77.39876556396484,
+              "right_code_norm": 77.45252227783203
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00430",
+              "report_id": "4",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 4.261987686157227,
+              "relative_distance": 0.06445516645908356,
+              "left_code_norm": 65.99220275878906,
+              "right_code_norm": 66.25438690185547
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::apex::00433",
+              "report_id": "184",
+              "template_id": "openi::laterality_minimal_pair::apex",
+              "distance": 6.554519176483154,
+              "relative_distance": 0.09478899091482162,
+              "left_code_norm": 68.71540069580078,
+              "right_code_norm": 69.58165740966797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00380",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 15.085229873657227,
+              "relative_distance": 0.2014683187007904,
+              "left_code_norm": 72.67230987548828,
+              "right_code_norm": 77.08055114746094
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00384",
+              "report_id": "2684",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.290332078933716,
+              "relative_distance": 0.05025108531117439,
+              "left_code_norm": 65.60865783691406,
+              "right_code_norm": 65.34700775146484
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00387",
+              "report_id": "3277",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 5.380945682525635,
+              "relative_distance": 0.07593201100826263,
+              "left_code_norm": 70.82504272460938,
+              "right_code_norm": 70.90557861328125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00391",
+              "report_id": "3097",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 4.603269100189209,
+              "relative_distance": 0.06828686594963074,
+              "left_code_norm": 67.1790542602539,
+              "right_code_norm": 67.6424560546875
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00395",
+              "report_id": "2219",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 12.347757339477539,
+              "relative_distance": 0.1678794026374817,
+              "left_code_norm": 73.36067962646484,
+              "right_code_norm": 73.74202728271484
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00400",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 20.839069366455078,
+              "relative_distance": 0.24257045984268188,
+              "left_code_norm": 86.71698760986328,
+              "right_code_norm": 85.10171508789062
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00402",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 10.773484230041504,
+              "relative_distance": 0.1558244228363037,
+              "left_code_norm": 67.59571075439453,
+              "right_code_norm": 70.6815185546875
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00403",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 16.23394203186035,
+              "relative_distance": 0.21673201024532318,
+              "left_code_norm": 75.40238952636719,
+              "right_code_norm": 74.40420532226562
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00405",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 18.53577423095703,
+              "relative_distance": 0.2385081648826599,
+              "left_code_norm": 78.68385314941406,
+              "right_code_norm": 76.74708557128906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00408",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.463304042816162,
+              "relative_distance": 0.03560318425297737,
+              "left_code_norm": 69.17710876464844,
+              "right_code_norm": 69.1983871459961
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00409",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 6.227932453155518,
+              "relative_distance": 0.08632949739694595,
+              "left_code_norm": 71.91373443603516,
+              "right_code_norm": 72.36910247802734
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00411",
+              "report_id": "3985",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 2.6450929641723633,
+              "relative_distance": 0.039143938571214676,
+              "left_code_norm": 67.8256607055664,
+              "right_code_norm": 67.32133483886719
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00415",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 0.7950690388679504,
+              "relative_distance": 0.011884260922670364,
+              "left_code_norm": 66.8541259765625,
+              "right_code_norm": 66.94789123535156
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00417",
+              "report_id": "3490",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 3.32226300239563,
+              "relative_distance": 0.047532059252262115,
+              "left_code_norm": 70.0813980102539,
+              "right_code_norm": 69.70899963378906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00421",
+              "report_id": "2126",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 12.71993350982666,
+              "relative_distance": 0.15820012986660004,
+              "left_code_norm": 81.30020141601562,
+              "right_code_norm": 79.50792694091797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00422",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 4.234781265258789,
+              "relative_distance": 0.057427410036325455,
+              "left_code_norm": 73.45042419433594,
+              "right_code_norm": 74.03250122070312
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00441",
+              "report_id": "2165",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 8.209195137023926,
+              "relative_distance": 0.11789217591285706,
+              "left_code_norm": 70.05101013183594,
+              "right_code_norm": 69.21514892578125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::base::00455",
+              "report_id": "1947",
+              "template_id": "openi::laterality_minimal_pair::base",
+              "distance": 4.729856014251709,
+              "relative_distance": 0.06953173130750656,
+              "left_code_norm": 67.44927978515625,
+              "right_code_norm": 68.59956359863281
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00392",
+              "report_id": "3652",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 5.141080856323242,
+              "relative_distance": 0.07216063886880875,
+              "left_code_norm": 70.56058502197266,
+              "right_code_norm": 71.92931365966797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00427",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 2.009032964706421,
+              "relative_distance": 0.031342312693595886,
+              "left_code_norm": 64.10333251953125,
+              "right_code_norm": 64.09607696533203
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00434",
+              "report_id": "3840",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 2.6058199405670166,
+              "relative_distance": 0.036196209490299225,
+              "left_code_norm": 72.16200256347656,
+              "right_code_norm": 71.82102966308594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::hilar::00447",
+              "report_id": "3575",
+              "template_id": "openi::laterality_minimal_pair::hilar",
+              "distance": 3.307504892349243,
+              "relative_distance": 0.048190630972385406,
+              "left_code_norm": 68.85281372070312,
+              "right_code_norm": 68.41474151611328
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00398",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 5.383047580718994,
+              "relative_distance": 0.06479468196630478,
+              "left_code_norm": 82.48222351074219,
+              "right_code_norm": 83.67485809326172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00407",
+              "report_id": "1393",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 16.574871063232422,
+              "relative_distance": 0.2137770801782608,
+              "left_code_norm": 76.73611450195312,
+              "right_code_norm": 78.33074951171875
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::line_or_tube::00450",
+              "report_id": "3462",
+              "template_id": "openi::laterality_minimal_pair::line_or_tube",
+              "distance": 15.775012969970703,
+              "relative_distance": 0.19762073457241058,
+              "left_code_norm": 81.80437469482422,
+              "right_code_norm": 77.8449935913086
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00378",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 4.423955917358398,
+              "relative_distance": 0.06534450501203537,
+              "left_code_norm": 67.74901580810547,
+              "right_code_norm": 67.6550521850586
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00381",
+              "report_id": "3559",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 1.0569313764572144,
+              "relative_distance": 0.015788177028298378,
+              "left_code_norm": 67.00902557373047,
+              "right_code_norm": 66.87993621826172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00383",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 4.19833517074585,
+              "relative_distance": 0.06733033061027527,
+              "left_code_norm": 62.43888473510742,
+              "right_code_norm": 62.26970291137695
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00390",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 0.9270321130752563,
+              "relative_distance": 0.014738478697836399,
+              "left_code_norm": 62.890106201171875,
+              "right_code_norm": 62.90742111206055
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00396",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.6117374897003174,
+              "relative_distance": 0.03570986166596413,
+              "left_code_norm": 73.18014526367188,
+              "right_code_norm": 73.09526824951172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00401",
+              "report_id": "908",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.2448277473449707,
+              "relative_distance": 0.049003470689058304,
+              "left_code_norm": 66.12092590332031,
+              "right_code_norm": 66.3116455078125
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00404",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 14.858843803405762,
+              "relative_distance": 0.1986725628376007,
+              "left_code_norm": 73.7391586303711,
+              "right_code_norm": 75.84207153320312
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00418",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.869441270828247,
+              "relative_distance": 0.06055949255824089,
+              "left_code_norm": 63.72214126586914,
+              "right_code_norm": 64.06761169433594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00426",
+              "report_id": "1103",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.1012635231018066,
+              "relative_distance": 0.05150775611400604,
+              "left_code_norm": 60.16579055786133,
+              "right_code_norm": 60.25349044799805
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00429",
+              "report_id": "2043",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.2898991107940674,
+              "relative_distance": 0.03435682877898216,
+              "left_code_norm": 66.69709014892578,
+              "right_code_norm": 66.60386657714844
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00437",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.064694404602051,
+              "relative_distance": 0.050151798874139786,
+              "left_code_norm": 61.04560852050781,
+              "right_code_norm": 61.171119689941406
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00443",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 3.5197598934173584,
+              "relative_distance": 0.05439018830657005,
+              "left_code_norm": 64.7326431274414,
+              "right_code_norm": 64.69364166259766
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00446",
+              "report_id": "636",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.232682704925537,
+              "relative_distance": 0.03289150819182396,
+              "left_code_norm": 67.65204620361328,
+              "right_code_norm": 68.1083984375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::lung::00454",
+              "report_id": "2333",
+              "template_id": "openi::laterality_minimal_pair::lung",
+              "distance": 2.997586965560913,
+              "relative_distance": 0.046980276703834534,
+              "left_code_norm": 64.11184692382812,
+              "right_code_norm": 63.49859619140625
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00382",
+              "report_id": "1339",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.4815073013305664,
+              "relative_distance": 0.0475689098238945,
+              "left_code_norm": 73.24712371826172,
+              "right_code_norm": 73.13030242919922
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00385",
+              "report_id": "500",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.898402214050293,
+              "relative_distance": 0.04256323724985123,
+              "left_code_norm": 68.3553695678711,
+              "right_code_norm": 67.83737182617188
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00389",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.1650335788726807,
+              "relative_distance": 0.04415109381079674,
+              "left_code_norm": 71.56572723388672,
+              "right_code_norm": 71.8071060180664
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00406",
+              "report_id": "3086",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.1549112796783447,
+              "relative_distance": 0.04542047530412674,
+              "left_code_norm": 69.44319915771484,
+              "right_code_norm": 69.47703552246094
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00410",
+              "report_id": "649",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.7588540315628052,
+              "relative_distance": 0.023136725649237633,
+              "left_code_norm": 76.09650421142578,
+              "right_code_norm": 75.9435043334961
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00412",
+              "report_id": "3213",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.6330020427703857,
+              "relative_distance": 0.05579141154885292,
+              "left_code_norm": 65.17342376708984,
+              "right_code_norm": 65.06175231933594
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00413",
+              "report_id": "3303",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.926273822784424,
+              "relative_distance": 0.04677730053663254,
+              "left_code_norm": 62.71966552734375,
+              "right_code_norm": 62.39545440673828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00416",
+              "report_id": "2003",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 12.067981719970703,
+              "relative_distance": 0.1524653434753418,
+              "left_code_norm": 79.49730682373047,
+              "right_code_norm": 78.80728149414062
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00420",
+              "report_id": "3014",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 9.358142852783203,
+              "relative_distance": 0.10590995848178864,
+              "left_code_norm": 87.53385925292969,
+              "right_code_norm": 89.18498992919922
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00425",
+              "report_id": "3988",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 3.2545742988586426,
+              "relative_distance": 0.04922609031200409,
+              "left_code_norm": 65.56117248535156,
+              "right_code_norm": 66.66846466064453
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00432",
+              "report_id": "591",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.59342622756958,
+              "relative_distance": 0.03725971281528473,
+              "left_code_norm": 69.60528564453125,
+              "right_code_norm": 69.60279083251953
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00435",
+              "report_id": "838",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.305622100830078,
+              "relative_distance": 0.059963833540678024,
+              "left_code_norm": 71.17659759521484,
+              "right_code_norm": 72.43069458007812
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00438",
+              "report_id": "2690",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 2.5351216793060303,
+              "relative_distance": 0.038096606731414795,
+              "left_code_norm": 66.52374267578125,
+              "right_code_norm": 66.56536102294922
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00439",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 6.061088562011719,
+              "relative_distance": 0.07902278006076813,
+              "left_code_norm": 76.4788589477539,
+              "right_code_norm": 76.92218780517578
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00442",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.634059906005859,
+              "relative_distance": 0.060574907809495926,
+              "left_code_norm": 76.35686492919922,
+              "right_code_norm": 76.64575958251953
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00444",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.294490814208984,
+              "relative_distance": 0.06576584279537201,
+              "left_code_norm": 65.37318420410156,
+              "right_code_norm": 65.22624206542969
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00445",
+              "report_id": "2283",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 4.28023099899292,
+              "relative_distance": 0.06264927238225937,
+              "left_code_norm": 68.17858123779297,
+              "right_code_norm": 68.46246337890625
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00449",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 9.741726875305176,
+              "relative_distance": 0.12359736859798431,
+              "left_code_norm": 79.15876770019531,
+              "right_code_norm": 78.47771453857422
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00451",
+              "report_id": "1940",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 1.7593269348144531,
+              "relative_distance": 0.024570796638727188,
+              "left_code_norm": 71.58723449707031,
+              "right_code_norm": 71.61746978759766
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00452",
+              "report_id": "388",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 5.195928573608398,
+              "relative_distance": 0.06473556905984879,
+              "left_code_norm": 80.32266998291016,
+              "right_code_norm": 80.20509338378906
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::other_laterality::00456",
+              "report_id": "3263",
+              "template_id": "openi::laterality_minimal_pair::other_laterality",
+              "distance": 8.028983116149902,
+              "relative_distance": 0.09484722465276718,
+              "left_code_norm": 85.81208801269531,
+              "right_code_norm": 83.49140930175781
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00393",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 4.552275657653809,
+              "relative_distance": 0.06068703904747963,
+              "left_code_norm": 75.13459777832031,
+              "right_code_norm": 74.89004516601562
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00397",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 20.54988670349121,
+              "relative_distance": 0.28795525431632996,
+              "left_code_norm": 70.82170867919922,
+              "right_code_norm": 71.90801239013672
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00424",
+              "report_id": "188",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 3.885230541229248,
+              "relative_distance": 0.05423387885093689,
+              "left_code_norm": 71.9511947631836,
+              "right_code_norm": 71.32569122314453
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00440",
+              "report_id": "3579",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.8806631565093994,
+              "relative_distance": 0.035931456834077835,
+              "left_code_norm": 80.5443115234375,
+              "right_code_norm": 79.79781341552734
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::pleural::00453",
+              "report_id": "569",
+              "template_id": "openi::laterality_minimal_pair::pleural",
+              "distance": 2.704928159713745,
+              "relative_distance": 0.04227592423558235,
+              "left_code_norm": 63.887596130371094,
+              "right_code_norm": 64.07782745361328
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00379",
+              "report_id": "3120",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 3.8368117809295654,
+              "relative_distance": 0.053833313286304474,
+              "left_code_norm": 71.74764251708984,
+              "right_code_norm": 70.79650115966797
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00394",
+              "report_id": "1169",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.5552928447723389,
+              "relative_distance": 0.023598726838827133,
+              "left_code_norm": 65.94315338134766,
+              "right_code_norm": 65.86842346191406
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00414",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.8235176801681519,
+              "relative_distance": 0.02743171714246273,
+              "left_code_norm": 66.49172973632812,
+              "right_code_norm": 66.45785522460938
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00419",
+              "report_id": "2130",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.9533791542053223,
+              "relative_distance": 0.028767164796590805,
+              "left_code_norm": 67.74312591552734,
+              "right_code_norm": 68.06304168701172
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00423",
+              "report_id": "1385",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 7.04797887802124,
+              "relative_distance": 0.10568182170391083,
+              "left_code_norm": 66.55012512207031,
+              "right_code_norm": 66.83098602294922
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00431",
+              "report_id": "907",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 4.198648452758789,
+              "relative_distance": 0.060538142919540405,
+              "left_code_norm": 69.2748794555664,
+              "right_code_norm": 69.43597412109375
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00436",
+              "report_id": "541",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 16.77592658996582,
+              "relative_distance": 0.23256151378154755,
+              "left_code_norm": 72.78607177734375,
+              "right_code_norm": 71.48480987548828
+            },
+            {
+              "global_pair_id": "openi_laterality_minimal_pair::rib::00448",
+              "report_id": "1817",
+              "template_id": "openi::laterality_minimal_pair::rib",
+              "distance": 1.9705781936645508,
+              "relative_distance": 0.030704379081726074,
+              "left_code_norm": 64.02171325683594,
+              "right_code_norm": 64.33641052246094
+            }
+          ]
+        }
+      },
+      "fidelity_openi": {
+        "train": {
+          "mse": 0.08841601759195328,
+          "nmse": 0.04322761130518118,
+          "explained_variance": 0.9567719152799717,
+          "cosine_mean": 0.9820684240100119,
+          "code_norm_mean": 70.60295395408585,
+          "L0_mean": 3212.3523489932886,
+          "density_mean": 0.7842657102034396
+        },
+        "dev": {
+          "mse": 0.09510935097932816,
+          "nmse": 0.04644802328098196,
+          "explained_variance": 0.9535519624880012,
+          "cosine_mean": 0.9808501326234197,
+          "code_norm_mean": 70.14022166913841,
+          "L0_mean": 3204.48125,
+          "density_mean": 0.7823440551757812
+        },
+        "test": {
+          "mse": 0.09110776335000992,
+          "nmse": 0.044379228354763316,
+          "explained_variance": 0.9556186260808928,
+          "cosine_mean": 0.9816005884264908,
+          "code_norm_mean": 70.86567196880186,
+          "L0_mean": 3216.512658227848,
+          "density_mean": 0.7852814107001582
+        }
+      },
+      "geometry_delta_vs_standard": {
+        "train": {
+          "distance": {
+            "tail_size": 60,
+            "tail_delta_mean": 0.32725192606449127,
+            "all_pair_delta_mean": -0.7612519322225711,
+            "all_pair_delta_median": 0.2751973867416382,
+            "fraction_improved": 0.7449664429530202
+          },
+          "relative_distance": {
+            "tail_size": 60,
+            "tail_delta_mean": 0.008733438793569803,
+            "all_pair_delta_mean": -0.0013919772967796197,
+            "all_pair_delta_median": 0.00955764390528202,
+            "fraction_improved": 0.8624161073825504
+          }
+        },
+        "dev": {
+          "distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.2680801600217819,
+            "all_pair_delta_mean": -0.17356073558330537,
+            "all_pair_delta_median": 0.15243268013000488,
+            "fraction_improved": 0.7625
+          },
+          "relative_distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.007320310338400304,
+            "all_pair_delta_mean": 0.005813702568411827,
+            "all_pair_delta_median": 0.008724862709641457,
+            "fraction_improved": 0.925
+          }
+        },
+        "test": {
+          "distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.308607779443264,
+            "all_pair_delta_mean": -0.7849379053598717,
+            "all_pair_delta_median": 0.12105822563171387,
+            "fraction_improved": 0.6708860759493671
+          },
+          "relative_distance": {
+            "tail_size": 16,
+            "tail_delta_mean": 0.008395751065108925,
+            "all_pair_delta_mean": 2.3239245048806637e-05,
+            "all_pair_delta_median": 0.008903471753001213,
+            "fraction_improved": 0.8354430379746836
+          }
+        }
+      },
+      "fidelity_owt": {
+        "mse": 0.02687857858836651,
+        "nmse": 0.00028038995957750966,
+        "explained_variance": 0.9997196087447858,
+        "cosine_mean": 0.9990351159764813,
+        "code_norm_mean": 127.7022155434429,
+        "L0_mean": 3359.134,
+        "density_mean": 0.82010107421875
+      }
+    }
+  }
+}

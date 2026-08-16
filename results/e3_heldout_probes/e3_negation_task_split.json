@@ -1,0 +1,3554 @@
+{
+  "experiment": "E3_heldout_probes",
+  "task": "negation_state",
+  "status": "negation_task_split_frozen",
+  "split_variant": "family_stratified_unseen_template",
+  "primary_role": "primary_downstream_probe",
+  "grouping_manifest_json": "E3_heldout_probes/results/e3_grouping_manifest.json",
+  "pairs_sha256": "ce94899d7c6c6e02a5c50be03cde2fad2c3580aba649158765eb6b068bb97c4a",
+  "seed": 42,
+  "split_policy": {
+    "primary": "family_stratified_unseen_template",
+    "leakage_units": [
+      "template_id",
+      "source_sentence_id"
+    ],
+    "assignment_unit": "template_id",
+    "assignment_method": "seeded_random_order_greedy_balance_within_family",
+    "target_ratios": {
+      "train": 0.6,
+      "dev": 0.2,
+      "test": 0.2
+    },
+    "splits": [
+      "train",
+      "dev",
+      "test"
+    ]
+  },
+  "label_rule": {
+    "task_label": "semantic_negation_state",
+    "labels": [
+      "affirmed",
+      "negated"
+    ],
+    "description": "Each sentence receives affirmed/negated from clause-level negation cues. Standalone prepositional 'without' is excluded from negation detection. The probe label is never original-vs-perturbed.",
+    "regex": "\\b(no|not|never|denies|denied|negative|cannot|can't|won't|isn't|aren't|wasn't|weren't|doesn't|don't|didn't|hasn't|haven't|hadn't|couldn't|wouldn't|shouldn't)\\b"
+  },
+  "primary_exclusions": [
+    "condition_negation::13",
+    "condition_negation::16"
+  ],
+  "sensitivity_analysis_pairs": [
+    "condition_negation::13",
+    "condition_negation::16"
+  ],
+  "random_label_control": {
+    "shuffle_scope": "train_only",
+    "dev_test_labels": "real",
+    "seeds": [
+      11,
+      23,
+      37,
+      53,
+      71
+    ]
+  },
+  "probe_protocol": {
+    "representations": [
+      "hidden",
+      "sae_standard_code",
+      "sae_vreg_code",
+      "sae_standard_reconstruction",
+      "sae_vreg_reconstruction"
+    ],
+    "primary_comparison": "sae_vreg_code_vs_sae_standard_code",
+    "classifier": "linear_probe",
+    "standardize_features": "train_only",
+    "hyperparameter_selection": "dev_only",
+    "test_evaluation": "once",
+    "real_label_probe_seed": 42,
+    "probe_seeds": [
+      42
+    ],
+    "probe_seed_note": "Single deterministic real-label fit; lbfgs logistic regression is effectively deterministic across random_state values. Uncertainty comes from offline template-cluster bootstrap over exported per-example predictions.",
+    "metrics": [
+      "balanced_accuracy",
+      "auroc",
+      "macro_f1"
+    ],
+    "export_predictions": [
+      "dev",
+      "test"
+    ]
+  },
+  "summary": {
+    "n_primary_pairs": 78,
+    "n_examples": 156,
+    "n_templates": 48,
+    "n_leakage_components": null
+  },
+  "template_to_split": {
+    "condition_negation::tpl_0415dbfce0": "train",
+    "condition_negation::tpl_0ba5b115d3": "train",
+    "condition_negation::tpl_0cdf77417b": "test",
+    "condition_negation::tpl_11bdf737d5": "train",
+    "condition_negation::tpl_15fa7846b8": "train",
+    "condition_negation::tpl_2c98c53942": "train",
+    "condition_negation::tpl_33a451f129": "train",
+    "condition_negation::tpl_3fccd5d8d4": "dev",
+    "condition_negation::tpl_45ec2a4d8b": "dev",
+    "condition_negation::tpl_4fe18c4ee2": "dev",
+    "condition_negation::tpl_51cce83ec3": "train",
+    "condition_negation::tpl_5d7a83aff4": "train",
+    "condition_negation::tpl_6467a7a99f": "train",
+    "condition_negation::tpl_79696d3df3": "train",
+    "condition_negation::tpl_8ffc67a157": "dev",
+    "condition_negation::tpl_94cda57a52": "test",
+    "condition_negation::tpl_a02ebaf61e": "train",
+    "condition_negation::tpl_abafcbe72a": "train",
+    "condition_negation::tpl_b02b5e67cb": "train",
+    "condition_negation::tpl_b123b1d320": "train",
+    "condition_negation::tpl_be32db72e2": "train",
+    "condition_negation::tpl_ccbde81a94": "train",
+    "condition_negation::tpl_e2a0186a48": "test",
+    "condition_negation::tpl_e7cb0670bb": "dev",
+    "condition_negation::tpl_ea9ca2508d": "test",
+    "condition_negation::tpl_f079b01521": "dev",
+    "condition_negation::tpl_f33f6fa458": "train",
+    "condition_negation::tpl_f3a9c7712e": "test",
+    "negation::tpl_0025558886": "test",
+    "negation::tpl_0482921b82": "test",
+    "negation::tpl_0723bed9b5": "train",
+    "negation::tpl_094423e355": "train",
+    "negation::tpl_142d13fd53": "dev",
+    "negation::tpl_2688c3ab51": "test",
+    "negation::tpl_3e49630b6c": "train",
+    "negation::tpl_45946e2617": "train",
+    "negation::tpl_4f04c612a6": "dev",
+    "negation::tpl_5b2b1da853": "train",
+    "negation::tpl_795abd12f6": "dev",
+    "negation::tpl_7f08fa1dc0": "train",
+    "negation::tpl_86d2154898": "train",
+    "negation::tpl_8a90ba6729": "dev",
+    "negation::tpl_9e8cb32cc6": "train",
+    "negation::tpl_c48c26699e": "train",
+    "negation::tpl_cd1fc1dbcf": "train",
+    "negation::tpl_cfee0e6952": "test",
+    "negation::tpl_d02b276503": "train",
+    "negation::tpl_efc4098b52": "train"
+  },
+  "validation": {
+    "leakage_checks_passed": true,
+    "split_summary": {
+      "train": {
+        "n_examples": 94,
+        "n_unique_texts": 58,
+        "n_pairs": 47,
+        "n_templates": 29,
+        "families": {
+          "condition_negation": 34,
+          "negation": 60
+        },
+        "label_counts": {
+          "affirmed": 47,
+          "negated": 47
+        }
+      },
+      "dev": {
+        "n_examples": 32,
+        "n_unique_texts": 20,
+        "n_pairs": 16,
+        "n_templates": 10,
+        "families": {
+          "condition_negation": 12,
+          "negation": 20
+        },
+        "label_counts": {
+          "affirmed": 16,
+          "negated": 16
+        }
+      },
+      "test": {
+        "n_examples": 30,
+        "n_unique_texts": 18,
+        "n_pairs": 15,
+        "n_templates": 9,
+        "families": {
+          "condition_negation": 10,
+          "negation": 20
+        },
+        "label_counts": {
+          "affirmed": 15,
+          "negated": 15
+        }
+      }
+    },
+    "split_audit": {
+      "splits": {
+        "train": {
+          "n_examples": 94,
+          "n_unique_texts": 58,
+          "n_exact_text_duplicates": 36,
+          "n_pairs": 47,
+          "n_templates": 29,
+          "families": {
+            "condition_negation": 34,
+            "negation": 60
+          },
+          "label_counts": {
+            "affirmed": 47,
+            "negated": 47
+          },
+          "templates_by_family": {
+            "condition_negation": 17,
+            "negation": 12
+          }
+        },
+        "dev": {
+          "n_examples": 32,
+          "n_unique_texts": 20,
+          "n_exact_text_duplicates": 12,
+          "n_pairs": 16,
+          "n_templates": 10,
+          "families": {
+            "condition_negation": 12,
+            "negation": 20
+          },
+          "label_counts": {
+            "affirmed": 16,
+            "negated": 16
+          },
+          "templates_by_family": {
+            "condition_negation": 6,
+            "negation": 4
+          }
+        },
+        "test": {
+          "n_examples": 30,
+          "n_unique_texts": 18,
+          "n_exact_text_duplicates": 12,
+          "n_pairs": 15,
+          "n_templates": 9,
+          "families": {
+            "condition_negation": 10,
+            "negation": 20
+          },
+          "label_counts": {
+            "affirmed": 15,
+            "negated": 15
+          },
+          "templates_by_family": {
+            "condition_negation": 5,
+            "negation": 4
+          }
+        }
+      },
+      "global": {
+        "n_examples": 156,
+        "n_unique_texts": 96,
+        "n_exact_duplicate_texts": 40,
+        "duplicate_text_counts": {
+          "He will attend the important meeting tomorrow morning": 3,
+          "He will not attend the important meeting tomorrow morning": 3,
+          "She can finish the project before the deadline easily": 3,
+          "She cannot finish the project before the deadline easily": 3,
+          "The data is consistent with the previous findings": 3,
+          "The data is not consistent with the previous findings": 3,
+          "The drug is not safe for use in elderly patients": 3,
+          "The drug is safe for use in elderly patients": 3,
+          "The patient is not responding well to the treatment now": 3,
+          "The patient is responding well to the treatment now": 3,
+          "The results are not significant at the reported level": 3,
+          "The results are significant at the reported level": 3,
+          "The system is not working correctly after the update": 3,
+          "The system is working correctly after the update": 3,
+          "The test result is not positive for the patient today": 3,
+          "The test result is positive for the patient today": 3,
+          "They have completed all the required tests successfully": 3,
+          "They have not completed all the required tests successfully": 3,
+          "This solution is effective for solving the problem": 3,
+          "This solution is not effective for solving the problem": 3
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "example_id": "condition_negation::0::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 0,
+      "global_pair_id": "condition_negation::0",
+      "side": "orig",
+      "text": "The patient has a history of diabetes",
+      "template_id": "condition_negation::tpl_11bdf737d5",
+      "template_signature": "The patient has <SLOT> history of diabetes",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::0::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_11bdf737d5",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::0::orig",
+        "source_pair": "condition_negation::0"
+      }
+    },
+    {
+      "example_id": "condition_negation::0::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 0,
+      "global_pair_id": "condition_negation::0",
+      "side": "pert",
+      "text": "The patient has no history of diabetes",
+      "template_id": "condition_negation::tpl_11bdf737d5",
+      "template_signature": "The patient has <SLOT> history of diabetes",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::0::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_11bdf737d5",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::0::pert",
+        "source_pair": "condition_negation::0"
+      }
+    },
+    {
+      "example_id": "condition_negation::1::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 1,
+      "global_pair_id": "condition_negation::1",
+      "side": "orig",
+      "text": "Allergies to penicillin are documented in records",
+      "template_id": "condition_negation::tpl_e2a0186a48",
+      "template_signature": "<SLOT> to penicillin are documented in records",
+      "unordered_value_pair_id": "condition_negation::uvp_c5e8bd877a66",
+      "source_sentence_id": "condition_negation::1::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_e2a0186a48",
+        "unordered_value_pair": "condition_negation::uvp_c5e8bd877a66",
+        "source_sentence_id": "condition_negation::1::orig",
+        "source_pair": "condition_negation::1"
+      }
+    },
+    {
+      "example_id": "condition_negation::1::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 1,
+      "global_pair_id": "condition_negation::1",
+      "side": "pert",
+      "text": "No allergies to penicillin are documented in records",
+      "template_id": "condition_negation::tpl_e2a0186a48",
+      "template_signature": "<SLOT> to penicillin are documented in records",
+      "unordered_value_pair_id": "condition_negation::uvp_c5e8bd877a66",
+      "source_sentence_id": "condition_negation::1::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_e2a0186a48",
+        "unordered_value_pair": "condition_negation::uvp_c5e8bd877a66",
+        "source_sentence_id": "condition_negation::1::pert",
+        "source_pair": "condition_negation::1"
+      }
+    },
+    {
+      "example_id": "condition_negation::2::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 2,
+      "global_pair_id": "condition_negation::2",
+      "side": "orig",
+      "text": "There is evidence of metastatic disease present",
+      "template_id": "condition_negation::tpl_45ec2a4d8b",
+      "template_signature": "There is <SLOT> evidence of metastatic disease present",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::2::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_45ec2a4d8b",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::2::orig",
+        "source_pair": "condition_negation::2"
+      }
+    },
+    {
+      "example_id": "condition_negation::2::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 2,
+      "global_pair_id": "condition_negation::2",
+      "side": "pert",
+      "text": "There is no evidence of metastatic disease present",
+      "template_id": "condition_negation::tpl_45ec2a4d8b",
+      "template_signature": "There is <SLOT> evidence of metastatic disease present",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::2::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_45ec2a4d8b",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::2::pert",
+        "source_pair": "condition_negation::2"
+      }
+    },
+    {
+      "example_id": "condition_negation::3::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 3,
+      "global_pair_id": "condition_negation::3",
+      "side": "orig",
+      "text": "He has a family history of cardiac disease",
+      "template_id": "condition_negation::tpl_3fccd5d8d4",
+      "template_signature": "He has <SLOT> family history of cardiac disease",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::3::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_3fccd5d8d4",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::3::orig",
+        "source_pair": "condition_negation::3"
+      }
+    },
+    {
+      "example_id": "condition_negation::3::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 3,
+      "global_pair_id": "condition_negation::3",
+      "side": "pert",
+      "text": "He has no family history of cardiac disease",
+      "template_id": "condition_negation::tpl_3fccd5d8d4",
+      "template_signature": "He has <SLOT> family history of cardiac disease",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::3::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_3fccd5d8d4",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::3::pert",
+        "source_pair": "condition_negation::3"
+      }
+    },
+    {
+      "example_id": "condition_negation::4::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 4,
+      "global_pair_id": "condition_negation::4",
+      "side": "orig",
+      "text": "Signs of infection were observed during examination",
+      "template_id": "condition_negation::tpl_ea9ca2508d",
+      "template_signature": "<SLOT> of infection were observed during examination",
+      "unordered_value_pair_id": "condition_negation::uvp_afdcd1760b2c",
+      "source_sentence_id": "condition_negation::4::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_ea9ca2508d",
+        "unordered_value_pair": "condition_negation::uvp_afdcd1760b2c",
+        "source_sentence_id": "condition_negation::4::orig",
+        "source_pair": "condition_negation::4"
+      }
+    },
+    {
+      "example_id": "condition_negation::4::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 4,
+      "global_pair_id": "condition_negation::4",
+      "side": "pert",
+      "text": "No signs of infection were observed during examination",
+      "template_id": "condition_negation::tpl_ea9ca2508d",
+      "template_signature": "<SLOT> of infection were observed during examination",
+      "unordered_value_pair_id": "condition_negation::uvp_afdcd1760b2c",
+      "source_sentence_id": "condition_negation::4::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_ea9ca2508d",
+        "unordered_value_pair": "condition_negation::uvp_afdcd1760b2c",
+        "source_sentence_id": "condition_negation::4::pert",
+        "source_pair": "condition_negation::4"
+      }
+    },
+    {
+      "example_id": "condition_negation::5::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 5,
+      "global_pair_id": "condition_negation::5",
+      "side": "orig",
+      "text": "The patient is currently taking blood thinners",
+      "template_id": "condition_negation::tpl_2c98c53942",
+      "template_signature": "The patient is <SLOT> currently taking blood thinners",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::5::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_2c98c53942",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::5::orig",
+        "source_pair": "condition_negation::5"
+      }
+    },
+    {
+      "example_id": "condition_negation::5::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 5,
+      "global_pair_id": "condition_negation::5",
+      "side": "pert",
+      "text": "The patient is not currently taking blood thinners",
+      "template_id": "condition_negation::tpl_2c98c53942",
+      "template_signature": "The patient is <SLOT> currently taking blood thinners",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::5::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_2c98c53942",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::5::pert",
+        "source_pair": "condition_negation::5"
+      }
+    },
+    {
+      "example_id": "condition_negation::6::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 6,
+      "global_pair_id": "condition_negation::6",
+      "side": "orig",
+      "text": "She reported recent travel outside the country",
+      "template_id": "condition_negation::tpl_ccbde81a94",
+      "template_signature": "She <SLOT> recent travel outside the country",
+      "unordered_value_pair_id": "condition_negation::uvp_5ddfe068c07d",
+      "source_sentence_id": "condition_negation::6::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_ccbde81a94",
+        "unordered_value_pair": "condition_negation::uvp_5ddfe068c07d",
+        "source_sentence_id": "condition_negation::6::orig",
+        "source_pair": "condition_negation::6"
+      }
+    },
+    {
+      "example_id": "condition_negation::6::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 6,
+      "global_pair_id": "condition_negation::6",
+      "side": "pert",
+      "text": "She denied any recent travel outside the country",
+      "template_id": "condition_negation::tpl_ccbde81a94",
+      "template_signature": "She <SLOT> recent travel outside the country",
+      "unordered_value_pair_id": "condition_negation::uvp_5ddfe068c07d",
+      "source_sentence_id": "condition_negation::6::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_ccbde81a94",
+        "unordered_value_pair": "condition_negation::uvp_5ddfe068c07d",
+        "source_sentence_id": "condition_negation::6::pert",
+        "source_pair": "condition_negation::6"
+      }
+    },
+    {
+      "example_id": "condition_negation::7::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 7,
+      "global_pair_id": "condition_negation::7",
+      "side": "orig",
+      "text": "There are contraindications for this procedure today",
+      "template_id": "condition_negation::tpl_f079b01521",
+      "template_signature": "There are <SLOT> contraindications for this procedure today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::7::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f079b01521",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::7::orig",
+        "source_pair": "condition_negation::7"
+      }
+    },
+    {
+      "example_id": "condition_negation::7::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 7,
+      "global_pair_id": "condition_negation::7",
+      "side": "pert",
+      "text": "There are no contraindications for this procedure today",
+      "template_id": "condition_negation::tpl_f079b01521",
+      "template_signature": "There are <SLOT> contraindications for this procedure today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::7::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f079b01521",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::7::pert",
+        "source_pair": "condition_negation::7"
+      }
+    },
+    {
+      "example_id": "condition_negation::8::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 8,
+      "global_pair_id": "condition_negation::8",
+      "side": "orig",
+      "text": "He has been exposed to tuberculosis recently",
+      "template_id": "condition_negation::tpl_b02b5e67cb",
+      "template_signature": "He has <SLOT> been exposed to tuberculosis recently",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::8::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_b02b5e67cb",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::8::orig",
+        "source_pair": "condition_negation::8"
+      }
+    },
+    {
+      "example_id": "condition_negation::8::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 8,
+      "global_pair_id": "condition_negation::8",
+      "side": "pert",
+      "text": "He has not been exposed to tuberculosis recently",
+      "template_id": "condition_negation::tpl_b02b5e67cb",
+      "template_signature": "He has <SLOT> been exposed to tuberculosis recently",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::8::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_b02b5e67cb",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::8::pert",
+        "source_pair": "condition_negation::8"
+      }
+    },
+    {
+      "example_id": "condition_negation::9::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 9,
+      "global_pair_id": "condition_negation::9",
+      "side": "orig",
+      "text": "The test result was positive for malaria",
+      "template_id": "condition_negation::tpl_f3a9c7712e",
+      "template_signature": "The test result was <SLOT> for malaria",
+      "unordered_value_pair_id": "condition_negation::uvp_4a7c6582df8d",
+      "source_sentence_id": "condition_negation::9::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f3a9c7712e",
+        "unordered_value_pair": "condition_negation::uvp_4a7c6582df8d",
+        "source_sentence_id": "condition_negation::9::orig",
+        "source_pair": "condition_negation::9"
+      }
+    },
+    {
+      "example_id": "condition_negation::9::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 9,
+      "global_pair_id": "condition_negation::9",
+      "side": "pert",
+      "text": "The test result was negative for malaria",
+      "template_id": "condition_negation::tpl_f3a9c7712e",
+      "template_signature": "The test result was <SLOT> for malaria",
+      "unordered_value_pair_id": "condition_negation::uvp_4a7c6582df8d",
+      "source_sentence_id": "condition_negation::9::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f3a9c7712e",
+        "unordered_value_pair": "condition_negation::uvp_4a7c6582df8d",
+        "source_sentence_id": "condition_negation::9::pert",
+        "source_pair": "condition_negation::9"
+      }
+    },
+    {
+      "example_id": "condition_negation::10::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 10,
+      "global_pair_id": "condition_negation::10",
+      "side": "orig",
+      "text": "She is pregnant according to the test result",
+      "template_id": "condition_negation::tpl_e7cb0670bb",
+      "template_signature": "She is <SLOT> pregnant according to the test result",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::10::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_e7cb0670bb",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::10::orig",
+        "source_pair": "condition_negation::10"
+      }
+    },
+    {
+      "example_id": "condition_negation::10::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 10,
+      "global_pair_id": "condition_negation::10",
+      "side": "pert",
+      "text": "She is not pregnant according to the test result",
+      "template_id": "condition_negation::tpl_e7cb0670bb",
+      "template_signature": "She is <SLOT> pregnant according to the test result",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::10::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_e7cb0670bb",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::10::pert",
+        "source_pair": "condition_negation::10"
+      }
+    },
+    {
+      "example_id": "condition_negation::11::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 11,
+      "global_pair_id": "condition_negation::11",
+      "side": "orig",
+      "text": "The patient consented to the surgical procedure",
+      "template_id": "condition_negation::tpl_8ffc67a157",
+      "template_signature": "The patient <SLOT> to the surgical procedure",
+      "unordered_value_pair_id": "condition_negation::uvp_d5d949284c28",
+      "source_sentence_id": "condition_negation::11::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_8ffc67a157",
+        "unordered_value_pair": "condition_negation::uvp_d5d949284c28",
+        "source_sentence_id": "condition_negation::11::orig",
+        "source_pair": "condition_negation::11"
+      }
+    },
+    {
+      "example_id": "condition_negation::11::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 11,
+      "global_pair_id": "condition_negation::11",
+      "side": "pert",
+      "text": "The patient did not consent to the surgical procedure",
+      "template_id": "condition_negation::tpl_8ffc67a157",
+      "template_signature": "The patient <SLOT> to the surgical procedure",
+      "unordered_value_pair_id": "condition_negation::uvp_d5d949284c28",
+      "source_sentence_id": "condition_negation::11::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_8ffc67a157",
+        "unordered_value_pair": "condition_negation::uvp_d5d949284c28",
+        "source_sentence_id": "condition_negation::11::pert",
+        "source_pair": "condition_negation::11"
+      }
+    },
+    {
+      "example_id": "condition_negation::12::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 12,
+      "global_pair_id": "condition_negation::12",
+      "side": "orig",
+      "text": "There is a prior history of substance abuse",
+      "template_id": "condition_negation::tpl_0ba5b115d3",
+      "template_signature": "There is <SLOT> prior history of substance abuse",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::12::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0ba5b115d3",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::12::orig",
+        "source_pair": "condition_negation::12"
+      }
+    },
+    {
+      "example_id": "condition_negation::12::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 12,
+      "global_pair_id": "condition_negation::12",
+      "side": "pert",
+      "text": "There is no prior history of substance abuse",
+      "template_id": "condition_negation::tpl_0ba5b115d3",
+      "template_signature": "There is <SLOT> prior history of substance abuse",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::12::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0ba5b115d3",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::12::pert",
+        "source_pair": "condition_negation::12"
+      }
+    },
+    {
+      "example_id": "condition_negation::14::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 14,
+      "global_pair_id": "condition_negation::14",
+      "side": "orig",
+      "text": "The biopsy showed malignant cells in the tissue",
+      "template_id": "condition_negation::tpl_6467a7a99f",
+      "template_signature": "The biopsy showed <SLOT> malignant cells in the tissue",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::14::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_6467a7a99f",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::14::orig",
+        "source_pair": "condition_negation::14"
+      }
+    },
+    {
+      "example_id": "condition_negation::14::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 14,
+      "global_pair_id": "condition_negation::14",
+      "side": "pert",
+      "text": "The biopsy showed no malignant cells in the tissue",
+      "template_id": "condition_negation::tpl_6467a7a99f",
+      "template_signature": "The biopsy showed <SLOT> malignant cells in the tissue",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::14::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_6467a7a99f",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::14::pert",
+        "source_pair": "condition_negation::14"
+      }
+    },
+    {
+      "example_id": "condition_negation::15::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 15,
+      "global_pair_id": "condition_negation::15",
+      "side": "orig",
+      "text": "She has been vaccinated against hepatitis B virus",
+      "template_id": "condition_negation::tpl_f33f6fa458",
+      "template_signature": "She has <SLOT> been vaccinated against hepatitis B virus",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::15::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f33f6fa458",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::15::orig",
+        "source_pair": "condition_negation::15"
+      }
+    },
+    {
+      "example_id": "condition_negation::15::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 15,
+      "global_pair_id": "condition_negation::15",
+      "side": "pert",
+      "text": "She has not been vaccinated against hepatitis B virus",
+      "template_id": "condition_negation::tpl_f33f6fa458",
+      "template_signature": "She has <SLOT> been vaccinated against hepatitis B virus",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::15::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_f33f6fa458",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::15::pert",
+        "source_pair": "condition_negation::15"
+      }
+    },
+    {
+      "example_id": "condition_negation::17::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 17,
+      "global_pair_id": "condition_negation::17",
+      "side": "orig",
+      "text": "There was significant blood loss during the surgery",
+      "template_id": "condition_negation::tpl_0415dbfce0",
+      "template_signature": "There was <SLOT> significant blood loss during the surgery",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::17::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0415dbfce0",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::17::orig",
+        "source_pair": "condition_negation::17"
+      }
+    },
+    {
+      "example_id": "condition_negation::17::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 17,
+      "global_pair_id": "condition_negation::17",
+      "side": "pert",
+      "text": "There was no significant blood loss during the surgery",
+      "template_id": "condition_negation::tpl_0415dbfce0",
+      "template_signature": "There was <SLOT> significant blood loss during the surgery",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::17::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0415dbfce0",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::17::pert",
+        "source_pair": "condition_negation::17"
+      }
+    },
+    {
+      "example_id": "condition_negation::18::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 18,
+      "global_pair_id": "condition_negation::18",
+      "side": "orig",
+      "text": "He has known risk factors for stroke currently",
+      "template_id": "condition_negation::tpl_5d7a83aff4",
+      "template_signature": "He has <SLOT> known risk factors for stroke currently",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::18::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_5d7a83aff4",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::18::orig",
+        "source_pair": "condition_negation::18"
+      }
+    },
+    {
+      "example_id": "condition_negation::18::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 18,
+      "global_pair_id": "condition_negation::18",
+      "side": "pert",
+      "text": "He has no known risk factors for stroke currently",
+      "template_id": "condition_negation::tpl_5d7a83aff4",
+      "template_signature": "He has <SLOT> known risk factors for stroke currently",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::18::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_5d7a83aff4",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::18::pert",
+        "source_pair": "condition_negation::18"
+      }
+    },
+    {
+      "example_id": "condition_negation::19::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 19,
+      "global_pair_id": "condition_negation::19",
+      "side": "orig",
+      "text": "The ECG showed abnormal rhythm patterns today",
+      "template_id": "condition_negation::tpl_79696d3df3",
+      "template_signature": "The ECG showed <SLOT> abnormal rhythm patterns today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::19::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_79696d3df3",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::19::orig",
+        "source_pair": "condition_negation::19"
+      }
+    },
+    {
+      "example_id": "condition_negation::19::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 19,
+      "global_pair_id": "condition_negation::19",
+      "side": "pert",
+      "text": "The ECG showed no abnormal rhythm patterns today",
+      "template_id": "condition_negation::tpl_79696d3df3",
+      "template_signature": "The ECG showed <SLOT> abnormal rhythm patterns today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::19::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_79696d3df3",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::19::pert",
+        "source_pair": "condition_negation::19"
+      }
+    },
+    {
+      "example_id": "condition_negation::20::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 20,
+      "global_pair_id": "condition_negation::20",
+      "side": "orig",
+      "text": "She reported dizziness and lightheadedness this morning",
+      "template_id": "condition_negation::tpl_b123b1d320",
+      "template_signature": "She <SLOT> dizziness and lightheadedness this morning",
+      "unordered_value_pair_id": "condition_negation::uvp_5ddfe068c07d",
+      "source_sentence_id": "condition_negation::20::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_b123b1d320",
+        "unordered_value_pair": "condition_negation::uvp_5ddfe068c07d",
+        "source_sentence_id": "condition_negation::20::orig",
+        "source_pair": "condition_negation::20"
+      }
+    },
+    {
+      "example_id": "condition_negation::20::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 20,
+      "global_pair_id": "condition_negation::20",
+      "side": "pert",
+      "text": "She denied any dizziness and lightheadedness this morning",
+      "template_id": "condition_negation::tpl_b123b1d320",
+      "template_signature": "She <SLOT> dizziness and lightheadedness this morning",
+      "unordered_value_pair_id": "condition_negation::uvp_5ddfe068c07d",
+      "source_sentence_id": "condition_negation::20::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_b123b1d320",
+        "unordered_value_pair": "condition_negation::uvp_5ddfe068c07d",
+        "source_sentence_id": "condition_negation::20::pert",
+        "source_pair": "condition_negation::20"
+      }
+    },
+    {
+      "example_id": "condition_negation::21::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 21,
+      "global_pair_id": "condition_negation::21",
+      "side": "orig",
+      "text": "Liver function tests are elevated this time",
+      "template_id": "condition_negation::tpl_4fe18c4ee2",
+      "template_signature": "Liver function tests are <SLOT> elevated this time",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::21::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_4fe18c4ee2",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::21::orig",
+        "source_pair": "condition_negation::21"
+      }
+    },
+    {
+      "example_id": "condition_negation::21::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "condition_negation",
+      "pair_index": 21,
+      "global_pair_id": "condition_negation::21",
+      "side": "pert",
+      "text": "Liver function tests are not elevated this time",
+      "template_id": "condition_negation::tpl_4fe18c4ee2",
+      "template_signature": "Liver function tests are <SLOT> elevated this time",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::21::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_4fe18c4ee2",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::21::pert",
+        "source_pair": "condition_negation::21"
+      }
+    },
+    {
+      "example_id": "condition_negation::22::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 22,
+      "global_pair_id": "condition_negation::22",
+      "side": "orig",
+      "text": "The patient has insurance coverage for treatment",
+      "template_id": "condition_negation::tpl_0cdf77417b",
+      "template_signature": "The patient has <SLOT> insurance coverage for treatment",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::22::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0cdf77417b",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::22::orig",
+        "source_pair": "condition_negation::22"
+      }
+    },
+    {
+      "example_id": "condition_negation::22::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 22,
+      "global_pair_id": "condition_negation::22",
+      "side": "pert",
+      "text": "The patient has no insurance coverage for treatment",
+      "template_id": "condition_negation::tpl_0cdf77417b",
+      "template_signature": "The patient has <SLOT> insurance coverage for treatment",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::22::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_0cdf77417b",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::22::pert",
+        "source_pair": "condition_negation::22"
+      }
+    },
+    {
+      "example_id": "condition_negation::23::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 23,
+      "global_pair_id": "condition_negation::23",
+      "side": "orig",
+      "text": "He showed improvement since the last visit here",
+      "template_id": "condition_negation::tpl_a02ebaf61e",
+      "template_signature": "He showed <SLOT> improvement since the last visit here",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::23::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_a02ebaf61e",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::23::orig",
+        "source_pair": "condition_negation::23"
+      }
+    },
+    {
+      "example_id": "condition_negation::23::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 23,
+      "global_pair_id": "condition_negation::23",
+      "side": "pert",
+      "text": "He showed no improvement since the last visit here",
+      "template_id": "condition_negation::tpl_a02ebaf61e",
+      "template_signature": "He showed <SLOT> improvement since the last visit here",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::23::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_a02ebaf61e",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::23::pert",
+        "source_pair": "condition_negation::23"
+      }
+    },
+    {
+      "example_id": "condition_negation::24::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 24,
+      "global_pair_id": "condition_negation::24",
+      "side": "orig",
+      "text": "There are complications following the procedure today",
+      "template_id": "condition_negation::tpl_51cce83ec3",
+      "template_signature": "There are <SLOT> complications following the procedure today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::24::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_51cce83ec3",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::24::orig",
+        "source_pair": "condition_negation::24"
+      }
+    },
+    {
+      "example_id": "condition_negation::24::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 24,
+      "global_pair_id": "condition_negation::24",
+      "side": "pert",
+      "text": "There are no complications following the procedure today",
+      "template_id": "condition_negation::tpl_51cce83ec3",
+      "template_signature": "There are <SLOT> complications following the procedure today",
+      "unordered_value_pair_id": "condition_negation::uvp_e290a5475c2f",
+      "source_sentence_id": "condition_negation::24::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_51cce83ec3",
+        "unordered_value_pair": "condition_negation::uvp_e290a5475c2f",
+        "source_sentence_id": "condition_negation::24::pert",
+        "source_pair": "condition_negation::24"
+      }
+    },
+    {
+      "example_id": "condition_negation::25::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 25,
+      "global_pair_id": "condition_negation::25",
+      "side": "orig",
+      "text": "She can ambulate independently without any assistance",
+      "template_id": "condition_negation::tpl_abafcbe72a",
+      "template_signature": "She <SLOT> ambulate independently without any assistance",
+      "unordered_value_pair_id": "condition_negation::uvp_e17d81dce720",
+      "source_sentence_id": "condition_negation::25::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_abafcbe72a",
+        "unordered_value_pair": "condition_negation::uvp_e17d81dce720",
+        "source_sentence_id": "condition_negation::25::orig",
+        "source_pair": "condition_negation::25"
+      }
+    },
+    {
+      "example_id": "condition_negation::25::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 25,
+      "global_pair_id": "condition_negation::25",
+      "side": "pert",
+      "text": "She cannot ambulate independently without any assistance",
+      "template_id": "condition_negation::tpl_abafcbe72a",
+      "template_signature": "She <SLOT> ambulate independently without any assistance",
+      "unordered_value_pair_id": "condition_negation::uvp_e17d81dce720",
+      "source_sentence_id": "condition_negation::25::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_abafcbe72a",
+        "unordered_value_pair": "condition_negation::uvp_e17d81dce720",
+        "source_sentence_id": "condition_negation::25::pert",
+        "source_pair": "condition_negation::25"
+      }
+    },
+    {
+      "example_id": "condition_negation::26::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 26,
+      "global_pair_id": "condition_negation::26",
+      "side": "orig",
+      "text": "The patient is compliant with the prescribed treatment",
+      "template_id": "condition_negation::tpl_be32db72e2",
+      "template_signature": "The patient is <SLOT> compliant with the prescribed treatment",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::26::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_be32db72e2",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::26::orig",
+        "source_pair": "condition_negation::26"
+      }
+    },
+    {
+      "example_id": "condition_negation::26::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 26,
+      "global_pair_id": "condition_negation::26",
+      "side": "pert",
+      "text": "The patient is not compliant with the prescribed treatment",
+      "template_id": "condition_negation::tpl_be32db72e2",
+      "template_signature": "The patient is <SLOT> compliant with the prescribed treatment",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::26::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_be32db72e2",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::26::pert",
+        "source_pair": "condition_negation::26"
+      }
+    },
+    {
+      "example_id": "condition_negation::27::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 27,
+      "global_pair_id": "condition_negation::27",
+      "side": "orig",
+      "text": "He has a documented advance directive on file",
+      "template_id": "condition_negation::tpl_33a451f129",
+      "template_signature": "He has <SLOT> documented advance directive on file",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::27::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_33a451f129",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::27::orig",
+        "source_pair": "condition_negation::27"
+      }
+    },
+    {
+      "example_id": "condition_negation::27::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 27,
+      "global_pair_id": "condition_negation::27",
+      "side": "pert",
+      "text": "He has no documented advance directive on file",
+      "template_id": "condition_negation::tpl_33a451f129",
+      "template_signature": "He has <SLOT> documented advance directive on file",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::27::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_33a451f129",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::27::pert",
+        "source_pair": "condition_negation::27"
+      }
+    },
+    {
+      "example_id": "condition_negation::28::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 28,
+      "global_pair_id": "condition_negation::28",
+      "side": "orig",
+      "text": "The wound site is showing signs of healing",
+      "template_id": "condition_negation::tpl_15fa7846b8",
+      "template_signature": "The wound site is <SLOT> showing signs of healing",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::28::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_15fa7846b8",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::28::orig",
+        "source_pair": "condition_negation::28"
+      }
+    },
+    {
+      "example_id": "condition_negation::28::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "condition_negation",
+      "pair_index": 28,
+      "global_pair_id": "condition_negation::28",
+      "side": "pert",
+      "text": "The wound site is not showing signs of healing",
+      "template_id": "condition_negation::tpl_15fa7846b8",
+      "template_signature": "The wound site is <SLOT> showing signs of healing",
+      "unordered_value_pair_id": "condition_negation::uvp_7a307c2b4159",
+      "source_sentence_id": "condition_negation::28::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_15fa7846b8",
+        "unordered_value_pair": "condition_negation::uvp_7a307c2b4159",
+        "source_sentence_id": "condition_negation::28::pert",
+        "source_pair": "condition_negation::28"
+      }
+    },
+    {
+      "example_id": "condition_negation::29::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 29,
+      "global_pair_id": "condition_negation::29",
+      "side": "orig",
+      "text": "There was a reaction to the contrast agent",
+      "template_id": "condition_negation::tpl_94cda57a52",
+      "template_signature": "There was <SLOT> reaction to the contrast agent",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::29::orig",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_94cda57a52",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::29::orig",
+        "source_pair": "condition_negation::29"
+      }
+    },
+    {
+      "example_id": "condition_negation::29::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "condition_negation",
+      "pair_index": 29,
+      "global_pair_id": "condition_negation::29",
+      "side": "pert",
+      "text": "There was no reaction to the contrast agent",
+      "template_id": "condition_negation::tpl_94cda57a52",
+      "template_signature": "There was <SLOT> reaction to the contrast agent",
+      "unordered_value_pair_id": "condition_negation::uvp_bfcec6d9fd22",
+      "source_sentence_id": "condition_negation::29::pert",
+      "leakage_groups": {
+        "template": "condition_negation::tpl_94cda57a52",
+        "unordered_value_pair": "condition_negation::uvp_bfcec6d9fd22",
+        "source_sentence_id": "condition_negation::29::pert",
+        "source_pair": "condition_negation::29"
+      }
+    },
+    {
+      "example_id": "negation::0::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 0,
+      "global_pair_id": "negation::0",
+      "side": "orig",
+      "text": "The test result is positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::0::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::0::orig",
+        "source_pair": "negation::0"
+      }
+    },
+    {
+      "example_id": "negation::0::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 0,
+      "global_pair_id": "negation::0",
+      "side": "pert",
+      "text": "The test result is not positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::0::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::0::pert",
+        "source_pair": "negation::0"
+      }
+    },
+    {
+      "example_id": "negation::1::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 1,
+      "global_pair_id": "negation::1",
+      "side": "orig",
+      "text": "She can finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::1::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::1::orig",
+        "source_pair": "negation::1"
+      }
+    },
+    {
+      "example_id": "negation::1::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 1,
+      "global_pair_id": "negation::1",
+      "side": "pert",
+      "text": "She cannot finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::1::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::1::pert",
+        "source_pair": "negation::1"
+      }
+    },
+    {
+      "example_id": "negation::2::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 2,
+      "global_pair_id": "negation::2",
+      "side": "orig",
+      "text": "The drug is safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::2::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::2::orig",
+        "source_pair": "negation::2"
+      }
+    },
+    {
+      "example_id": "negation::2::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 2,
+      "global_pair_id": "negation::2",
+      "side": "pert",
+      "text": "The drug is not safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::2::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::2::pert",
+        "source_pair": "negation::2"
+      }
+    },
+    {
+      "example_id": "negation::3::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 3,
+      "global_pair_id": "negation::3",
+      "side": "orig",
+      "text": "He will attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::3::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::3::orig",
+        "source_pair": "negation::3"
+      }
+    },
+    {
+      "example_id": "negation::3::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 3,
+      "global_pair_id": "negation::3",
+      "side": "pert",
+      "text": "He will not attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::3::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::3::pert",
+        "source_pair": "negation::3"
+      }
+    },
+    {
+      "example_id": "negation::4::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 4,
+      "global_pair_id": "negation::4",
+      "side": "orig",
+      "text": "The system is working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::4::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::4::orig",
+        "source_pair": "negation::4"
+      }
+    },
+    {
+      "example_id": "negation::4::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 4,
+      "global_pair_id": "negation::4",
+      "side": "pert",
+      "text": "The system is not working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::4::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::4::pert",
+        "source_pair": "negation::4"
+      }
+    },
+    {
+      "example_id": "negation::5::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 5,
+      "global_pair_id": "negation::5",
+      "side": "orig",
+      "text": "They have completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::5::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::5::orig",
+        "source_pair": "negation::5"
+      }
+    },
+    {
+      "example_id": "negation::5::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 5,
+      "global_pair_id": "negation::5",
+      "side": "pert",
+      "text": "They have not completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::5::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::5::pert",
+        "source_pair": "negation::5"
+      }
+    },
+    {
+      "example_id": "negation::6::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 6,
+      "global_pair_id": "negation::6",
+      "side": "orig",
+      "text": "The patient is responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::6::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::6::orig",
+        "source_pair": "negation::6"
+      }
+    },
+    {
+      "example_id": "negation::6::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 6,
+      "global_pair_id": "negation::6",
+      "side": "pert",
+      "text": "The patient is not responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::6::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::6::pert",
+        "source_pair": "negation::6"
+      }
+    },
+    {
+      "example_id": "negation::7::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 7,
+      "global_pair_id": "negation::7",
+      "side": "orig",
+      "text": "This solution is effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::7::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::7::orig",
+        "source_pair": "negation::7"
+      }
+    },
+    {
+      "example_id": "negation::7::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 7,
+      "global_pair_id": "negation::7",
+      "side": "pert",
+      "text": "This solution is not effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::7::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::7::pert",
+        "source_pair": "negation::7"
+      }
+    },
+    {
+      "example_id": "negation::8::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 8,
+      "global_pair_id": "negation::8",
+      "side": "orig",
+      "text": "The data is consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::8::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::8::orig",
+        "source_pair": "negation::8"
+      }
+    },
+    {
+      "example_id": "negation::8::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 8,
+      "global_pair_id": "negation::8",
+      "side": "pert",
+      "text": "The data is not consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::8::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::8::pert",
+        "source_pair": "negation::8"
+      }
+    },
+    {
+      "example_id": "negation::9::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 9,
+      "global_pair_id": "negation::9",
+      "side": "orig",
+      "text": "The results are significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::9::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::9::orig",
+        "source_pair": "negation::9"
+      }
+    },
+    {
+      "example_id": "negation::9::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 9,
+      "global_pair_id": "negation::9",
+      "side": "pert",
+      "text": "The results are not significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::9::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::9::pert",
+        "source_pair": "negation::9"
+      }
+    },
+    {
+      "example_id": "negation::10::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 10,
+      "global_pair_id": "negation::10",
+      "side": "orig",
+      "text": "The device is approved for clinical use",
+      "template_id": "negation::tpl_0482921b82",
+      "template_signature": "The device is <SLOT> approved for clinical use",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::10::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0482921b82",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::10::orig",
+        "source_pair": "negation::10"
+      }
+    },
+    {
+      "example_id": "negation::10::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 10,
+      "global_pair_id": "negation::10",
+      "side": "pert",
+      "text": "The device is not approved for clinical use",
+      "template_id": "negation::tpl_0482921b82",
+      "template_signature": "The device is <SLOT> approved for clinical use",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::10::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0482921b82",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::10::pert",
+        "source_pair": "negation::10"
+      }
+    },
+    {
+      "example_id": "negation::11::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 11,
+      "global_pair_id": "negation::11",
+      "side": "orig",
+      "text": "The nurse can administer the medication now",
+      "template_id": "negation::tpl_d02b276503",
+      "template_signature": "The nurse <SLOT> administer the medication now",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::11::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_d02b276503",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::11::orig",
+        "source_pair": "negation::11"
+      }
+    },
+    {
+      "example_id": "negation::11::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 11,
+      "global_pair_id": "negation::11",
+      "side": "pert",
+      "text": "The nurse cannot administer the medication now",
+      "template_id": "negation::tpl_d02b276503",
+      "template_signature": "The nurse <SLOT> administer the medication now",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::11::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_d02b276503",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::11::pert",
+        "source_pair": "negation::11"
+      }
+    },
+    {
+      "example_id": "negation::12::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 12,
+      "global_pair_id": "negation::12",
+      "side": "orig",
+      "text": "The trial will continue until next month",
+      "template_id": "negation::tpl_0723bed9b5",
+      "template_signature": "The trial will <SLOT> continue until next month",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::12::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0723bed9b5",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::12::orig",
+        "source_pair": "negation::12"
+      }
+    },
+    {
+      "example_id": "negation::12::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 12,
+      "global_pair_id": "negation::12",
+      "side": "pert",
+      "text": "The trial will not continue until next month",
+      "template_id": "negation::tpl_0723bed9b5",
+      "template_signature": "The trial will <SLOT> continue until next month",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::12::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0723bed9b5",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::12::pert",
+        "source_pair": "negation::12"
+      }
+    },
+    {
+      "example_id": "negation::13::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 13,
+      "global_pair_id": "negation::13",
+      "side": "orig",
+      "text": "The sensor is calibrated for this range",
+      "template_id": "negation::tpl_efc4098b52",
+      "template_signature": "The sensor is <SLOT> calibrated for this range",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::13::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_efc4098b52",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::13::orig",
+        "source_pair": "negation::13"
+      }
+    },
+    {
+      "example_id": "negation::13::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 13,
+      "global_pair_id": "negation::13",
+      "side": "pert",
+      "text": "The sensor is not calibrated for this range",
+      "template_id": "negation::tpl_efc4098b52",
+      "template_signature": "The sensor is <SLOT> calibrated for this range",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::13::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_efc4098b52",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::13::pert",
+        "source_pair": "negation::13"
+      }
+    },
+    {
+      "example_id": "negation::14::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 14,
+      "global_pair_id": "negation::14",
+      "side": "orig",
+      "text": "The protocol is valid under current guidelines",
+      "template_id": "negation::tpl_cd1fc1dbcf",
+      "template_signature": "The protocol is <SLOT> valid under current guidelines",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::14::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_cd1fc1dbcf",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::14::orig",
+        "source_pair": "negation::14"
+      }
+    },
+    {
+      "example_id": "negation::14::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 14,
+      "global_pair_id": "negation::14",
+      "side": "pert",
+      "text": "The protocol is not valid under current guidelines",
+      "template_id": "negation::tpl_cd1fc1dbcf",
+      "template_signature": "The protocol is <SLOT> valid under current guidelines",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::14::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_cd1fc1dbcf",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::14::pert",
+        "source_pair": "negation::14"
+      }
+    },
+    {
+      "example_id": "negation::15::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 15,
+      "global_pair_id": "negation::15",
+      "side": "orig",
+      "text": "The patient has recovered from the infection",
+      "template_id": "negation::tpl_795abd12f6",
+      "template_signature": "The patient has <SLOT> recovered from the infection",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::15::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_795abd12f6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::15::orig",
+        "source_pair": "negation::15"
+      }
+    },
+    {
+      "example_id": "negation::15::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 15,
+      "global_pair_id": "negation::15",
+      "side": "pert",
+      "text": "The patient has not recovered from the infection",
+      "template_id": "negation::tpl_795abd12f6",
+      "template_signature": "The patient has <SLOT> recovered from the infection",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::15::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_795abd12f6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::15::pert",
+        "source_pair": "negation::15"
+      }
+    },
+    {
+      "example_id": "negation::16::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 16,
+      "global_pair_id": "negation::16",
+      "side": "orig",
+      "text": "The model is accurate on the validation set",
+      "template_id": "negation::tpl_2688c3ab51",
+      "template_signature": "The model is <SLOT> accurate on the validation set",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::16::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_2688c3ab51",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::16::orig",
+        "source_pair": "negation::16"
+      }
+    },
+    {
+      "example_id": "negation::16::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 16,
+      "global_pair_id": "negation::16",
+      "side": "pert",
+      "text": "The model is not accurate on the validation set",
+      "template_id": "negation::tpl_2688c3ab51",
+      "template_signature": "The model is <SLOT> accurate on the validation set",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::16::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_2688c3ab51",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::16::pert",
+        "source_pair": "negation::16"
+      }
+    },
+    {
+      "example_id": "negation::17::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 17,
+      "global_pair_id": "negation::17",
+      "side": "orig",
+      "text": "The alarm is triggered by high pressure",
+      "template_id": "negation::tpl_5b2b1da853",
+      "template_signature": "The alarm is <SLOT> triggered by high pressure",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::17::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_5b2b1da853",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::17::orig",
+        "source_pair": "negation::17"
+      }
+    },
+    {
+      "example_id": "negation::17::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 17,
+      "global_pair_id": "negation::17",
+      "side": "pert",
+      "text": "The alarm is not triggered by high pressure",
+      "template_id": "negation::tpl_5b2b1da853",
+      "template_signature": "The alarm is <SLOT> triggered by high pressure",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::17::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_5b2b1da853",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::17::pert",
+        "source_pair": "negation::17"
+      }
+    },
+    {
+      "example_id": "negation::18::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 18,
+      "global_pair_id": "negation::18",
+      "side": "orig",
+      "text": "The dose is sufficient for the symptoms",
+      "template_id": "negation::tpl_142d13fd53",
+      "template_signature": "The dose is <SLOT> sufficient for the symptoms",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::18::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_142d13fd53",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::18::orig",
+        "source_pair": "negation::18"
+      }
+    },
+    {
+      "example_id": "negation::18::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 18,
+      "global_pair_id": "negation::18",
+      "side": "pert",
+      "text": "The dose is not sufficient for the symptoms",
+      "template_id": "negation::tpl_142d13fd53",
+      "template_signature": "The dose is <SLOT> sufficient for the symptoms",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::18::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_142d13fd53",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::18::pert",
+        "source_pair": "negation::18"
+      }
+    },
+    {
+      "example_id": "negation::19::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 19,
+      "global_pair_id": "negation::19",
+      "side": "orig",
+      "text": "The scan is clear of acute findings",
+      "template_id": "negation::tpl_9e8cb32cc6",
+      "template_signature": "The scan is <SLOT> clear of acute findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::19::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_9e8cb32cc6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::19::orig",
+        "source_pair": "negation::19"
+      }
+    },
+    {
+      "example_id": "negation::19::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 19,
+      "global_pair_id": "negation::19",
+      "side": "pert",
+      "text": "The scan is not clear of acute findings",
+      "template_id": "negation::tpl_9e8cb32cc6",
+      "template_signature": "The scan is <SLOT> clear of acute findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::19::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_9e8cb32cc6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::19::pert",
+        "source_pair": "negation::19"
+      }
+    },
+    {
+      "example_id": "negation::20::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 20,
+      "global_pair_id": "negation::20",
+      "side": "orig",
+      "text": "The test result is positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::20::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::20::orig",
+        "source_pair": "negation::20"
+      }
+    },
+    {
+      "example_id": "negation::20::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 20,
+      "global_pair_id": "negation::20",
+      "side": "pert",
+      "text": "The test result is not positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::20::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::20::pert",
+        "source_pair": "negation::20"
+      }
+    },
+    {
+      "example_id": "negation::21::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 21,
+      "global_pair_id": "negation::21",
+      "side": "orig",
+      "text": "She can finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::21::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::21::orig",
+        "source_pair": "negation::21"
+      }
+    },
+    {
+      "example_id": "negation::21::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 21,
+      "global_pair_id": "negation::21",
+      "side": "pert",
+      "text": "She cannot finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::21::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::21::pert",
+        "source_pair": "negation::21"
+      }
+    },
+    {
+      "example_id": "negation::22::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 22,
+      "global_pair_id": "negation::22",
+      "side": "orig",
+      "text": "The drug is safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::22::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::22::orig",
+        "source_pair": "negation::22"
+      }
+    },
+    {
+      "example_id": "negation::22::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 22,
+      "global_pair_id": "negation::22",
+      "side": "pert",
+      "text": "The drug is not safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::22::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::22::pert",
+        "source_pair": "negation::22"
+      }
+    },
+    {
+      "example_id": "negation::23::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 23,
+      "global_pair_id": "negation::23",
+      "side": "orig",
+      "text": "He will attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::23::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::23::orig",
+        "source_pair": "negation::23"
+      }
+    },
+    {
+      "example_id": "negation::23::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 23,
+      "global_pair_id": "negation::23",
+      "side": "pert",
+      "text": "He will not attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::23::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::23::pert",
+        "source_pair": "negation::23"
+      }
+    },
+    {
+      "example_id": "negation::24::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 24,
+      "global_pair_id": "negation::24",
+      "side": "orig",
+      "text": "The system is working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::24::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::24::orig",
+        "source_pair": "negation::24"
+      }
+    },
+    {
+      "example_id": "negation::24::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 24,
+      "global_pair_id": "negation::24",
+      "side": "pert",
+      "text": "The system is not working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::24::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::24::pert",
+        "source_pair": "negation::24"
+      }
+    },
+    {
+      "example_id": "negation::25::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 25,
+      "global_pair_id": "negation::25",
+      "side": "orig",
+      "text": "They have completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::25::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::25::orig",
+        "source_pair": "negation::25"
+      }
+    },
+    {
+      "example_id": "negation::25::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 25,
+      "global_pair_id": "negation::25",
+      "side": "pert",
+      "text": "They have not completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::25::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::25::pert",
+        "source_pair": "negation::25"
+      }
+    },
+    {
+      "example_id": "negation::26::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 26,
+      "global_pair_id": "negation::26",
+      "side": "orig",
+      "text": "The patient is responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::26::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::26::orig",
+        "source_pair": "negation::26"
+      }
+    },
+    {
+      "example_id": "negation::26::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 26,
+      "global_pair_id": "negation::26",
+      "side": "pert",
+      "text": "The patient is not responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::26::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::26::pert",
+        "source_pair": "negation::26"
+      }
+    },
+    {
+      "example_id": "negation::27::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 27,
+      "global_pair_id": "negation::27",
+      "side": "orig",
+      "text": "This solution is effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::27::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::27::orig",
+        "source_pair": "negation::27"
+      }
+    },
+    {
+      "example_id": "negation::27::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 27,
+      "global_pair_id": "negation::27",
+      "side": "pert",
+      "text": "This solution is not effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::27::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::27::pert",
+        "source_pair": "negation::27"
+      }
+    },
+    {
+      "example_id": "negation::28::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 28,
+      "global_pair_id": "negation::28",
+      "side": "orig",
+      "text": "The data is consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::28::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::28::orig",
+        "source_pair": "negation::28"
+      }
+    },
+    {
+      "example_id": "negation::28::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 28,
+      "global_pair_id": "negation::28",
+      "side": "pert",
+      "text": "The data is not consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::28::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::28::pert",
+        "source_pair": "negation::28"
+      }
+    },
+    {
+      "example_id": "negation::29::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 29,
+      "global_pair_id": "negation::29",
+      "side": "orig",
+      "text": "The results are significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::29::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::29::orig",
+        "source_pair": "negation::29"
+      }
+    },
+    {
+      "example_id": "negation::29::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 29,
+      "global_pair_id": "negation::29",
+      "side": "pert",
+      "text": "The results are not significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::29::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::29::pert",
+        "source_pair": "negation::29"
+      }
+    },
+    {
+      "example_id": "negation::30::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 30,
+      "global_pair_id": "negation::30",
+      "side": "orig",
+      "text": "The device is approved for clinical use",
+      "template_id": "negation::tpl_0482921b82",
+      "template_signature": "The device is <SLOT> approved for clinical use",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::30::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0482921b82",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::30::orig",
+        "source_pair": "negation::30"
+      }
+    },
+    {
+      "example_id": "negation::30::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 30,
+      "global_pair_id": "negation::30",
+      "side": "pert",
+      "text": "The device is not approved for clinical use",
+      "template_id": "negation::tpl_0482921b82",
+      "template_signature": "The device is <SLOT> approved for clinical use",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::30::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0482921b82",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::30::pert",
+        "source_pair": "negation::30"
+      }
+    },
+    {
+      "example_id": "negation::31::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 31,
+      "global_pair_id": "negation::31",
+      "side": "orig",
+      "text": "The nurse can administer the medication now",
+      "template_id": "negation::tpl_d02b276503",
+      "template_signature": "The nurse <SLOT> administer the medication now",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::31::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_d02b276503",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::31::orig",
+        "source_pair": "negation::31"
+      }
+    },
+    {
+      "example_id": "negation::31::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 31,
+      "global_pair_id": "negation::31",
+      "side": "pert",
+      "text": "The nurse cannot administer the medication now",
+      "template_id": "negation::tpl_d02b276503",
+      "template_signature": "The nurse <SLOT> administer the medication now",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::31::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_d02b276503",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::31::pert",
+        "source_pair": "negation::31"
+      }
+    },
+    {
+      "example_id": "negation::32::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 32,
+      "global_pair_id": "negation::32",
+      "side": "orig",
+      "text": "The trial will continue until next month",
+      "template_id": "negation::tpl_0723bed9b5",
+      "template_signature": "The trial will <SLOT> continue until next month",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::32::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0723bed9b5",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::32::orig",
+        "source_pair": "negation::32"
+      }
+    },
+    {
+      "example_id": "negation::32::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 32,
+      "global_pair_id": "negation::32",
+      "side": "pert",
+      "text": "The trial will not continue until next month",
+      "template_id": "negation::tpl_0723bed9b5",
+      "template_signature": "The trial will <SLOT> continue until next month",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::32::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0723bed9b5",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::32::pert",
+        "source_pair": "negation::32"
+      }
+    },
+    {
+      "example_id": "negation::33::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 33,
+      "global_pair_id": "negation::33",
+      "side": "orig",
+      "text": "The sensor is calibrated for this range",
+      "template_id": "negation::tpl_efc4098b52",
+      "template_signature": "The sensor is <SLOT> calibrated for this range",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::33::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_efc4098b52",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::33::orig",
+        "source_pair": "negation::33"
+      }
+    },
+    {
+      "example_id": "negation::33::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 33,
+      "global_pair_id": "negation::33",
+      "side": "pert",
+      "text": "The sensor is not calibrated for this range",
+      "template_id": "negation::tpl_efc4098b52",
+      "template_signature": "The sensor is <SLOT> calibrated for this range",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::33::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_efc4098b52",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::33::pert",
+        "source_pair": "negation::33"
+      }
+    },
+    {
+      "example_id": "negation::34::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 34,
+      "global_pair_id": "negation::34",
+      "side": "orig",
+      "text": "The protocol is valid under current guidelines",
+      "template_id": "negation::tpl_cd1fc1dbcf",
+      "template_signature": "The protocol is <SLOT> valid under current guidelines",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::34::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_cd1fc1dbcf",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::34::orig",
+        "source_pair": "negation::34"
+      }
+    },
+    {
+      "example_id": "negation::34::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 34,
+      "global_pair_id": "negation::34",
+      "side": "pert",
+      "text": "The protocol is not valid under current guidelines",
+      "template_id": "negation::tpl_cd1fc1dbcf",
+      "template_signature": "The protocol is <SLOT> valid under current guidelines",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::34::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_cd1fc1dbcf",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::34::pert",
+        "source_pair": "negation::34"
+      }
+    },
+    {
+      "example_id": "negation::35::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 35,
+      "global_pair_id": "negation::35",
+      "side": "orig",
+      "text": "The patient has recovered from the infection",
+      "template_id": "negation::tpl_795abd12f6",
+      "template_signature": "The patient has <SLOT> recovered from the infection",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::35::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_795abd12f6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::35::orig",
+        "source_pair": "negation::35"
+      }
+    },
+    {
+      "example_id": "negation::35::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 35,
+      "global_pair_id": "negation::35",
+      "side": "pert",
+      "text": "The patient has not recovered from the infection",
+      "template_id": "negation::tpl_795abd12f6",
+      "template_signature": "The patient has <SLOT> recovered from the infection",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::35::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_795abd12f6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::35::pert",
+        "source_pair": "negation::35"
+      }
+    },
+    {
+      "example_id": "negation::36::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 36,
+      "global_pair_id": "negation::36",
+      "side": "orig",
+      "text": "The model is accurate on the validation set",
+      "template_id": "negation::tpl_2688c3ab51",
+      "template_signature": "The model is <SLOT> accurate on the validation set",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::36::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_2688c3ab51",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::36::orig",
+        "source_pair": "negation::36"
+      }
+    },
+    {
+      "example_id": "negation::36::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 36,
+      "global_pair_id": "negation::36",
+      "side": "pert",
+      "text": "The model is not accurate on the validation set",
+      "template_id": "negation::tpl_2688c3ab51",
+      "template_signature": "The model is <SLOT> accurate on the validation set",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::36::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_2688c3ab51",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::36::pert",
+        "source_pair": "negation::36"
+      }
+    },
+    {
+      "example_id": "negation::37::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 37,
+      "global_pair_id": "negation::37",
+      "side": "orig",
+      "text": "The alarm is triggered by high pressure",
+      "template_id": "negation::tpl_5b2b1da853",
+      "template_signature": "The alarm is <SLOT> triggered by high pressure",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::37::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_5b2b1da853",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::37::orig",
+        "source_pair": "negation::37"
+      }
+    },
+    {
+      "example_id": "negation::37::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 37,
+      "global_pair_id": "negation::37",
+      "side": "pert",
+      "text": "The alarm is not triggered by high pressure",
+      "template_id": "negation::tpl_5b2b1da853",
+      "template_signature": "The alarm is <SLOT> triggered by high pressure",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::37::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_5b2b1da853",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::37::pert",
+        "source_pair": "negation::37"
+      }
+    },
+    {
+      "example_id": "negation::38::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 38,
+      "global_pair_id": "negation::38",
+      "side": "orig",
+      "text": "The dose is sufficient for the symptoms",
+      "template_id": "negation::tpl_142d13fd53",
+      "template_signature": "The dose is <SLOT> sufficient for the symptoms",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::38::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_142d13fd53",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::38::orig",
+        "source_pair": "negation::38"
+      }
+    },
+    {
+      "example_id": "negation::38::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 38,
+      "global_pair_id": "negation::38",
+      "side": "pert",
+      "text": "The dose is not sufficient for the symptoms",
+      "template_id": "negation::tpl_142d13fd53",
+      "template_signature": "The dose is <SLOT> sufficient for the symptoms",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::38::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_142d13fd53",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::38::pert",
+        "source_pair": "negation::38"
+      }
+    },
+    {
+      "example_id": "negation::39::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 39,
+      "global_pair_id": "negation::39",
+      "side": "orig",
+      "text": "The scan is clear of acute findings",
+      "template_id": "negation::tpl_9e8cb32cc6",
+      "template_signature": "The scan is <SLOT> clear of acute findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::39::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_9e8cb32cc6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::39::orig",
+        "source_pair": "negation::39"
+      }
+    },
+    {
+      "example_id": "negation::39::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 39,
+      "global_pair_id": "negation::39",
+      "side": "pert",
+      "text": "The scan is not clear of acute findings",
+      "template_id": "negation::tpl_9e8cb32cc6",
+      "template_signature": "The scan is <SLOT> clear of acute findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::39::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_9e8cb32cc6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::39::pert",
+        "source_pair": "negation::39"
+      }
+    },
+    {
+      "example_id": "negation::40::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 40,
+      "global_pair_id": "negation::40",
+      "side": "orig",
+      "text": "The test result is positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::40::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::40::orig",
+        "source_pair": "negation::40"
+      }
+    },
+    {
+      "example_id": "negation::40::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 40,
+      "global_pair_id": "negation::40",
+      "side": "pert",
+      "text": "The test result is not positive for the patient today",
+      "template_id": "negation::tpl_c48c26699e",
+      "template_signature": "The test result is <SLOT> positive for the patient today",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::40::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_c48c26699e",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::40::pert",
+        "source_pair": "negation::40"
+      }
+    },
+    {
+      "example_id": "negation::41::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 41,
+      "global_pair_id": "negation::41",
+      "side": "orig",
+      "text": "She can finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::41::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::41::orig",
+        "source_pair": "negation::41"
+      }
+    },
+    {
+      "example_id": "negation::41::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 41,
+      "global_pair_id": "negation::41",
+      "side": "pert",
+      "text": "She cannot finish the project before the deadline easily",
+      "template_id": "negation::tpl_cfee0e6952",
+      "template_signature": "She <SLOT> finish the project before the deadline easily",
+      "unordered_value_pair_id": "negation::uvp_958ce29f05d1",
+      "source_sentence_id": "negation::41::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_cfee0e6952",
+        "unordered_value_pair": "negation::uvp_958ce29f05d1",
+        "source_sentence_id": "negation::41::pert",
+        "source_pair": "negation::41"
+      }
+    },
+    {
+      "example_id": "negation::42::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 42,
+      "global_pair_id": "negation::42",
+      "side": "orig",
+      "text": "The drug is safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::42::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::42::orig",
+        "source_pair": "negation::42"
+      }
+    },
+    {
+      "example_id": "negation::42::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 42,
+      "global_pair_id": "negation::42",
+      "side": "pert",
+      "text": "The drug is not safe for use in elderly patients",
+      "template_id": "negation::tpl_45946e2617",
+      "template_signature": "The drug is <SLOT> safe for use in elderly patients",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::42::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_45946e2617",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::42::pert",
+        "source_pair": "negation::42"
+      }
+    },
+    {
+      "example_id": "negation::43::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 43,
+      "global_pair_id": "negation::43",
+      "side": "orig",
+      "text": "He will attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::43::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::43::orig",
+        "source_pair": "negation::43"
+      }
+    },
+    {
+      "example_id": "negation::43::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 43,
+      "global_pair_id": "negation::43",
+      "side": "pert",
+      "text": "He will not attend the important meeting tomorrow morning",
+      "template_id": "negation::tpl_86d2154898",
+      "template_signature": "He will <SLOT> attend the important meeting tomorrow morning",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::43::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_86d2154898",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::43::pert",
+        "source_pair": "negation::43"
+      }
+    },
+    {
+      "example_id": "negation::44::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 44,
+      "global_pair_id": "negation::44",
+      "side": "orig",
+      "text": "The system is working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::44::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::44::orig",
+        "source_pair": "negation::44"
+      }
+    },
+    {
+      "example_id": "negation::44::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 44,
+      "global_pair_id": "negation::44",
+      "side": "pert",
+      "text": "The system is not working correctly after the update",
+      "template_id": "negation::tpl_8a90ba6729",
+      "template_signature": "The system is <SLOT> working correctly after the update",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::44::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_8a90ba6729",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::44::pert",
+        "source_pair": "negation::44"
+      }
+    },
+    {
+      "example_id": "negation::45::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 45,
+      "global_pair_id": "negation::45",
+      "side": "orig",
+      "text": "They have completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::45::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::45::orig",
+        "source_pair": "negation::45"
+      }
+    },
+    {
+      "example_id": "negation::45::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 45,
+      "global_pair_id": "negation::45",
+      "side": "pert",
+      "text": "They have not completed all the required tests successfully",
+      "template_id": "negation::tpl_094423e355",
+      "template_signature": "They have <SLOT> completed all the required tests successfully",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::45::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_094423e355",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::45::pert",
+        "source_pair": "negation::45"
+      }
+    },
+    {
+      "example_id": "negation::46::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 46,
+      "global_pair_id": "negation::46",
+      "side": "orig",
+      "text": "The patient is responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::46::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::46::orig",
+        "source_pair": "negation::46"
+      }
+    },
+    {
+      "example_id": "negation::46::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 46,
+      "global_pair_id": "negation::46",
+      "side": "pert",
+      "text": "The patient is not responding well to the treatment now",
+      "template_id": "negation::tpl_7f08fa1dc0",
+      "template_signature": "The patient is <SLOT> responding well to the treatment now",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::46::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_7f08fa1dc0",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::46::pert",
+        "source_pair": "negation::46"
+      }
+    },
+    {
+      "example_id": "negation::47::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 47,
+      "global_pair_id": "negation::47",
+      "side": "orig",
+      "text": "This solution is effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::47::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::47::orig",
+        "source_pair": "negation::47"
+      }
+    },
+    {
+      "example_id": "negation::47::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "train",
+      "family": "negation",
+      "pair_index": 47,
+      "global_pair_id": "negation::47",
+      "side": "pert",
+      "text": "This solution is not effective for solving the problem",
+      "template_id": "negation::tpl_3e49630b6c",
+      "template_signature": "This solution is <SLOT> effective for solving the problem",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::47::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_3e49630b6c",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::47::pert",
+        "source_pair": "negation::47"
+      }
+    },
+    {
+      "example_id": "negation::48::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 48,
+      "global_pair_id": "negation::48",
+      "side": "orig",
+      "text": "The data is consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::48::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::48::orig",
+        "source_pair": "negation::48"
+      }
+    },
+    {
+      "example_id": "negation::48::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "test",
+      "family": "negation",
+      "pair_index": 48,
+      "global_pair_id": "negation::48",
+      "side": "pert",
+      "text": "The data is not consistent with the previous findings",
+      "template_id": "negation::tpl_0025558886",
+      "template_signature": "The data is <SLOT> consistent with the previous findings",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::48::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_0025558886",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::48::pert",
+        "source_pair": "negation::48"
+      }
+    },
+    {
+      "example_id": "negation::49::orig",
+      "task": "negation_state",
+      "label": "affirmed",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 49,
+      "global_pair_id": "negation::49",
+      "side": "orig",
+      "text": "The results are significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::49::orig",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::49::orig",
+        "source_pair": "negation::49"
+      }
+    },
+    {
+      "example_id": "negation::49::pert",
+      "task": "negation_state",
+      "label": "negated",
+      "split": "dev",
+      "family": "negation",
+      "pair_index": 49,
+      "global_pair_id": "negation::49",
+      "side": "pert",
+      "text": "The results are not significant at the reported level",
+      "template_id": "negation::tpl_4f04c612a6",
+      "template_signature": "The results are <SLOT> significant at the reported level",
+      "unordered_value_pair_id": "negation::uvp_68d33dff3d8c",
+      "source_sentence_id": "negation::49::pert",
+      "leakage_groups": {
+        "template": "negation::tpl_4f04c612a6",
+        "unordered_value_pair": "negation::uvp_68d33dff3d8c",
+        "source_sentence_id": "negation::49::pert",
+        "source_pair": "negation::49"
+      }
+    }
+  ]
+}

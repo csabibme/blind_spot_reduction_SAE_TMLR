@@ -1,0 +1,26 @@
+{
+  "profile": "gpt2",
+  "split_json": "../../REVISION_1/E3b_external_negation/results/openi_natural_classification_split.json",
+  "n": 979,
+  "label_counts": {
+    "negated": 556,
+    "affirmed": 423
+  },
+  "results": {
+    "hidden": {
+      "test_auroc": 0.9924,
+      "test_ba": 0.9454,
+      "n_test": 124
+    },
+    "std_code": {
+      "test_auroc": 0.99,
+      "test_ba": 0.938,
+      "n_test": 124
+    },
+    "vreg_code": {
+      "test_auroc": 0.9903,
+      "test_ba": 0.938,
+      "n_test": 124
+    }
+  }
+}

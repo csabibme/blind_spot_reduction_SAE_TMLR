@@ -1,0 +1,166 @@
+{
+  "experiment": "exp_dosage",
+  "endpoint": "single_side_value_accessibility",
+  "high_value_threshold": 6,
+  "dataset_json": "data/heldout_dosage_numeric_probe.json",
+  "features_json": "results/dosage_probe_features.json",
+  "bootstrap_n": 1000,
+  "profiles": {
+    "gpt2": {
+      "profile": "gpt2",
+      "representations": {
+        "hidden": {
+          "selected_c": 100.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.9803356481481482,
+            "balanced_accuracy": 0.9282407407407407,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_standard_code": {
+          "selected_c": 100.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.9722273662551439,
+            "balanced_accuracy": 0.9078703703703703,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_vreg_code": {
+          "selected_c": 0.01,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.8732690329218107,
+            "balanced_accuracy": 0.812037037037037,
+            "n": 1440,
+            "n_positive": 360
+          }
+        }
+      },
+      "standard_vs_vreg_test": {
+        "delta_auroc": -0.09895833333333326,
+        "delta_balanced_accuracy": -0.09583333333333333,
+        "bootstrap_delta_auroc": {
+          "point": -0.09895833333333326,
+          "lo": -0.16072334747942393,
+          "hi": 0.006165927211934186,
+          "n_clusters": 6,
+          "n_successful": 1000
+        }
+      }
+    },
+    "gemma-2-2b": {
+      "profile": "gemma-2-2b",
+      "representations": {
+        "hidden": {
+          "selected_c": 100.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.8650900205761316,
+            "balanced_accuracy": 0.8106481481481482,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_standard_code": {
+          "selected_c": 10.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.8517592592592593,
+            "balanced_accuracy": 0.7629629629629631,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_vreg_code": {
+          "selected_c": 10.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.8125064300411522,
+            "balanced_accuracy": 0.7444444444444445,
+            "n": 1440,
+            "n_positive": 360
+          }
+        }
+      },
+      "standard_vs_vreg_test": {
+        "delta_auroc": -0.03925282921810713,
+        "delta_balanced_accuracy": -0.0185185185185186,
+        "bootstrap_delta_auroc": {
+          "point": -0.03925282921810713,
+          "lo": -0.10577546296296281,
+          "hi": 0.033549929269547245,
+          "n_clusters": 6,
+          "n_successful": 1000
+        }
+      }
+    },
+    "qwen-2.5-3b": {
+      "profile": "qwen-2.5-3b",
+      "representations": {
+        "hidden": {
+          "selected_c": 0.1,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.9207844650205762,
+            "balanced_accuracy": 0.8185185185185185,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_standard_code": {
+          "selected_c": 0.01,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.912128343621399,
+            "balanced_accuracy": 0.8310185185185185,
+            "n": 1440,
+            "n_positive": 360
+          }
+        },
+        "sae_vreg_code": {
+          "selected_c": 100.0,
+          "n_train": 2440,
+          "n_dev": 1220,
+          "n_test": 1440,
+          "test": {
+            "auroc": 0.7557883230452674,
+            "balanced_accuracy": 0.7138888888888889,
+            "n": 1440,
+            "n_positive": 360
+          }
+        }
+      },
+      "standard_vs_vreg_test": {
+        "delta_auroc": -0.1563400205761316,
+        "delta_balanced_accuracy": -0.11712962962962958,
+        "bootstrap_delta_auroc": {
+          "point": -0.1563400205761316,
+          "lo": -0.28265451388888896,
+          "hi": -0.05973251028806581,
+          "n_clusters": 6,
+          "n_successful": 1000
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+{
+  "experiment": "E3b_external_negation",
+  "analysis": "openi_report_cluster_inference",
+  "status": "complete",
+  "source_analysis_json": "E3b_external_negation/results/openi_minimal_pair_cached_analysis.json",
+  "dataset_kind": "minimal_pair",
+  "primary_cluster_unit": "report_id",
+  "n_boot": 5000,
+  "seed": 42,
+  "profiles": {
+    "gpt2": {
+      "n_test_reports": 14,
+      "n_test_pairs": 32,
+      "point": {
+        "standard": {
+          "probability_l20": 0.9916645376421555,
+          "logit_l20": 15.68129261116626,
+          "geometric_l20": 17.955394115300827,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "vreg": {
+          "probability_l20": 0.994184924600625,
+          "logit_l20": 16.409764913941643,
+          "geometric_l20": 20.16584584140537,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "delta": {
+          "probability_l20": 0.002520386958469567,
+          "logit_l20": 0.7284723027753834,
+          "geometric_l20": 2.2104517261045444,
+          "pairwise_accuracy": 0.0,
+          "balanced_accuracy": 0.0,
+          "macro_f1": 0.0,
+          "auroc": 0.0
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": 0.002725225971148847,
+          "ci_low": -0.002488256629079144,
+          "ci_high": 0.008219966575700517,
+          "positive_fraction": 0.8358
+        },
+        "logit_l20": {
+          "bootstrap_mean": 0.7604760348451066,
+          "ci_low": -1.257171993757912,
+          "ci_high": 2.4983803361744696,
+          "positive_fraction": 0.7764
+        },
+        "geometric_l20": {
+          "bootstrap_mean": 2.266337225543691,
+          "ci_low": -0.1161477795692323,
+          "ci_high": 4.363029655032827,
+          "positive_fraction": 0.9714
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "macro_f1": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "auroc": {
+          "bootstrap_mean": -6.217248937900877e-19,
+          "ci_low": -1.1102230246251565e-16,
+          "ci_high": 1.1102230246251565e-16,
+          "positive_fraction": 0.0336
+        }
+      }
+    },
+    "gemma-2-2b": {
+      "n_test_reports": 14,
+      "n_test_pairs": 32,
+      "point": {
+        "standard": {
+          "probability_l20": 0.9866046202558528,
+          "logit_l20": 12.30193179014103,
+          "geometric_l20": 36.43503840016728,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "vreg": {
+          "probability_l20": 0.9794767409935944,
+          "logit_l20": 11.64132023572475,
+          "geometric_l20": 32.788514825199435,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "delta": {
+          "probability_l20": -0.007127879262258441,
+          "logit_l20": -0.6606115544162794,
+          "geometric_l20": -3.646523574967844,
+          "pairwise_accuracy": 0.0,
+          "balanced_accuracy": 0.0,
+          "macro_f1": 0.0,
+          "auroc": 0.0
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": -0.006420214582999835,
+          "ci_low": -0.014721911497537425,
+          "ci_high": -0.0003788883988025127,
+          "positive_fraction": 0.0
+        },
+        "logit_l20": {
+          "bootstrap_mean": -0.6901145312421851,
+          "ci_low": -1.4949644912352156,
+          "ci_high": -0.12876221196444781,
+          "positive_fraction": 0.0
+        },
+        "geometric_l20": {
+          "bootstrap_mean": -3.7966828054808786,
+          "ci_low": -6.153936823963512,
+          "ci_high": -2.1677180514176264,
+          "positive_fraction": 0.0
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "macro_f1": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "auroc": {
+          "bootstrap_mean": 7.327471962526033e-19,
+          "ci_low": -1.1102230246251565e-16,
+          "ci_high": 1.1102230246251565e-16,
+          "positive_fraction": 0.0446
+        }
+      }
+    },
+    "qwen-2.5-3b": {
+      "n_test_reports": 14,
+      "n_test_pairs": 32,
+      "point": {
+        "standard": {
+          "probability_l20": 0.9984924515901916,
+          "logit_l20": 36.27903380361835,
+          "geometric_l20": 36.27903380361833,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "vreg": {
+          "probability_l20": 0.9943522173359878,
+          "logit_l20": 13.4931017950334,
+          "geometric_l20": 33.59552703470907,
+          "pairwise_accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "macro_f1": 1.0,
+          "auroc": 1.0
+        },
+        "delta": {
+          "probability_l20": -0.004140234254203845,
+          "logit_l20": -22.785932008584947,
+          "geometric_l20": -2.683506768909261,
+          "pairwise_accuracy": 0.0,
+          "balanced_accuracy": 0.0,
+          "macro_f1": 0.0,
+          "auroc": 0.0
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": -0.004098394725276665,
+          "ci_low": -0.009214410083041108,
+          "ci_high": -0.0007278630169021971,
+          "positive_fraction": 0.0
+        },
+        "logit_l20": {
+          "bootstrap_mean": -24.083601157969184,
+          "ci_low": -32.26858601523071,
+          "ci_high": -21.05326715522085,
+          "positive_fraction": 0.0
+        },
+        "geometric_l20": {
+          "bootstrap_mean": -3.9590294371687196,
+          "ci_low": -10.953675571337836,
+          "ci_high": -0.7726457330501333,
+          "positive_fraction": 0.0
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "macro_f1": {
+          "bootstrap_mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "auroc": {
+          "bootstrap_mean": -5.329070518200751e-19,
+          "ci_low": -1.1102230246251565e-16,
+          "ci_high": 1.1102230246251565e-16,
+          "positive_fraction": 0.0384
+        }
+      }
+    }
+  }
+}

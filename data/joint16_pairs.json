@@ -1,0 +1,2500 @@
+{
+  "families": {
+    "semantic_substitution": {
+      "description": "Similar-meaning word swap",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The cat sat on the mat and looked around the room",
+          "The dog sat on the mat and looked around the room"
+        ],
+        [
+          "The weather today is very cat and sunny outside",
+          "The weather today is very dog and sunny outside"
+        ],
+        [
+          "She drove her cat to the nearby store quickly",
+          "She drove her dog to the nearby store quickly"
+        ],
+        [
+          "The cat ran across the green field happily",
+          "The dog ran across the green field happily"
+        ],
+        [
+          "He ate a big cat at the restaurant downtown",
+          "He ate a big dog at the restaurant downtown"
+        ],
+        [
+          "The cat examined the young patient carefully today",
+          "The dog examined the young patient carefully today"
+        ],
+        [
+          "They walked slowly through the dark cat together",
+          "They walked slowly through the dark dog together"
+        ],
+        [
+          "She wrote a long cat to her old friend",
+          "She wrote a long dog to her old friend"
+        ],
+        [
+          "The bird flew over the tall cat gracefully",
+          "The bird flew over the tall dog gracefully"
+        ],
+        [
+          "He bought a new book from the small cat",
+          "He bought a new book from the small dog"
+        ],
+        [
+          "The cat published the results in the journal",
+          "The dog published the results in the journal"
+        ],
+        [
+          "A small cat appeared near the garden gate",
+          "A small dog appeared near the garden gate"
+        ],
+        [
+          "The team visited the old cat after lunch",
+          "The team visited the old dog after lunch"
+        ],
+        [
+          "We watched the cat from the hilltop",
+          "We watched the dog from the hilltop"
+        ],
+        [
+          "The child drew a picture of a cat",
+          "The child drew a picture of a dog"
+        ],
+        [
+          "The hot sat on the mat and looked around the room",
+          "The cold sat on the mat and looked around the room"
+        ],
+        [
+          "The weather today is very hot and sunny outside",
+          "The weather today is very cold and sunny outside"
+        ],
+        [
+          "She drove her hot to the nearby store quickly",
+          "She drove her cold to the nearby store quickly"
+        ],
+        [
+          "The hot ran across the green field happily",
+          "The cold ran across the green field happily"
+        ],
+        [
+          "He ate a big hot at the restaurant downtown",
+          "He ate a big cold at the restaurant downtown"
+        ],
+        [
+          "The hot examined the young patient carefully today",
+          "The cold examined the young patient carefully today"
+        ],
+        [
+          "They walked slowly through the dark hot together",
+          "They walked slowly through the dark cold together"
+        ],
+        [
+          "She wrote a long hot to her old friend",
+          "She wrote a long cold to her old friend"
+        ],
+        [
+          "The bird flew over the tall hot gracefully",
+          "The bird flew over the tall cold gracefully"
+        ],
+        [
+          "He bought a new book from the small hot",
+          "He bought a new book from the small cold"
+        ],
+        [
+          "The hot published the results in the journal",
+          "The cold published the results in the journal"
+        ],
+        [
+          "A small hot appeared near the garden gate",
+          "A small cold appeared near the garden gate"
+        ],
+        [
+          "The team visited the old hot after lunch",
+          "The team visited the old cold after lunch"
+        ],
+        [
+          "We watched the hot from the hilltop",
+          "We watched the cold from the hilltop"
+        ],
+        [
+          "The child drew a picture of a hot",
+          "The child drew a picture of a cold"
+        ],
+        [
+          "The car sat on the mat and looked around the room",
+          "The truck sat on the mat and looked around the room"
+        ],
+        [
+          "The weather today is very car and sunny outside",
+          "The weather today is very truck and sunny outside"
+        ],
+        [
+          "She drove her car to the nearby store quickly",
+          "She drove her truck to the nearby store quickly"
+        ],
+        [
+          "The car ran across the green field happily",
+          "The truck ran across the green field happily"
+        ],
+        [
+          "He ate a big car at the restaurant downtown",
+          "He ate a big truck at the restaurant downtown"
+        ],
+        [
+          "The car examined the young patient carefully today",
+          "The truck examined the young patient carefully today"
+        ],
+        [
+          "They walked slowly through the dark car together",
+          "They walked slowly through the dark truck together"
+        ],
+        [
+          "She wrote a long car to her old friend",
+          "She wrote a long truck to her old friend"
+        ],
+        [
+          "The bird flew over the tall car gracefully",
+          "The bird flew over the tall truck gracefully"
+        ],
+        [
+          "He bought a new book from the small car",
+          "He bought a new book from the small truck"
+        ],
+        [
+          "The car published the results in the journal",
+          "The truck published the results in the journal"
+        ],
+        [
+          "A small car appeared near the garden gate",
+          "A small truck appeared near the garden gate"
+        ],
+        [
+          "The team visited the old car after lunch",
+          "The team visited the old truck after lunch"
+        ],
+        [
+          "We watched the car from the hilltop",
+          "We watched the truck from the hilltop"
+        ],
+        [
+          "The child drew a picture of a car",
+          "The child drew a picture of a truck"
+        ],
+        [
+          "The boy sat on the mat and looked around the room",
+          "The girl sat on the mat and looked around the room"
+        ],
+        [
+          "The weather today is very boy and sunny outside",
+          "The weather today is very girl and sunny outside"
+        ],
+        [
+          "She drove her boy to the nearby store quickly",
+          "She drove her girl to the nearby store quickly"
+        ],
+        [
+          "The boy ran across the green field happily",
+          "The girl ran across the green field happily"
+        ],
+        [
+          "He ate a big boy at the restaurant downtown",
+          "He ate a big girl at the restaurant downtown"
+        ]
+      ]
+    },
+    "typo": {
+      "description": "Adjacent character transposition",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The patient was admitted to the hospital yesterday morning",
+          "The patient was admitted to the hosiptal yesterday morning"
+        ],
+        [
+          "The scientists hospital the results in the journal",
+          "The scientists hosiptal the results in the journal"
+        ],
+        [
+          "She received an important hospital from the office",
+          "She received an important hosiptal from the office"
+        ],
+        [
+          "The students completed their hospital before the deadline",
+          "The students completed their hosiptal before the deadline"
+        ],
+        [
+          "He walked through the hospital garden in the morning",
+          "He walked through the hosiptal garden in the morning"
+        ],
+        [
+          "The computer processed the hospital very quickly today",
+          "The computer processed the hosiptal very quickly today"
+        ],
+        [
+          "They discussed the hospital during the meeting yesterday",
+          "They discussed the hosiptal during the meeting yesterday"
+        ],
+        [
+          "The teacher hospital the concept to the students clearly",
+          "The teacher hosiptal the concept to the students clearly"
+        ],
+        [
+          "She finished reading the hospital article last night",
+          "She finished reading the hosiptal article last night"
+        ],
+        [
+          "The engineer hospital a new bridge for the city",
+          "The engineer hosiptal a new bridge for the city"
+        ],
+        [
+          "The clinic updated the hospital records last week",
+          "The clinic updated the hosiptal records last week"
+        ],
+        [
+          "The nurse reviewed the hospital before the shift",
+          "The nurse reviewed the hosiptal before the shift"
+        ],
+        [
+          "The report described the hospital in detail",
+          "The report described the hosiptal in detail"
+        ],
+        [
+          "The team fixed the hospital issue before release",
+          "The team fixed the hosiptal issue before release"
+        ],
+        [
+          "The patient was admitted to the published yesterday morning",
+          "The patient was admitted to the pubilshed yesterday morning"
+        ],
+        [
+          "The scientists published the results in the journal",
+          "The scientists pubilshed the results in the journal"
+        ],
+        [
+          "She received an important published from the office",
+          "She received an important pubilshed from the office"
+        ],
+        [
+          "The students completed their published before the deadline",
+          "The students completed their pubilshed before the deadline"
+        ],
+        [
+          "He walked through the published garden in the morning",
+          "He walked through the pubilshed garden in the morning"
+        ],
+        [
+          "The computer processed the published very quickly today",
+          "The computer processed the pubilshed very quickly today"
+        ],
+        [
+          "They discussed the published during the meeting yesterday",
+          "They discussed the pubilshed during the meeting yesterday"
+        ],
+        [
+          "The teacher published the concept to the students clearly",
+          "The teacher pubilshed the concept to the students clearly"
+        ],
+        [
+          "She finished reading the published article last night",
+          "She finished reading the pubilshed article last night"
+        ],
+        [
+          "The engineer published a new bridge for the city",
+          "The engineer pubilshed a new bridge for the city"
+        ],
+        [
+          "The clinic updated the published records last week",
+          "The clinic updated the pubilshed records last week"
+        ],
+        [
+          "The nurse reviewed the published before the shift",
+          "The nurse reviewed the pubilshed before the shift"
+        ],
+        [
+          "The report described the published in detail",
+          "The report described the pubilshed in detail"
+        ],
+        [
+          "The team fixed the published issue before release",
+          "The team fixed the pubilshed issue before release"
+        ],
+        [
+          "The patient was admitted to the assignment yesterday morning",
+          "The patient was admitted to the assingment yesterday morning"
+        ],
+        [
+          "The scientists assignment the results in the journal",
+          "The scientists assingment the results in the journal"
+        ],
+        [
+          "She received an important assignment from the office",
+          "She received an important assingment from the office"
+        ],
+        [
+          "The students completed their assignment before the deadline",
+          "The students completed their assingment before the deadline"
+        ],
+        [
+          "He walked through the assignment garden in the morning",
+          "He walked through the assingment garden in the morning"
+        ],
+        [
+          "The computer processed the assignment very quickly today",
+          "The computer processed the assingment very quickly today"
+        ],
+        [
+          "They discussed the assignment during the meeting yesterday",
+          "They discussed the assingment during the meeting yesterday"
+        ],
+        [
+          "The teacher assignment the concept to the students clearly",
+          "The teacher assingment the concept to the students clearly"
+        ],
+        [
+          "She finished reading the assignment article last night",
+          "She finished reading the assingment article last night"
+        ],
+        [
+          "The engineer assignment a new bridge for the city",
+          "The engineer assingment a new bridge for the city"
+        ],
+        [
+          "The clinic updated the assignment records last week",
+          "The clinic updated the assingment records last week"
+        ],
+        [
+          "The nurse reviewed the assignment before the shift",
+          "The nurse reviewed the assingment before the shift"
+        ],
+        [
+          "The report described the assignment in detail",
+          "The report described the assingment in detail"
+        ],
+        [
+          "The team fixed the assignment issue before release",
+          "The team fixed the assingment issue before release"
+        ],
+        [
+          "The patient was admitted to the beautiful yesterday morning",
+          "The patient was admitted to the beatuiful yesterday morning"
+        ],
+        [
+          "The scientists beautiful the results in the journal",
+          "The scientists beatuiful the results in the journal"
+        ],
+        [
+          "She received an important beautiful from the office",
+          "She received an important beatuiful from the office"
+        ],
+        [
+          "The students completed their beautiful before the deadline",
+          "The students completed their beatuiful before the deadline"
+        ],
+        [
+          "He walked through the beautiful garden in the morning",
+          "He walked through the beatuiful garden in the morning"
+        ],
+        [
+          "The computer processed the beautiful very quickly today",
+          "The computer processed the beatuiful very quickly today"
+        ],
+        [
+          "They discussed the beautiful during the meeting yesterday",
+          "They discussed the beatuiful during the meeting yesterday"
+        ],
+        [
+          "The teacher beautiful the concept to the students clearly",
+          "The teacher beatuiful the concept to the students clearly"
+        ]
+      ]
+    },
+    "negation": {
+      "description": "Meaning reversal",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The test result is positive for the patient today",
+          "The test result is not positive for the patient today"
+        ],
+        [
+          "She can finish the project before the deadline easily",
+          "She cannot finish the project before the deadline easily"
+        ],
+        [
+          "The drug is safe for use in elderly patients",
+          "The drug is not safe for use in elderly patients"
+        ],
+        [
+          "He will attend the important meeting tomorrow morning",
+          "He will not attend the important meeting tomorrow morning"
+        ],
+        [
+          "The system is working correctly after the update",
+          "The system is not working correctly after the update"
+        ],
+        [
+          "They have completed all the required tests successfully",
+          "They have not completed all the required tests successfully"
+        ],
+        [
+          "The patient is responding well to the treatment now",
+          "The patient is not responding well to the treatment now"
+        ],
+        [
+          "This solution is effective for solving the problem",
+          "This solution is not effective for solving the problem"
+        ],
+        [
+          "The data is consistent with the previous findings",
+          "The data is not consistent with the previous findings"
+        ],
+        [
+          "The results are significant at the reported level",
+          "The results are not significant at the reported level"
+        ],
+        [
+          "The device is approved for clinical use",
+          "The device is not approved for clinical use"
+        ],
+        [
+          "The nurse can administer the medication now",
+          "The nurse cannot administer the medication now"
+        ],
+        [
+          "The trial will continue until next month",
+          "The trial will not continue until next month"
+        ],
+        [
+          "The sensor is calibrated for this range",
+          "The sensor is not calibrated for this range"
+        ],
+        [
+          "The protocol is valid under current guidelines",
+          "The protocol is not valid under current guidelines"
+        ],
+        [
+          "The patient has recovered from the infection",
+          "The patient has not recovered from the infection"
+        ],
+        [
+          "The model is accurate on the validation set",
+          "The model is not accurate on the validation set"
+        ],
+        [
+          "The alarm is triggered by high pressure",
+          "The alarm is not triggered by high pressure"
+        ],
+        [
+          "The dose is sufficient for the symptoms",
+          "The dose is not sufficient for the symptoms"
+        ],
+        [
+          "The scan is clear of acute findings",
+          "The scan is not clear of acute findings"
+        ],
+        [
+          "The test result is positive for the patient today",
+          "The test result is not positive for the patient today"
+        ],
+        [
+          "She can finish the project before the deadline easily",
+          "She cannot finish the project before the deadline easily"
+        ],
+        [
+          "The drug is safe for use in elderly patients",
+          "The drug is not safe for use in elderly patients"
+        ],
+        [
+          "He will attend the important meeting tomorrow morning",
+          "He will not attend the important meeting tomorrow morning"
+        ],
+        [
+          "The system is working correctly after the update",
+          "The system is not working correctly after the update"
+        ],
+        [
+          "They have completed all the required tests successfully",
+          "They have not completed all the required tests successfully"
+        ],
+        [
+          "The patient is responding well to the treatment now",
+          "The patient is not responding well to the treatment now"
+        ],
+        [
+          "This solution is effective for solving the problem",
+          "This solution is not effective for solving the problem"
+        ],
+        [
+          "The data is consistent with the previous findings",
+          "The data is not consistent with the previous findings"
+        ],
+        [
+          "The results are significant at the reported level",
+          "The results are not significant at the reported level"
+        ],
+        [
+          "The device is approved for clinical use",
+          "The device is not approved for clinical use"
+        ],
+        [
+          "The nurse can administer the medication now",
+          "The nurse cannot administer the medication now"
+        ],
+        [
+          "The trial will continue until next month",
+          "The trial will not continue until next month"
+        ],
+        [
+          "The sensor is calibrated for this range",
+          "The sensor is not calibrated for this range"
+        ],
+        [
+          "The protocol is valid under current guidelines",
+          "The protocol is not valid under current guidelines"
+        ],
+        [
+          "The patient has recovered from the infection",
+          "The patient has not recovered from the infection"
+        ],
+        [
+          "The model is accurate on the validation set",
+          "The model is not accurate on the validation set"
+        ],
+        [
+          "The alarm is triggered by high pressure",
+          "The alarm is not triggered by high pressure"
+        ],
+        [
+          "The dose is sufficient for the symptoms",
+          "The dose is not sufficient for the symptoms"
+        ],
+        [
+          "The scan is clear of acute findings",
+          "The scan is not clear of acute findings"
+        ],
+        [
+          "The test result is positive for the patient today",
+          "The test result is not positive for the patient today"
+        ],
+        [
+          "She can finish the project before the deadline easily",
+          "She cannot finish the project before the deadline easily"
+        ],
+        [
+          "The drug is safe for use in elderly patients",
+          "The drug is not safe for use in elderly patients"
+        ],
+        [
+          "He will attend the important meeting tomorrow morning",
+          "He will not attend the important meeting tomorrow morning"
+        ],
+        [
+          "The system is working correctly after the update",
+          "The system is not working correctly after the update"
+        ],
+        [
+          "They have completed all the required tests successfully",
+          "They have not completed all the required tests successfully"
+        ],
+        [
+          "The patient is responding well to the treatment now",
+          "The patient is not responding well to the treatment now"
+        ],
+        [
+          "This solution is effective for solving the problem",
+          "This solution is not effective for solving the problem"
+        ],
+        [
+          "The data is consistent with the previous findings",
+          "The data is not consistent with the previous findings"
+        ],
+        [
+          "The results are significant at the reported level",
+          "The results are not significant at the reported level"
+        ]
+      ]
+    },
+    "synonym": {
+      "description": "True synonym swap",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The building is very big and impressive to visitors",
+          "The building is very large and impressive to visitors"
+        ],
+        [
+          "She ran very big to catch the departing bus",
+          "She ran very large to catch the departing bus"
+        ],
+        [
+          "He was big to hear the wonderful news today",
+          "He was large to hear the wonderful news today"
+        ],
+        [
+          "The task was very big to complete on time",
+          "The task was very large to complete on time"
+        ],
+        [
+          "The old house was very big in the sunlight",
+          "The old house was very large in the sunlight"
+        ],
+        [
+          "The answer was very big and easy to understand",
+          "The answer was very large and easy to understand"
+        ],
+        [
+          "The road was very big and well maintained overall",
+          "The road was very large and well maintained overall"
+        ],
+        [
+          "The room felt big after the renovation",
+          "The room felt large after the renovation"
+        ],
+        [
+          "The story was big enough for children",
+          "The story was large enough for children"
+        ],
+        [
+          "The water in the lake was big this morning",
+          "The water in the lake was large this morning"
+        ],
+        [
+          "The building is very fast and impressive to visitors",
+          "The building is very quick and impressive to visitors"
+        ],
+        [
+          "She ran very fast to catch the departing bus",
+          "She ran very quick to catch the departing bus"
+        ],
+        [
+          "He was fast to hear the wonderful news today",
+          "He was quick to hear the wonderful news today"
+        ],
+        [
+          "The task was very fast to complete on time",
+          "The task was very quick to complete on time"
+        ],
+        [
+          "The old house was very fast in the sunlight",
+          "The old house was very quick in the sunlight"
+        ],
+        [
+          "The answer was very fast and easy to understand",
+          "The answer was very quick and easy to understand"
+        ],
+        [
+          "The road was very fast and well maintained overall",
+          "The road was very quick and well maintained overall"
+        ],
+        [
+          "The room felt fast after the renovation",
+          "The room felt quick after the renovation"
+        ],
+        [
+          "The story was fast enough for children",
+          "The story was quick enough for children"
+        ],
+        [
+          "The water in the lake was fast this morning",
+          "The water in the lake was quick this morning"
+        ],
+        [
+          "The building is very happy and impressive to visitors",
+          "The building is very glad and impressive to visitors"
+        ],
+        [
+          "She ran very happy to catch the departing bus",
+          "She ran very glad to catch the departing bus"
+        ],
+        [
+          "He was happy to hear the wonderful news today",
+          "He was glad to hear the wonderful news today"
+        ],
+        [
+          "The task was very happy to complete on time",
+          "The task was very glad to complete on time"
+        ],
+        [
+          "The old house was very happy in the sunlight",
+          "The old house was very glad in the sunlight"
+        ],
+        [
+          "The answer was very happy and easy to understand",
+          "The answer was very glad and easy to understand"
+        ],
+        [
+          "The road was very happy and well maintained overall",
+          "The road was very glad and well maintained overall"
+        ],
+        [
+          "The room felt happy after the renovation",
+          "The room felt glad after the renovation"
+        ],
+        [
+          "The story was happy enough for children",
+          "The story was glad enough for children"
+        ],
+        [
+          "The water in the lake was happy this morning",
+          "The water in the lake was glad this morning"
+        ],
+        [
+          "The building is very hard and impressive to visitors",
+          "The building is very difficult and impressive to visitors"
+        ],
+        [
+          "She ran very hard to catch the departing bus",
+          "She ran very difficult to catch the departing bus"
+        ],
+        [
+          "He was hard to hear the wonderful news today",
+          "He was difficult to hear the wonderful news today"
+        ],
+        [
+          "The task was very hard to complete on time",
+          "The task was very difficult to complete on time"
+        ],
+        [
+          "The old house was very hard in the sunlight",
+          "The old house was very difficult in the sunlight"
+        ],
+        [
+          "The answer was very hard and easy to understand",
+          "The answer was very difficult and easy to understand"
+        ],
+        [
+          "The road was very hard and well maintained overall",
+          "The road was very difficult and well maintained overall"
+        ],
+        [
+          "The room felt hard after the renovation",
+          "The room felt difficult after the renovation"
+        ],
+        [
+          "The story was hard enough for children",
+          "The story was difficult enough for children"
+        ],
+        [
+          "The water in the lake was hard this morning",
+          "The water in the lake was difficult this morning"
+        ],
+        [
+          "The building is very pretty and impressive to visitors",
+          "The building is very beautiful and impressive to visitors"
+        ],
+        [
+          "She ran very pretty to catch the departing bus",
+          "She ran very beautiful to catch the departing bus"
+        ],
+        [
+          "He was pretty to hear the wonderful news today",
+          "He was beautiful to hear the wonderful news today"
+        ],
+        [
+          "The task was very pretty to complete on time",
+          "The task was very beautiful to complete on time"
+        ],
+        [
+          "The old house was very pretty in the sunlight",
+          "The old house was very beautiful in the sunlight"
+        ],
+        [
+          "The answer was very pretty and easy to understand",
+          "The answer was very beautiful and easy to understand"
+        ],
+        [
+          "The road was very pretty and well maintained overall",
+          "The road was very beautiful and well maintained overall"
+        ],
+        [
+          "The room felt pretty after the renovation",
+          "The room felt beautiful after the renovation"
+        ],
+        [
+          "The story was pretty enough for children",
+          "The story was beautiful enough for children"
+        ],
+        [
+          "The water in the lake was pretty this morning",
+          "The water in the lake was beautiful this morning"
+        ]
+      ]
+    },
+    "number_swap": {
+      "description": "Numeric value change",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The patient received 3 doses of the medication daily",
+          "The patient received 8 doses of the medication daily"
+        ],
+        [
+          "There are 3 hospitals in the northern district now",
+          "There are 8 hospitals in the northern district now"
+        ],
+        [
+          "The study included 3 participants from the city",
+          "The study included 8 participants from the city"
+        ],
+        [
+          "She takes 3 pills every morning before breakfast",
+          "She takes 8 pills every morning before breakfast"
+        ],
+        [
+          "The treatment lasted for 3 weeks in total",
+          "The treatment lasted for 8 weeks in total"
+        ],
+        [
+          "He scored 3 points on the final examination",
+          "He scored 8 points on the final examination"
+        ],
+        [
+          "The building has 3 floors and a basement level",
+          "The building has 8 floors and a basement level"
+        ],
+        [
+          "They need 3 volunteers for the research study",
+          "They need 8 volunteers for the research study"
+        ],
+        [
+          "The temperature reached 3 degrees in the afternoon",
+          "The temperature reached 8 degrees in the afternoon"
+        ],
+        [
+          "She waited for 3 minutes at the bus stop",
+          "She waited for 8 minutes at the bus stop"
+        ],
+        [
+          "The ward has 3 beds available for new admissions",
+          "The ward has 8 beds available for new admissions"
+        ],
+        [
+          "The infusion rate was set to 3 milliliters per hour",
+          "The infusion rate was set to 8 milliliters per hour"
+        ],
+        [
+          "Blood pressure was recorded as 3 over 80",
+          "Blood pressure was recorded as 8 over 80"
+        ],
+        [
+          "The child was given 3 milligrams of the antibiotic twice daily",
+          "The child was given 8 milligrams of the antibiotic twice daily"
+        ],
+        [
+          "The lab reported a glucose level of 3 mg per deciliter",
+          "The lab reported a glucose level of 8 mg per deciliter"
+        ],
+        [
+          "The patient received 5 doses of the medication daily",
+          "The patient received 9 doses of the medication daily"
+        ],
+        [
+          "There are 5 hospitals in the northern district now",
+          "There are 9 hospitals in the northern district now"
+        ],
+        [
+          "The study included 5 participants from the city",
+          "The study included 9 participants from the city"
+        ],
+        [
+          "She takes 5 pills every morning before breakfast",
+          "She takes 9 pills every morning before breakfast"
+        ],
+        [
+          "The treatment lasted for 5 weeks in total",
+          "The treatment lasted for 9 weeks in total"
+        ],
+        [
+          "He scored 5 points on the final examination",
+          "He scored 9 points on the final examination"
+        ],
+        [
+          "The building has 5 floors and a basement level",
+          "The building has 9 floors and a basement level"
+        ],
+        [
+          "They need 5 volunteers for the research study",
+          "They need 9 volunteers for the research study"
+        ],
+        [
+          "The temperature reached 5 degrees in the afternoon",
+          "The temperature reached 9 degrees in the afternoon"
+        ],
+        [
+          "She waited for 5 minutes at the bus stop",
+          "She waited for 9 minutes at the bus stop"
+        ],
+        [
+          "The ward has 5 beds available for new admissions",
+          "The ward has 9 beds available for new admissions"
+        ],
+        [
+          "The infusion rate was set to 5 milliliters per hour",
+          "The infusion rate was set to 9 milliliters per hour"
+        ],
+        [
+          "Blood pressure was recorded as 5 over 80",
+          "Blood pressure was recorded as 9 over 80"
+        ],
+        [
+          "The child was given 5 milligrams of the antibiotic twice daily",
+          "The child was given 9 milligrams of the antibiotic twice daily"
+        ],
+        [
+          "The lab reported a glucose level of 5 mg per deciliter",
+          "The lab reported a glucose level of 9 mg per deciliter"
+        ],
+        [
+          "The patient received 100 doses of the medication daily",
+          "The patient received 200 doses of the medication daily"
+        ],
+        [
+          "There are 100 hospitals in the northern district now",
+          "There are 200 hospitals in the northern district now"
+        ],
+        [
+          "The study included 100 participants from the city",
+          "The study included 200 participants from the city"
+        ],
+        [
+          "She takes 100 pills every morning before breakfast",
+          "She takes 200 pills every morning before breakfast"
+        ],
+        [
+          "The treatment lasted for 100 weeks in total",
+          "The treatment lasted for 200 weeks in total"
+        ],
+        [
+          "He scored 100 points on the final examination",
+          "He scored 200 points on the final examination"
+        ],
+        [
+          "The building has 100 floors and a basement level",
+          "The building has 200 floors and a basement level"
+        ],
+        [
+          "They need 100 volunteers for the research study",
+          "They need 200 volunteers for the research study"
+        ],
+        [
+          "The temperature reached 100 degrees in the afternoon",
+          "The temperature reached 200 degrees in the afternoon"
+        ],
+        [
+          "She waited for 100 minutes at the bus stop",
+          "She waited for 200 minutes at the bus stop"
+        ],
+        [
+          "The ward has 100 beds available for new admissions",
+          "The ward has 200 beds available for new admissions"
+        ],
+        [
+          "The infusion rate was set to 100 milliliters per hour",
+          "The infusion rate was set to 200 milliliters per hour"
+        ],
+        [
+          "Blood pressure was recorded as 100 over 80",
+          "Blood pressure was recorded as 200 over 80"
+        ],
+        [
+          "The child was given 100 milligrams of the antibiotic twice daily",
+          "The child was given 200 milligrams of the antibiotic twice daily"
+        ],
+        [
+          "The lab reported a glucose level of 100 mg per deciliter",
+          "The lab reported a glucose level of 200 mg per deciliter"
+        ],
+        [
+          "The patient received 2 doses of the medication daily",
+          "The patient received 7 doses of the medication daily"
+        ],
+        [
+          "There are 2 hospitals in the northern district now",
+          "There are 7 hospitals in the northern district now"
+        ],
+        [
+          "The study included 2 participants from the city",
+          "The study included 7 participants from the city"
+        ],
+        [
+          "She takes 2 pills every morning before breakfast",
+          "She takes 7 pills every morning before breakfast"
+        ],
+        [
+          "The treatment lasted for 2 weeks in total",
+          "The treatment lasted for 7 weeks in total"
+        ]
+      ]
+    },
+    "word_order": {
+      "description": "Adjacent word swap",
+      "n_pairs": 50,
+      "pairs": [
+        [
+          "The black cat sat quietly on the warm mat",
+          "The cat black sat quietly on the warm mat"
+        ],
+        [
+          "The black cat walked slowly down the empty street",
+          "The cat black walked slowly down the empty street"
+        ],
+        [
+          "The black cat played happily in the green garden",
+          "The cat black played happily in the green garden"
+        ],
+        [
+          "The black cat studied hard for the final exam",
+          "The cat black studied hard for the final exam"
+        ],
+        [
+          "We saw the black cat near the river bank",
+          "We saw the cat black near the river bank"
+        ],
+        [
+          "The old man sat quietly on the warm mat",
+          "The man old sat quietly on the warm mat"
+        ],
+        [
+          "The old man walked slowly down the empty street",
+          "The man old walked slowly down the empty street"
+        ],
+        [
+          "The old man played happily in the green garden",
+          "The man old played happily in the green garden"
+        ],
+        [
+          "The old man studied hard for the final exam",
+          "The man old studied hard for the final exam"
+        ],
+        [
+          "We saw the old man near the river bank",
+          "We saw the man old near the river bank"
+        ],
+        [
+          "The small child sat quietly on the warm mat",
+          "The child small sat quietly on the warm mat"
+        ],
+        [
+          "The small child walked slowly down the empty street",
+          "The child small walked slowly down the empty street"
+        ],
+        [
+          "The small child played happily in the green garden",
+          "The child small played happily in the green garden"
+        ],
+        [
+          "The small child studied hard for the final exam",
+          "The child small studied hard for the final exam"
+        ],
+        [
+          "We saw the small child near the river bank",
+          "We saw the child small near the river bank"
+        ],
+        [
+          "The bright sun sat quietly on the warm mat",
+          "The sun bright sat quietly on the warm mat"
+        ],
+        [
+          "The bright sun walked slowly down the empty street",
+          "The sun bright walked slowly down the empty street"
+        ],
+        [
+          "The bright sun played happily in the green garden",
+          "The sun bright played happily in the green garden"
+        ],
+        [
+          "The bright sun studied hard for the final exam",
+          "The sun bright studied hard for the final exam"
+        ],
+        [
+          "We saw the bright sun near the river bank",
+          "We saw the sun bright near the river bank"
+        ],
+        [
+          "The young student sat quietly on the warm mat",
+          "The student young sat quietly on the warm mat"
+        ],
+        [
+          "The young student walked slowly down the empty street",
+          "The student young walked slowly down the empty street"
+        ],
+        [
+          "The young student played happily in the green garden",
+          "The student young played happily in the green garden"
+        ],
+        [
+          "The young student studied hard for the final exam",
+          "The student young studied hard for the final exam"
+        ],
+        [
+          "We saw the young student near the river bank",
+          "We saw the student young near the river bank"
+        ],
+        [
+          "The red car sat quietly on the warm mat",
+          "The car red sat quietly on the warm mat"
+        ],
+        [
+          "The red car walked slowly down the empty street",
+          "The car red walked slowly down the empty street"
+        ],
+        [
+          "The red car played happily in the green garden",
+          "The car red played happily in the green garden"
+        ],
+        [
+          "The red car studied hard for the final exam",
+          "The car red studied hard for the final exam"
+        ],
+        [
+          "We saw the red car near the river bank",
+          "We saw the car red near the river bank"
+        ],
+        [
+          "The tall tree sat quietly on the warm mat",
+          "The tree tall sat quietly on the warm mat"
+        ],
+        [
+          "The tall tree walked slowly down the empty street",
+          "The tree tall walked slowly down the empty street"
+        ],
+        [
+          "The tall tree played happily in the green garden",
+          "The tree tall played happily in the green garden"
+        ],
+        [
+          "The tall tree studied hard for the final exam",
+          "The tree tall studied hard for the final exam"
+        ],
+        [
+          "We saw the tall tree near the river bank",
+          "We saw the tree tall near the river bank"
+        ],
+        [
+          "The new phone sat quietly on the warm mat",
+          "The phone new sat quietly on the warm mat"
+        ],
+        [
+          "The new phone walked slowly down the empty street",
+          "The phone new walked slowly down the empty street"
+        ],
+        [
+          "The new phone played happily in the green garden",
+          "The phone new played happily in the green garden"
+        ],
+        [
+          "The new phone studied hard for the final exam",
+          "The phone new studied hard for the final exam"
+        ],
+        [
+          "We saw the new phone near the river bank",
+          "We saw the phone new near the river bank"
+        ],
+        [
+          "The dark room sat quietly on the warm mat",
+          "The room dark sat quietly on the warm mat"
+        ],
+        [
+          "The dark room walked slowly down the empty street",
+          "The room dark walked slowly down the empty street"
+        ],
+        [
+          "The dark room played happily in the green garden",
+          "The room dark played happily in the green garden"
+        ],
+        [
+          "The dark room studied hard for the final exam",
+          "The room dark studied hard for the final exam"
+        ],
+        [
+          "We saw the dark room near the river bank",
+          "We saw the room dark near the river bank"
+        ],
+        [
+          "The long book sat quietly on the warm mat",
+          "The book long sat quietly on the warm mat"
+        ],
+        [
+          "The long book walked slowly down the empty street",
+          "The book long walked slowly down the empty street"
+        ],
+        [
+          "The long book played happily in the green garden",
+          "The book long played happily in the green garden"
+        ],
+        [
+          "The long book studied hard for the final exam",
+          "The book long studied hard for the final exam"
+        ],
+        [
+          "We saw the long book near the river bank",
+          "We saw the book long near the river bank"
+        ]
+      ]
+    },
+    "unit_of_measure": {
+      "description": "Change the unit of measure (mg\u2192g, cm\u2192mm, etc.)",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The dosage is 500 mg administered orally",
+          "The dosage is 500 g administered orally"
+        ],
+        [
+          "Inject 0.5 mL subcutaneously",
+          "Inject 0.5 L subcutaneously"
+        ],
+        [
+          "The tumor measured 2.3 cm on imaging",
+          "The tumor measured 2.3 mm on imaging"
+        ],
+        [
+          "Blood glucose was 120 mg per dL",
+          "Blood glucose was 120 g per dL"
+        ],
+        [
+          "Administer 10 mL of saline solution",
+          "Administer 10 L of saline solution"
+        ],
+        [
+          "The lesion is 15 mm in diameter",
+          "The lesion is 15 cm in diameter"
+        ],
+        [
+          "Heart rate was 72 beats per minute",
+          "Heart rate was 72 beats per second"
+        ],
+        [
+          "Temperature was 37.2 degrees Celsius",
+          "Temperature was 37.2 degrees Fahrenheit"
+        ],
+        [
+          "Patient weighs 70 kg currently",
+          "Patient weighs 70 lb currently"
+        ],
+        [
+          "Infusion rate set to 100 mL per hour",
+          "Infusion rate set to 100 L per hour"
+        ],
+        [
+          "The wound is 3 cm long approximately",
+          "The wound is 3 mm long approximately"
+        ],
+        [
+          "Prescribe 250 mg twice daily orally",
+          "Prescribe 250 g twice daily orally"
+        ],
+        [
+          "Hemoglobin level is 14 g per dL",
+          "Hemoglobin level is 14 mg per dL"
+        ],
+        [
+          "Platelet count is 250 thousand per uL",
+          "Platelet count is 250 million per uL"
+        ],
+        [
+          "The cyst is 4.5 cm in diameter",
+          "The cyst is 4.5 mm in diameter"
+        ],
+        [
+          "Oxygen saturation was 98 percent today",
+          "Oxygen saturation was 98 per mille today"
+        ],
+        [
+          "Serum creatinine is 1.2 mg per dL",
+          "Serum creatinine is 1.2 g per dL"
+        ],
+        [
+          "BMI calculated at 24.5 kg per m2",
+          "BMI calculated at 24.5 lb per m2"
+        ],
+        [
+          "Pain score reported as 7 out of 10",
+          "Pain score reported as 7 out of 100"
+        ],
+        [
+          "White blood cell count 8.5 thousand per uL",
+          "White blood cell count 8.5 million per uL"
+        ],
+        [
+          "Albumin level is 3.8 g per dL",
+          "Albumin level is 3.8 mg per dL"
+        ],
+        [
+          "The fracture gap is 2 mm wide",
+          "The fracture gap is 2 cm wide"
+        ],
+        [
+          "Calcium level is 9.5 mg per dL",
+          "Calcium level is 9.5 g per dL"
+        ],
+        [
+          "Respiratory rate was 18 breaths per minute",
+          "Respiratory rate was 18 breaths per second"
+        ],
+        [
+          "Potassium level is 4.2 mEq per L",
+          "Potassium level is 4.2 Eq per L"
+        ],
+        [
+          "INR value was 1.2 at last check",
+          "INR value was 12 at last check"
+        ],
+        [
+          "Bilirubin total is 0.8 mg per dL",
+          "Bilirubin total is 0.8 g per dL"
+        ],
+        [
+          "Urine output was 1500 mL in 24 hours",
+          "Urine output was 1500 L in 24 hours"
+        ],
+        [
+          "Troponin level was 0.04 ng per mL",
+          "Troponin level was 0.04 mg per mL"
+        ],
+        [
+          "GFR estimated at 90 mL per minute",
+          "GFR estimated at 90 L per minute"
+        ]
+      ]
+    },
+    "gender_swap": {
+      "description": "Swap gender pronouns (he\u2194she, his\u2194her)",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The patient reported he felt dizzy today",
+          "The patient reported she felt dizzy today"
+        ],
+        [
+          "She was admitted to the ward yesterday",
+          "He was admitted to the ward yesterday"
+        ],
+        [
+          "His blood pressure was elevated significantly",
+          "Her blood pressure was elevated significantly"
+        ],
+        [
+          "The doctor told her to rest completely",
+          "The doctor told him to rest completely"
+        ],
+        [
+          "He has a history of heart disease",
+          "She has a history of heart disease"
+        ],
+        [
+          "She complained of severe chest pain",
+          "He complained of severe chest pain"
+        ],
+        [
+          "His medication was adjusted last week",
+          "Her medication was adjusted last week"
+        ],
+        [
+          "She is scheduled for surgery tomorrow morning",
+          "He is scheduled for surgery tomorrow morning"
+        ],
+        [
+          "He denied any allergies to medications",
+          "She denied any allergies to medications"
+        ],
+        [
+          "Her lab results came back normal today",
+          "His lab results came back normal today"
+        ],
+        [
+          "He was discharged in stable condition",
+          "She was discharged in stable condition"
+        ],
+        [
+          "She experienced nausea after the treatment",
+          "He experienced nausea after the treatment"
+        ],
+        [
+          "His wound is healing well so far",
+          "Her wound is healing well so far"
+        ],
+        [
+          "She has been compliant with her medication",
+          "He has been compliant with his medication"
+        ],
+        [
+          "He reported improvement in his symptoms",
+          "She reported improvement in her symptoms"
+        ],
+        [
+          "Her oxygen levels dropped during the night",
+          "His oxygen levels dropped during the night"
+        ],
+        [
+          "He was referred to a specialist today",
+          "She was referred to a specialist today"
+        ],
+        [
+          "She underwent a successful procedure yesterday",
+          "He underwent a successful procedure yesterday"
+        ],
+        [
+          "His appetite has improved since last visit",
+          "Her appetite has improved since last visit"
+        ],
+        [
+          "She was given antibiotics for the infection",
+          "He was given antibiotics for the infection"
+        ],
+        [
+          "He showed signs of respiratory distress today",
+          "She showed signs of respiratory distress today"
+        ],
+        [
+          "Her temperature returned to normal this morning",
+          "His temperature returned to normal this morning"
+        ],
+        [
+          "He requires further diagnostic testing soon",
+          "She requires further diagnostic testing soon"
+        ],
+        [
+          "She tolerated the procedure well overall",
+          "He tolerated the procedure well overall"
+        ],
+        [
+          "His family history includes diabetes mellitus",
+          "Her family history includes diabetes mellitus"
+        ],
+        [
+          "She was placed on a cardiac monitor",
+          "He was placed on a cardiac monitor"
+        ],
+        [
+          "He is recovering from the surgery well",
+          "She is recovering from the surgery well"
+        ],
+        [
+          "Her condition is stable at this time",
+          "His condition is stable at this time"
+        ],
+        [
+          "He presented with acute abdominal pain today",
+          "She presented with acute abdominal pain today"
+        ],
+        [
+          "She has no known drug allergies currently",
+          "He has no known drug allergies currently"
+        ]
+      ]
+    },
+    "drug_name_swap": {
+      "description": "Replace one drug name with a different drug",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The patient was prescribed metformin daily",
+          "The patient was prescribed lisinopril daily"
+        ],
+        [
+          "Start ibuprofen 400 mg three times daily",
+          "Start acetaminophen 400 mg three times daily"
+        ],
+        [
+          "Patient is currently taking warfarin for clots",
+          "Patient is currently taking aspirin for clots"
+        ],
+        [
+          "Discontinue amoxicillin and start azithromycin instead",
+          "Discontinue azithromycin and start amoxicillin instead"
+        ],
+        [
+          "She was given morphine for pain relief",
+          "She was given fentanyl for pain relief"
+        ],
+        [
+          "Prescribe omeprazole 20 mg before breakfast",
+          "Prescribe pantoprazole 20 mg before breakfast"
+        ],
+        [
+          "He takes atorvastatin for high cholesterol levels",
+          "He takes rosuvastatin for high cholesterol levels"
+        ],
+        [
+          "Switch from insulin to metformin if possible",
+          "Switch from metformin to insulin if possible"
+        ],
+        [
+          "The patient is on amlodipine for hypertension",
+          "The patient is on losartan for hypertension"
+        ],
+        [
+          "Administer ceftriaxone 1 g intravenously now",
+          "Administer vancomycin 1 g intravenously now"
+        ],
+        [
+          "She takes sertraline for depression currently",
+          "She takes fluoxetine for depression currently"
+        ],
+        [
+          "Continue prednisone 10 mg daily as prescribed",
+          "Continue dexamethasone 10 mg daily as prescribed"
+        ],
+        [
+          "Patient was started on gabapentin for pain",
+          "Patient was started on pregabalin for pain"
+        ],
+        [
+          "He is allergic to penicillin since childhood",
+          "He is allergic to cephalosporin since childhood"
+        ],
+        [
+          "Prescribe ciprofloxacin 500 mg twice daily orally",
+          "Prescribe levofloxacin 500 mg twice daily orally"
+        ],
+        [
+          "She was given ondansetron for the nausea",
+          "She was given metoclopramide for the nausea"
+        ],
+        [
+          "Start enoxaparin 40 mg subcutaneously daily",
+          "Start heparin 40 mg subcutaneously daily"
+        ],
+        [
+          "He takes lisinopril 10 mg every morning",
+          "He takes enalapril 10 mg every morning"
+        ],
+        [
+          "Patient receives chemotherapy with cisplatin weekly",
+          "Patient receives chemotherapy with carboplatin weekly"
+        ],
+        [
+          "Administer diazepam 5 mg for the anxiety",
+          "Administer lorazepam 5 mg for the anxiety"
+        ],
+        [
+          "She was prescribed tramadol for moderate pain",
+          "She was prescribed codeine for moderate pain"
+        ],
+        [
+          "Continue furosemide 40 mg daily for edema",
+          "Continue hydrochlorothiazide 40 mg daily for edema"
+        ],
+        [
+          "He takes metoprolol for heart rate control",
+          "He takes propranolol for heart rate control"
+        ],
+        [
+          "Patient is on clopidogrel after the stent",
+          "Patient is on ticagrelor after the stent"
+        ],
+        [
+          "She was given epinephrine for the reaction",
+          "She was given norepinephrine for the reaction"
+        ],
+        [
+          "Prescribe azithromycin 250 mg for five days",
+          "Prescribe clarithromycin 250 mg for five days"
+        ],
+        [
+          "He takes tamsulosin for urinary symptoms daily",
+          "He takes finasteride for urinary symptoms daily"
+        ],
+        [
+          "Start levothyroxine 50 mcg daily for hypothyroidism",
+          "Start methimazole 50 mcg daily for hypothyroidism"
+        ],
+        [
+          "Patient receives rituximab infusion every month",
+          "Patient receives trastuzumab infusion every month"
+        ],
+        [
+          "She takes escitalopram 10 mg for anxiety",
+          "She takes paroxetine 10 mg for anxiety"
+        ]
+      ]
+    },
+    "date_time_change": {
+      "description": "Change date, time, or temporal reference",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The surgery is scheduled for Monday morning",
+          "The surgery is scheduled for Friday morning"
+        ],
+        [
+          "Patient was admitted on January 15 this year",
+          "Patient was admitted on March 15 this year"
+        ],
+        [
+          "Follow up appointment in 2 weeks from now",
+          "Follow up appointment in 6 weeks from now"
+        ],
+        [
+          "Symptoms started 3 days ago approximately",
+          "Symptoms started 3 weeks ago approximately"
+        ],
+        [
+          "Last blood test was done in December",
+          "Last blood test was done in August"
+        ],
+        [
+          "She has been on medication for 6 months",
+          "She has been on medication for 6 years"
+        ],
+        [
+          "The next dose is due at 8 AM",
+          "The next dose is due at 8 PM"
+        ],
+        [
+          "Patient was diagnosed in 2019 with cancer",
+          "Patient was diagnosed in 2023 with cancer"
+        ],
+        [
+          "Review results in 48 hours from now",
+          "Review results in 48 days from now"
+        ],
+        [
+          "He was born on March 5 1990",
+          "He was born on March 5 1980"
+        ],
+        [
+          "Surgery lasted approximately 3 hours total",
+          "Surgery lasted approximately 3 minutes total"
+        ],
+        [
+          "Medication changed 2 days ago by doctor",
+          "Medication changed 2 months ago by doctor"
+        ],
+        [
+          "She visited the clinic last Tuesday afternoon",
+          "She visited the clinic last Saturday afternoon"
+        ],
+        [
+          "Start treatment on the first of June",
+          "Start treatment on the first of October"
+        ],
+        [
+          "The infection cleared within 7 days completely",
+          "The infection cleared within 7 months completely"
+        ],
+        [
+          "Patient returns for checkup every 3 months",
+          "Patient returns for checkup every 3 weeks"
+        ],
+        [
+          "Symptoms worsen in the morning hours usually",
+          "Symptoms worsen in the evening hours usually"
+        ],
+        [
+          "He completed radiation therapy in April",
+          "He completed radiation therapy in November"
+        ],
+        [
+          "The cast should be removed in 6 weeks",
+          "The cast should be removed in 6 days"
+        ],
+        [
+          "She has annual screenings since 2015 regularly",
+          "She has annual screenings since 2021 regularly"
+        ],
+        [
+          "Take the medication at noon every day",
+          "Take the medication at midnight every day"
+        ],
+        [
+          "Lab results expected by Wednesday this week",
+          "Lab results expected by Monday this week"
+        ],
+        [
+          "The wound appeared approximately 5 days ago",
+          "The wound appeared approximately 5 hours ago"
+        ],
+        [
+          "Follow up in 1 month after the procedure",
+          "Follow up in 1 year after the procedure"
+        ],
+        [
+          "He was hospitalized for 10 days total",
+          "He was hospitalized for 10 weeks total"
+        ],
+        [
+          "The rash started on Sunday last week",
+          "The rash started on Wednesday last week"
+        ],
+        [
+          "Prescription valid for 30 days from today",
+          "Prescription valid for 30 months from today"
+        ],
+        [
+          "She gave birth in September last year",
+          "She gave birth in February last year"
+        ],
+        [
+          "Treatment cycle repeats every 21 days exactly",
+          "Treatment cycle repeats every 21 weeks exactly"
+        ],
+        [
+          "The biopsy was performed 2 weeks ago",
+          "The biopsy was performed 2 years ago"
+        ]
+      ]
+    },
+    "body_part_swap": {
+      "description": "Swap left\u2194right or change body part reference",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The patient has pain in the left knee",
+          "The patient has pain in the right knee"
+        ],
+        [
+          "Fracture detected in the right femur today",
+          "Fracture detected in the left femur today"
+        ],
+        [
+          "Swelling observed in the left ankle joint",
+          "Swelling observed in the right ankle joint"
+        ],
+        [
+          "Mass found in the upper right lung lobe",
+          "Mass found in the upper left lung lobe"
+        ],
+        [
+          "Patient reports numbness in the left hand",
+          "Patient reports numbness in the right hand"
+        ],
+        [
+          "Tenderness noted in the right lower abdomen",
+          "Tenderness noted in the left lower abdomen"
+        ],
+        [
+          "The left eye shows signs of inflammation",
+          "The right eye shows signs of inflammation"
+        ],
+        [
+          "Weakness detected in the right arm today",
+          "Weakness detected in the left arm today"
+        ],
+        [
+          "Pain radiates to the left shoulder area",
+          "Pain radiates to the right shoulder area"
+        ],
+        [
+          "The right kidney appears enlarged on ultrasound",
+          "The left kidney appears enlarged on ultrasound"
+        ],
+        [
+          "Decreased breath sounds in the left lung",
+          "Decreased breath sounds in the right lung"
+        ],
+        [
+          "Lesion found on the right breast tissue",
+          "Lesion found on the left breast tissue"
+        ],
+        [
+          "Patient cannot move the left leg properly",
+          "Patient cannot move the right leg properly"
+        ],
+        [
+          "Infection present in the right ear canal",
+          "Infection present in the left ear canal"
+        ],
+        [
+          "Swollen lymph nodes on the left side detected",
+          "Swollen lymph nodes on the right side detected"
+        ],
+        [
+          "Bruising visible on the right thigh area",
+          "Bruising visible on the left thigh area"
+        ],
+        [
+          "He fractured his left wrist last month",
+          "He fractured his right wrist last month"
+        ],
+        [
+          "The right hip replacement was successful overall",
+          "The left hip replacement was successful overall"
+        ],
+        [
+          "Tingling sensation in the left foot reported",
+          "Tingling sensation in the right foot reported"
+        ],
+        [
+          "Calcification found in the right shoulder joint",
+          "Calcification found in the left shoulder joint"
+        ],
+        [
+          "Pain localized to the upper left quadrant",
+          "Pain localized to the upper right quadrant"
+        ],
+        [
+          "The left carotid artery shows mild stenosis",
+          "The right carotid artery shows mild stenosis"
+        ],
+        [
+          "Redness observed in the right eye today",
+          "Redness observed in the left eye today"
+        ],
+        [
+          "Fluid accumulation in the left pleural space",
+          "Fluid accumulation in the right pleural space"
+        ],
+        [
+          "Motor deficit in the right lower extremity",
+          "Motor deficit in the left lower extremity"
+        ],
+        [
+          "The left ventricle is mildly dilated now",
+          "The right ventricle is mildly dilated now"
+        ],
+        [
+          "Tenderness over the right costal margin noted",
+          "Tenderness over the left costal margin noted"
+        ],
+        [
+          "Skin rash on the left forearm spreading",
+          "Skin rash on the right forearm spreading"
+        ],
+        [
+          "The right tonsil is significantly enlarged today",
+          "The left tonsil is significantly enlarged today"
+        ],
+        [
+          "Decreased range of motion in right shoulder",
+          "Decreased range of motion in left shoulder"
+        ]
+      ]
+    },
+    "severity_change": {
+      "description": "Change severity level (mild\u2192severe, minor\u2192major, etc.)",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The patient has mild chest pain today",
+          "The patient has severe chest pain today"
+        ],
+        [
+          "She reports moderate difficulty breathing now",
+          "She reports extreme difficulty breathing now"
+        ],
+        [
+          "There is slight swelling in the area",
+          "There is significant swelling in the area"
+        ],
+        [
+          "His condition is stable and improving well",
+          "His condition is critical and deteriorating rapidly"
+        ],
+        [
+          "The infection appears to be minor overall",
+          "The infection appears to be serious overall"
+        ],
+        [
+          "Pain was described as mild and tolerable",
+          "Pain was described as excruciating and unbearable"
+        ],
+        [
+          "There is minimal blood loss during surgery",
+          "There is massive blood loss during surgery"
+        ],
+        [
+          "The fracture is a minor hairline crack",
+          "The fracture is a complete displaced break"
+        ],
+        [
+          "She has a low grade fever this evening",
+          "She has a high grade fever this evening"
+        ],
+        [
+          "The wound shows early signs of healing",
+          "The wound shows early signs of infection"
+        ],
+        [
+          "His symptoms are gradually improving each day",
+          "His symptoms are rapidly worsening each day"
+        ],
+        [
+          "The tumor is small and well contained",
+          "The tumor is large and has spread widely"
+        ],
+        [
+          "There is mild stenosis in the artery",
+          "There is severe stenosis in the artery"
+        ],
+        [
+          "Patient has a slight headache this morning",
+          "Patient has an intense headache this morning"
+        ],
+        [
+          "The allergic reaction was mild and brief",
+          "The allergic reaction was severe and prolonged"
+        ],
+        [
+          "Inflammation is minimal at the injection site",
+          "Inflammation is extensive at the injection site"
+        ],
+        [
+          "He has a minor skin irritation only",
+          "He has a major skin ulceration spreading"
+        ],
+        [
+          "The dehydration is mild and easily treated",
+          "The dehydration is severe and requires intervention"
+        ],
+        [
+          "She experienced a brief episode of dizziness",
+          "She experienced a prolonged episode of unconsciousness"
+        ],
+        [
+          "The arrhythmia is benign and not concerning",
+          "The arrhythmia is malignant and life threatening"
+        ],
+        [
+          "There is a small amount of fluid present",
+          "There is a large amount of fluid present"
+        ],
+        [
+          "His mobility is slightly reduced after surgery",
+          "His mobility is severely compromised after surgery"
+        ],
+        [
+          "The pain is intermittent and manageable overall",
+          "The pain is constant and unmanageable overall"
+        ],
+        [
+          "She has early stage kidney disease now",
+          "She has end stage kidney disease now"
+        ],
+        [
+          "The bleeding was minor and stopped quickly",
+          "The bleeding was profuse and continued persistently"
+        ],
+        [
+          "Mild cognitive impairment was noted on testing",
+          "Severe cognitive impairment was noted on testing"
+        ],
+        [
+          "The cough is occasional and nonproductive today",
+          "The cough is persistent and productive today"
+        ],
+        [
+          "His anxiety is mild and situational only",
+          "His anxiety is severe and generalized completely"
+        ],
+        [
+          "The edema is trace and barely noticeable",
+          "The edema is massive and clearly visible"
+        ],
+        [
+          "There is slight tenderness on palpation only",
+          "There is extreme tenderness on palpation only"
+        ]
+      ]
+    },
+    "frequency_change": {
+      "description": "Change dosage frequency or schedule",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "Take the medication once daily with food",
+          "Take the medication three times daily with food"
+        ],
+        [
+          "Apply the cream twice daily to affected area",
+          "Apply the cream once weekly to affected area"
+        ],
+        [
+          "The injection is given every two weeks",
+          "The injection is given every two months"
+        ],
+        [
+          "She takes insulin before every meal daily",
+          "She takes insulin once a week only"
+        ],
+        [
+          "Blood pressure should be checked twice daily",
+          "Blood pressure should be checked twice weekly"
+        ],
+        [
+          "The antibiotic is prescribed for 7 days",
+          "The antibiotic is prescribed for 7 weeks"
+        ],
+        [
+          "He exercises three times per week regularly",
+          "He exercises three times per day regularly"
+        ],
+        [
+          "Dialysis sessions occur three times weekly now",
+          "Dialysis sessions occur three times monthly now"
+        ],
+        [
+          "Change the dressing every 24 hours please",
+          "Change the dressing every 24 days please"
+        ],
+        [
+          "Physical therapy sessions twice a week recommended",
+          "Physical therapy sessions twice a day recommended"
+        ],
+        [
+          "Take one tablet every 8 hours as needed",
+          "Take one tablet every 8 days as needed"
+        ],
+        [
+          "The infusion runs for 4 hours each time",
+          "The infusion runs for 4 minutes each time"
+        ],
+        [
+          "Blood glucose monitoring four times daily required",
+          "Blood glucose monitoring four times weekly required"
+        ],
+        [
+          "Nebulizer treatment every 6 hours as prescribed",
+          "Nebulizer treatment every 6 days as prescribed"
+        ],
+        [
+          "She visits the clinic monthly for checkups",
+          "She visits the clinic daily for checkups"
+        ],
+        [
+          "Eye drops administered every 4 hours today",
+          "Eye drops administered every 4 days today"
+        ],
+        [
+          "The patch should be changed every 72 hours",
+          "The patch should be changed every 72 minutes"
+        ],
+        [
+          "He takes his vitamins once daily at breakfast",
+          "He takes his vitamins once monthly at breakfast"
+        ],
+        [
+          "Wound assessment done every shift by nursing",
+          "Wound assessment done every week by nursing"
+        ],
+        [
+          "The patient eats three meals per day",
+          "The patient eats three meals per week"
+        ],
+        [
+          "Respiratory therapy scheduled four times daily now",
+          "Respiratory therapy scheduled four times yearly now"
+        ],
+        [
+          "Check vital signs every 2 hours overnight",
+          "Check vital signs every 2 minutes overnight"
+        ],
+        [
+          "She does breathing exercises twice daily at home",
+          "She does breathing exercises twice yearly at home"
+        ],
+        [
+          "The statin is taken once at bedtime nightly",
+          "The statin is taken once at bedtime weekly"
+        ],
+        [
+          "Rotate injection sites with each administration please",
+          "Rotate injection sites with each monthly visit"
+        ],
+        [
+          "He walks for 30 minutes daily after lunch",
+          "He walks for 30 minutes weekly after lunch"
+        ],
+        [
+          "Follow up appointments every 3 months scheduled",
+          "Follow up appointments every 3 weeks scheduled"
+        ],
+        [
+          "The supplement is taken with every meal daily",
+          "The supplement is taken with every meal weekly"
+        ],
+        [
+          "Pain medication as needed up to 4 times daily",
+          "Pain medication as needed up to 4 times monthly"
+        ],
+        [
+          "Physiotherapy exercises repeated 10 times each session",
+          "Physiotherapy exercises repeated 10 times each month"
+        ]
+      ]
+    },
+    "causal_reversal": {
+      "description": "Reverse or flip the causal direction",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The fever was caused by the infection",
+          "The infection was caused by the fever"
+        ],
+        [
+          "Pain increased after taking the medication today",
+          "Pain decreased after taking the medication today"
+        ],
+        [
+          "The treatment resulted in significant improvement overall",
+          "The treatment resulted in significant deterioration overall"
+        ],
+        [
+          "Surgery was needed because of the fracture",
+          "The fracture was needed because of surgery"
+        ],
+        [
+          "She developed a rash due to the antibiotic",
+          "The antibiotic was prescribed due to the rash"
+        ],
+        [
+          "Blood pressure rose after stopping the medication",
+          "Blood pressure dropped after stopping the medication"
+        ],
+        [
+          "The bleeding was controlled by applying pressure",
+          "The pressure was controlled by applying bleeding"
+        ],
+        [
+          "He lost weight because of the new diet",
+          "He gained weight because of the new diet"
+        ],
+        [
+          "The tumor shrank following the chemotherapy treatment",
+          "The tumor grew following the chemotherapy treatment"
+        ],
+        [
+          "Nausea occurred as a side effect of radiation",
+          "Radiation occurred as a side effect of nausea"
+        ],
+        [
+          "Her condition improved after the blood transfusion",
+          "Her condition worsened after the blood transfusion"
+        ],
+        [
+          "The swelling reduced after applying the ice pack",
+          "The swelling increased after applying the ice pack"
+        ],
+        [
+          "He was admitted because his symptoms worsened",
+          "His symptoms worsened because he was admitted"
+        ],
+        [
+          "The infection spread due to delayed treatment start",
+          "The treatment was delayed due to infection spread"
+        ],
+        [
+          "Recovery was faster thanks to early intervention",
+          "Recovery was slower thanks to early intervention"
+        ],
+        [
+          "The drug interaction caused the adverse reaction",
+          "The adverse reaction caused the drug interaction"
+        ],
+        [
+          "Exercise helped to lower his blood sugar levels",
+          "Exercise helped to raise his blood sugar levels"
+        ],
+        [
+          "The stent was placed to prevent further blockage",
+          "The blockage was placed to prevent further stenting"
+        ],
+        [
+          "Her pain resolved after the nerve block procedure",
+          "Her pain worsened after the nerve block procedure"
+        ],
+        [
+          "The fall resulted in a broken hip bone",
+          "The broken hip resulted in a fall today"
+        ],
+        [
+          "Antibiotics were given to treat the pneumonia",
+          "Pneumonia was given to treat the antibiotics"
+        ],
+        [
+          "Dehydration occurred because of excessive vomiting",
+          "Excessive vomiting occurred because of dehydration"
+        ],
+        [
+          "The wound healed after the stitches were placed",
+          "The wound opened after the stitches were placed"
+        ],
+        [
+          "His glucose spiked because he skipped his insulin",
+          "He skipped his insulin because his glucose spiked"
+        ],
+        [
+          "The allergy test confirmed the suspected allergen",
+          "The suspected allergen confirmed the allergy test"
+        ],
+        [
+          "She fainted due to a sudden drop in pressure",
+          "Her pressure dropped due to a sudden faint"
+        ],
+        [
+          "The biopsy confirmed that the mass was benign",
+          "The mass confirmed that the biopsy was benign"
+        ],
+        [
+          "Rehabilitation strengthened her muscles after the surgery",
+          "Surgery strengthened her muscles after the rehabilitation"
+        ],
+        [
+          "The scan revealed that the tumor had spread",
+          "The tumor revealed that the scan had spread"
+        ],
+        [
+          "Physical therapy reduced his pain significantly overall",
+          "Physical therapy increased his pain significantly overall"
+        ]
+      ]
+    },
+    "condition_negation": {
+      "description": "Negate the presence/absence of a clinical condition",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The patient has a history of diabetes",
+          "The patient has no history of diabetes"
+        ],
+        [
+          "Allergies to penicillin are documented in records",
+          "No allergies to penicillin are documented in records"
+        ],
+        [
+          "There is evidence of metastatic disease present",
+          "There is no evidence of metastatic disease present"
+        ],
+        [
+          "He has a family history of cardiac disease",
+          "He has no family history of cardiac disease"
+        ],
+        [
+          "Signs of infection were observed during examination",
+          "No signs of infection were observed during examination"
+        ],
+        [
+          "The patient is currently taking blood thinners",
+          "The patient is not currently taking blood thinners"
+        ],
+        [
+          "She reported recent travel outside the country",
+          "She denied any recent travel outside the country"
+        ],
+        [
+          "There are contraindications for this procedure today",
+          "There are no contraindications for this procedure today"
+        ],
+        [
+          "He has been exposed to tuberculosis recently",
+          "He has not been exposed to tuberculosis recently"
+        ],
+        [
+          "The test result was positive for malaria",
+          "The test result was negative for malaria"
+        ],
+        [
+          "She is pregnant according to the test result",
+          "She is not pregnant according to the test result"
+        ],
+        [
+          "The patient consented to the surgical procedure",
+          "The patient did not consent to the surgical procedure"
+        ],
+        [
+          "There is a prior history of substance abuse",
+          "There is no prior history of substance abuse"
+        ],
+        [
+          "He experienced chest pain during the exercise test",
+          "He did not experience chest pain during the test"
+        ],
+        [
+          "The biopsy showed malignant cells in the tissue",
+          "The biopsy showed no malignant cells in the tissue"
+        ],
+        [
+          "She has been vaccinated against hepatitis B virus",
+          "She has not been vaccinated against hepatitis B virus"
+        ],
+        [
+          "The patient is responsive and oriented properly",
+          "The patient is not responsive and not oriented"
+        ],
+        [
+          "There was significant blood loss during the surgery",
+          "There was no significant blood loss during the surgery"
+        ],
+        [
+          "He has known risk factors for stroke currently",
+          "He has no known risk factors for stroke currently"
+        ],
+        [
+          "The ECG showed abnormal rhythm patterns today",
+          "The ECG showed no abnormal rhythm patterns today"
+        ],
+        [
+          "She reported dizziness and lightheadedness this morning",
+          "She denied any dizziness and lightheadedness this morning"
+        ],
+        [
+          "Liver function tests are elevated this time",
+          "Liver function tests are not elevated this time"
+        ],
+        [
+          "The patient has insurance coverage for treatment",
+          "The patient has no insurance coverage for treatment"
+        ],
+        [
+          "He showed improvement since the last visit here",
+          "He showed no improvement since the last visit here"
+        ],
+        [
+          "There are complications following the procedure today",
+          "There are no complications following the procedure today"
+        ],
+        [
+          "She can ambulate independently without any assistance",
+          "She cannot ambulate independently without any assistance"
+        ],
+        [
+          "The patient is compliant with the prescribed treatment",
+          "The patient is not compliant with the prescribed treatment"
+        ],
+        [
+          "He has a documented advance directive on file",
+          "He has no documented advance directive on file"
+        ],
+        [
+          "The wound site is showing signs of healing",
+          "The wound site is not showing signs of healing"
+        ],
+        [
+          "There was a reaction to the contrast agent",
+          "There was no reaction to the contrast agent"
+        ]
+      ]
+    },
+    "anatomical_direction": {
+      "description": "Swap anatomical direction (anterior\u2194posterior, proximal\u2194distal, etc.)",
+      "n_pairs": 30,
+      "pairs": [
+        [
+          "The mass is located in the anterior mediastinum",
+          "The mass is located in the posterior mediastinum"
+        ],
+        [
+          "Pain is felt in the proximal part of forearm",
+          "Pain is felt in the distal part of forearm"
+        ],
+        [
+          "The lesion is on the dorsal surface of hand",
+          "The lesion is on the ventral surface of hand"
+        ],
+        [
+          "Fluid collection noted in the superior aspect",
+          "Fluid collection noted in the inferior aspect"
+        ],
+        [
+          "The catheter tip is in the proximal segment",
+          "The catheter tip is in the distal segment"
+        ],
+        [
+          "Tenderness in the medial aspect of the knee",
+          "Tenderness in the lateral aspect of the knee"
+        ],
+        [
+          "The fracture is in the anterior cortex bone",
+          "The fracture is in the posterior cortex bone"
+        ],
+        [
+          "Swelling noted on the superior border of wound",
+          "Swelling noted on the inferior border of wound"
+        ],
+        [
+          "The tumor extends into the medial compartment",
+          "The tumor extends into the lateral compartment"
+        ],
+        [
+          "Pain radiates to the anterior chest wall area",
+          "Pain radiates to the posterior chest wall area"
+        ],
+        [
+          "The graft was placed on the dorsal side",
+          "The graft was placed on the ventral side"
+        ],
+        [
+          "Lymph nodes enlarged in the superficial layer",
+          "Lymph nodes enlarged in the deep layer"
+        ],
+        [
+          "The incision was made along the medial border",
+          "The incision was made along the lateral border"
+        ],
+        [
+          "Herniation noted at the anterior disc margin",
+          "Herniation noted at the posterior disc margin"
+        ],
+        [
+          "The probe was inserted from the proximal end",
+          "The probe was inserted from the distal end"
+        ],
+        [
+          "Calcification seen in the superior pole of kidney",
+          "Calcification seen in the inferior pole of kidney"
+        ],
+        [
+          "The stent was placed in the proximal artery",
+          "The stent was placed in the distal artery"
+        ],
+        [
+          "Compression observed on the anterior spinal cord",
+          "Compression observed on the posterior spinal cord"
+        ],
+        [
+          "The abscess is in the superficial tissue layer",
+          "The abscess is in the deep tissue layer"
+        ],
+        [
+          "Edema extends from the proximal thigh distally",
+          "Edema extends from the distal thigh proximally"
+        ],
+        [
+          "The tumor invades the anterior abdominal wall",
+          "The tumor invades the posterior abdominal wall"
+        ],
+        [
+          "Tenderness localized to the medial epicondyle area",
+          "Tenderness localized to the lateral epicondyle area"
+        ],
+        [
+          "The nodule is on the anterior surface thyroid",
+          "The nodule is on the posterior surface thyroid"
+        ],
+        [
+          "Drainage was placed in the superior recess area",
+          "Drainage was placed in the inferior recess area"
+        ],
+        [
+          "Rupture at the proximal tendon insertion point",
+          "Rupture at the distal tendon insertion point"
+        ],
+        [
+          "The lesion is predominantly in the superficial dermis",
+          "The lesion is predominantly in the deep dermis"
+        ],
+        [
+          "Narrowing observed in the proximal coronary artery",
+          "Narrowing observed in the distal coronary artery"
+        ],
+        [
+          "Inflammation of the anterior chamber of the eye",
+          "Inflammation of the posterior chamber of the eye"
+        ],
+        [
+          "The clip was applied to the medial vessel",
+          "The clip was applied to the lateral vessel"
+        ],
+        [
+          "Bone loss noted at the superior acetabular rim",
+          "Bone loss noted at the inferior acetabular rim"
+        ]
+      ]
+    }
+  }
+}

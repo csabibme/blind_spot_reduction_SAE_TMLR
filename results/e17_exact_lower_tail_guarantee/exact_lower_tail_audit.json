@@ -1,0 +1,353 @@
+{
+  "analysis": "Exact finite-family worst-subset lower-tail guarantee",
+  "status": "PASS",
+  "tolerance": 1e-12,
+  "assumptions": [
+    "identical finite evaluated pair universe",
+    "equal pair weighting",
+    "identical response definition",
+    "identical tail cardinality m=ceil(0.20*n)"
+  ],
+  "formulas": {
+    "worst_subset": "L20(D)=min_{W subset I, |W|=m} mean_{i in W} D_i",
+    "corollary": "mean_V(W_S)-mean_S(W_S) >= L20(D_V)-L20(D_S)",
+    "lorenz_gini": "G=(n-1)/n-(2/n)*sum_{k=1}^{n-1} Lambda_k, Lambda_k = cumulative share of k smallest normalised responses"
+  },
+  "scope": "Subset-average guarantee only; no pointwise improvement claim. Absolute displacement and probe endpoints remain empirical.",
+  "models": {
+    "GPT-2": {
+      "source": "<REPO_ROOT>/FINAL/REVISION_FINAL/Supplementary/results/e14_real_clinical_lower_tail/openi_standard_weakset_v1_gpt2.json",
+      "source_sha256": "6218e0066533faaf44cbb74bd5b10e96b74c3c2993505020536c15423c98301f",
+      "families": {
+        "negation": {
+          "n": 300,
+          "m": 60,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.015742089783178675,
+            "L20_vreg": 0.01995692543935435,
+            "own_tail_delta": 0.004214835656175673,
+            "fixed_W_std_standard": 0.015742089783178675,
+            "fixed_W_std_vreg": 0.02047846804809766,
+            "fixed_W_std_delta": 0.0047363782649189855,
+            "fixed_W_std_delta_ci": [
+              0.0037203671190091897,
+              0.005731026535567492
+            ],
+            "worst_subset_slack": 0.0005215426087433125,
+            "fraction_pairs_improved": 0.9166666666666666
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": 0.6336729092896807,
+            "fixed_W_std_delta_ci": [
+              0.5150857446891782,
+              0.7536628993733
+            ],
+            "fraction_pairs_improved": 0.9333333333333333,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.4229799155303098,
+            "vreg": 0.40389476760593457,
+            "delta": -0.019085147924375212,
+            "max_identity_error": 1.6653345369377348e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "laterality": {
+          "n": 300,
+          "m": 60,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.0024224555598920928,
+            "L20_vreg": 0.0033676470855578343,
+            "own_tail_delta": 0.0009451915256657416,
+            "fixed_W_std_standard": 0.0024224555598920928,
+            "fixed_W_std_vreg": 0.003416980913619487,
+            "fixed_W_std_delta": 0.0009945253537273942,
+            "fixed_W_std_delta_ci": [
+              0.000885794504949621,
+              0.001104000915270944
+            ],
+            "worst_subset_slack": 4.9333828061652596e-05,
+            "fraction_pairs_improved": 0.9833333333333333
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": 0.12021385272287967,
+            "fixed_W_std_delta_ci": [
+              0.10528810863377298,
+              0.13483193178015024
+            ],
+            "fraction_pairs_improved": 0.9833333333333333,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.6998516720746135,
+            "vreg": 0.6645780886331998,
+            "delta": -0.035273583441413736,
+            "max_identity_error": 2.220446049250313e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "severity": {
+          "n": 300,
+          "m": 60,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.004439462388179235,
+            "L20_vreg": 0.007670040874060401,
+            "own_tail_delta": 0.0032305784858811656,
+            "fixed_W_std_standard": 0.004439462388179235,
+            "fixed_W_std_vreg": 0.008596571232124778,
+            "fixed_W_std_delta": 0.004157108843945543,
+            "fixed_W_std_delta_ci": [
+              0.003558134549579541,
+              0.0047913905441519244
+            ],
+            "worst_subset_slack": 0.0009265303580643777,
+            "fraction_pairs_improved": 1.0
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": 0.535006092942306,
+            "fixed_W_std_delta_ci": [
+              0.4577258335474285,
+              0.6182548135666718
+            ],
+            "fraction_pairs_improved": 1.0,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.6153693124648189,
+            "vreg": 0.5771575834408685,
+            "delta": -0.038211729023950314,
+            "max_identity_error": 2.220446049250313e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "anatomical_direction": {
+          "n": 131,
+          "m": 27,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.0017415425026740192,
+            "L20_vreg": 0.0025484807204028846,
+            "own_tail_delta": 0.0008069382177288654,
+            "fixed_W_std_standard": 0.0017415425026740192,
+            "fixed_W_std_vreg": 0.002690340140050972,
+            "fixed_W_std_delta": 0.0009487976373769528,
+            "fixed_W_std_delta_ci": [
+              0.000771262191736432,
+              0.0011491540205614784
+            ],
+            "worst_subset_slack": 0.00014185941964808737,
+            "fraction_pairs_improved": 1.0
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": 0.11612911823743453,
+            "fixed_W_std_delta_ci": [
+              0.0954437925971158,
+              0.1388453294390231
+            ],
+            "fraction_pairs_improved": 1.0,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.6441846645453223,
+            "vreg": 0.5883193796596458,
+            "delta": -0.05586528488567655,
+            "max_identity_error": 2.220446049250313e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        }
+      },
+      "all_checks_pass": true
+    },
+    "Qwen 2.5": {
+      "source": "<REPO_ROOT>/FINAL/REVISION_FINAL/Supplementary/results/e14_real_clinical_lower_tail/openi_standard_weakset_v1_qwen_exact128.json",
+      "source_sha256": "f709b78171f1a758512a3a866f1eed225afb9e871288c46aa5d09beb67dc9fe0",
+      "families": {
+        "negation": {
+          "n": 80,
+          "m": 16,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.02976930154528503,
+            "L20_vreg": 0.03965664440548792,
+            "own_tail_delta": 0.009887342860202888,
+            "fixed_W_std_standard": 0.02976930154528503,
+            "fixed_W_std_vreg": 0.03965664440548792,
+            "fixed_W_std_delta": 0.009887342860202888,
+            "fixed_W_std_delta_ci": [
+              0.008414793355610534,
+              0.011204516380058852
+            ],
+            "worst_subset_slack": 0.0,
+            "fraction_pairs_improved": 1.0
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": -0.1080082421196808,
+            "fixed_W_std_delta_ci": [
+              -0.1962579744777928,
+              -0.02707935819584888
+            ],
+            "fraction_pairs_improved": 0.25,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.4266221068964269,
+            "vreg": 0.4236722715981681,
+            "delta": -0.002949835298258763,
+            "max_identity_error": 3.3306690738754696e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "laterality": {
+          "n": 80,
+          "m": 16,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.0034035341968028134,
+            "L20_vreg": 0.00429193593703911,
+            "own_tail_delta": 0.0008884017402362963,
+            "fixed_W_std_standard": 0.0034035341968028134,
+            "fixed_W_std_vreg": 0.004363715303206164,
+            "fixed_W_std_delta": 0.0009601811064033506,
+            "fixed_W_std_delta_ci": [
+              0.0007691926473460961,
+              0.0011813551265930343
+            ],
+            "worst_subset_slack": 7.177936616705426e-05,
+            "fraction_pairs_improved": 1.0
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": -0.006615618184084087,
+            "fixed_W_std_delta_ci": [
+              -0.013235256325708452,
+              -0.0007756077496961775
+            ],
+            "fraction_pairs_improved": 0.375,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.5688698309626701,
+            "vreg": 0.5653704366521071,
+            "delta": -0.0034993943105630088,
+            "max_identity_error": 2.220446049250313e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "severity": {
+          "n": 80,
+          "m": 16,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.011746553694234125,
+            "L20_vreg": 0.015252290082156065,
+            "own_tail_delta": 0.00350573638792194,
+            "fixed_W_std_standard": 0.011746553694234125,
+            "fixed_W_std_vreg": 0.015348003274630147,
+            "fixed_W_std_delta": 0.0036014495803960225,
+            "fixed_W_std_delta_ci": [
+              0.002770941772186858,
+              0.004416577032586313
+            ],
+            "worst_subset_slack": 9.571319247408255e-05,
+            "fraction_pairs_improved": 1.0
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": -0.0028822532561221144,
+            "fixed_W_std_delta_ci": [
+              -0.02946286950917718,
+              0.026550881889650185
+            ],
+            "fraction_pairs_improved": 0.375,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.44984793752146135,
+            "vreg": 0.4488167234145707,
+            "delta": -0.0010312141068906655,
+            "max_identity_error": 2.7755575615628914e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        },
+        "anatomical_direction": {
+          "n": 80,
+          "m": 16,
+          "stored_W_std_matches": true,
+          "relative": {
+            "L20_standard": 0.002149108951551817,
+            "L20_vreg": 0.0027049180835783376,
+            "own_tail_delta": 0.0005558091320265203,
+            "fixed_W_std_standard": 0.002149108951551817,
+            "fixed_W_std_vreg": 0.0027114728594625154,
+            "fixed_W_std_delta": 0.0005623639079106982,
+            "fixed_W_std_delta_ci": [
+              0.00040797034635025404,
+              0.0007047758568775547
+            ],
+            "worst_subset_slack": 6.554775884177848e-06,
+            "fraction_pairs_improved": 0.875
+          },
+          "absolute_on_relative_W_std": {
+            "fixed_W_std_delta": -0.0014601129516394855,
+            "fixed_W_std_delta_ci": [
+              -0.0051045609979376285,
+              0.002120492389088813
+            ],
+            "fraction_pairs_improved": 0.375,
+            "status": "empirical_not_implied_by_relative_worst_subset_theorem"
+          },
+          "lorenz_gini": {
+            "standard": 0.5530485500077252,
+            "vreg": 0.550279145326436,
+            "delta": -0.002769404681289278,
+            "max_identity_error": 4.440892098500626e-16
+          },
+          "checks": {
+            "standard_minimizer_identity": true,
+            "fixed_delta_ge_own_tail_delta": true,
+            "stored_W_std_matches": true,
+            "lorenz_gini_identity": true
+          }
+        }
+      },
+      "all_checks_pass": true
+    }
+  }
+}

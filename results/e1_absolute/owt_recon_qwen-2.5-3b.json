@@ -1,0 +1,37 @@
+{
+  "profile": "qwen-2.5-3b",
+  "owt_cache": "<REPO_ROOT>",
+  "n_samples": 1000,
+  "seed": 42,
+  "h_norm_mean": 120.47881317138672,
+  "standard": {
+    "mse": 0.14990943670272827,
+    "nmse": 0.0015638140500475002,
+    "explained_variance": 0.9984362208519758,
+    "cosine_sim_mean": 0.9981157372458391,
+    "cosine_sim_min": 0.9915044145626736,
+    "cosine_sim_q05": 0.9972746363650373,
+    "L0_mean": 3365.273,
+    "code_norm_mean": 129.22905629494272,
+    "density_mean": 0.821599853515625,
+    "inactive_frac_mean": 0.178400146484375
+  },
+  "vreg": {
+    "mse": 0.1278764009475708,
+    "nmse": 0.0013339716057623318,
+    "explained_variance": 0.9986660229927066,
+    "cosine_sim_mean": 0.9983581147599913,
+    "cosine_sim_min": 0.9961876545027659,
+    "cosine_sim_q05": 0.9975738817551079,
+    "L0_mean": 3364.796,
+    "code_norm_mean": 133.1178904182905,
+    "density_mean": 0.8214833984375,
+    "inactive_frac_mean": 0.1785166015625
+  },
+  "comparison": {
+    "mse_ratio": 0.8530243576346551,
+    "nmse_ratio": 0.8530244403858557,
+    "ev_drop": -0.00022980214073076155,
+    "cos_drop": -0.0002423775141521256
+  }
+}

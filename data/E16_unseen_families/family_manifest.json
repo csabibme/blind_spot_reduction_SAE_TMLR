@@ -1,0 +1,502 @@
+{
+  "adverb_swap": {
+    "source": "template",
+    "description": "Swap one adverb",
+    "n_pairs": 30
+  },
+  "anatomical_direction": {
+    "source": "medical_auto",
+    "description": "Swap anatomical direction (anterior↔posterior, proximal↔distal, etc.)",
+    "n_pairs": 30
+  },
+  "article_swap": {
+    "source": "template",
+    "description": "Change definite/indefinite article",
+    "n_pairs": 15
+  },
+  "body_part_swap": {
+    "source": "medical_auto",
+    "description": "Swap left↔right or change body part reference",
+    "n_pairs": 30
+  },
+  "capitalization": {
+    "source": "template",
+    "description": "Change capitalization of one token",
+    "n_pairs": 30
+  },
+  "causal_reversal": {
+    "source": "medical_auto",
+    "description": "Reverse or flip the causal direction",
+    "n_pairs": 30
+  },
+  "clause_order": {
+    "source": "template",
+    "description": "Swap clause order (same semantics)",
+    "n_pairs": 30
+  },
+  "comparative_swap": {
+    "source": "template",
+    "description": "Swap comparative adjective",
+    "n_pairs": 30
+  },
+  "condition_negation": {
+    "source": "medical_auto",
+    "description": "Negate the presence/absence of a clinical condition",
+    "n_pairs": 30
+  },
+  "conjunction_swap": {
+    "source": "template",
+    "description": "Swap coordinating/subordinating conjunction",
+    "n_pairs": 16
+  },
+  "contraction_expand": {
+    "source": "template",
+    "description": "Expand or contract negation (don't ↔ do not)",
+    "n_pairs": 30
+  },
+  "coreference_swap": {
+    "source": "template",
+    "description": "Swap pronoun antecedent (gender/role)",
+    "n_pairs": 30
+  },
+  "date_time_change": {
+    "source": "medical_auto",
+    "description": "Change date, time, or temporal reference",
+    "n_pairs": 30
+  },
+  "degree_intensifier": {
+    "source": "template",
+    "description": "Swap intensity adverb",
+    "n_pairs": 20
+  },
+  "determiner_quantifier": {
+    "source": "template",
+    "description": "Swap quantifier/determiner",
+    "n_pairs": 24
+  },
+  "drug_name_swap": {
+    "source": "medical_auto",
+    "description": "Replace one drug name with a different drug",
+    "n_pairs": 30
+  },
+  "frequency_change": {
+    "source": "medical_auto",
+    "description": "Change dosage frequency or schedule",
+    "n_pairs": 30
+  },
+  "gender_swap": {
+    "source": "medical_auto",
+    "description": "Swap gender pronouns (he↔she, his↔her)",
+    "n_pairs": 30
+  },
+  "hedging_swap": {
+    "source": "template",
+    "description": "Swap clinical hedging language",
+    "n_pairs": 28
+  },
+  "homophone_swap": {
+    "source": "template",
+    "description": "Homophone substitution (single word)",
+    "n_pairs": 30
+  },
+  "modal_swap": {
+    "source": "template",
+    "description": "Swap modal verb (can/must/should/...)",
+    "n_pairs": 30
+  },
+  "negation": {
+    "source": "paper",
+    "description": "Meaning reversal",
+    "n_pairs": 30
+  },
+  "negation_shard_00": {
+    "source": "template",
+    "description": "Negation shard (seed 200)",
+    "n_pairs": 30
+  },
+  "negation_shard_01": {
+    "source": "template",
+    "description": "Negation shard (seed 201)",
+    "n_pairs": 30
+  },
+  "negation_shard_02": {
+    "source": "template",
+    "description": "Negation shard (seed 202)",
+    "n_pairs": 30
+  },
+  "negation_shard_03": {
+    "source": "template",
+    "description": "Negation shard (seed 203)",
+    "n_pairs": 30
+  },
+  "negation_shard_04": {
+    "source": "template",
+    "description": "Negation shard (seed 204)",
+    "n_pairs": 30
+  },
+  "negation_shard_05": {
+    "source": "template",
+    "description": "Negation shard (seed 205)",
+    "n_pairs": 30
+  },
+  "negation_shard_06": {
+    "source": "template",
+    "description": "Negation shard (seed 206)",
+    "n_pairs": 30
+  },
+  "negation_shard_07": {
+    "source": "template",
+    "description": "Negation shard (seed 207)",
+    "n_pairs": 30
+  },
+  "number_shard_00": {
+    "source": "template",
+    "description": "Number swap shard (seed 100)",
+    "n_pairs": 30
+  },
+  "number_shard_01": {
+    "source": "template",
+    "description": "Number swap shard (seed 101)",
+    "n_pairs": 30
+  },
+  "number_shard_02": {
+    "source": "template",
+    "description": "Number swap shard (seed 102)",
+    "n_pairs": 30
+  },
+  "number_shard_03": {
+    "source": "template",
+    "description": "Number swap shard (seed 103)",
+    "n_pairs": 30
+  },
+  "number_shard_04": {
+    "source": "template",
+    "description": "Number swap shard (seed 104)",
+    "n_pairs": 30
+  },
+  "number_shard_05": {
+    "source": "template",
+    "description": "Number swap shard (seed 105)",
+    "n_pairs": 30
+  },
+  "number_shard_06": {
+    "source": "template",
+    "description": "Number swap shard (seed 106)",
+    "n_pairs": 30
+  },
+  "number_shard_07": {
+    "source": "template",
+    "description": "Number swap shard (seed 107)",
+    "n_pairs": 30
+  },
+  "number_swap": {
+    "source": "paper",
+    "description": "Numeric value change",
+    "n_pairs": 30
+  },
+  "pluralization": {
+    "source": "template",
+    "description": "Singular/plural change on one noun",
+    "n_pairs": 30
+  },
+  "polarity_flip": {
+    "source": "template",
+    "description": "Flip binary clinical polarity",
+    "n_pairs": 30
+  },
+  "preposition_swap": {
+    "source": "template",
+    "description": "Change one preposition",
+    "n_pairs": 30
+  },
+  "punctuation_change": {
+    "source": "template",
+    "description": "Add/remove/change punctuation",
+    "n_pairs": 30
+  },
+  "semantic_age_group": {
+    "source": "template",
+    "description": "Semantic substitution (age)",
+    "n_pairs": 8
+  },
+  "semantic_allergy": {
+    "source": "template",
+    "description": "Semantic substitution (allergen)",
+    "n_pairs": 8
+  },
+  "semantic_anatomy_organ": {
+    "source": "template",
+    "description": "Semantic substitution (organ)",
+    "n_pairs": 8
+  },
+  "semantic_color": {
+    "source": "template",
+    "description": "Semantic substitution (color)",
+    "n_pairs": 8
+  },
+  "semantic_device": {
+    "source": "template",
+    "description": "Semantic substitution (device)",
+    "n_pairs": 8
+  },
+  "semantic_emotion": {
+    "source": "template",
+    "description": "Semantic substitution (emotion)",
+    "n_pairs": 8
+  },
+  "semantic_food": {
+    "source": "template",
+    "description": "Semantic substitution (food)",
+    "n_pairs": 8
+  },
+  "semantic_frequency_word": {
+    "source": "template",
+    "description": "Semantic substitution (frequency)",
+    "n_pairs": 8
+  },
+  "semantic_imaging_modality": {
+    "source": "template",
+    "description": "Semantic substitution (modality)",
+    "n_pairs": 8
+  },
+  "semantic_lab_analyte": {
+    "source": "template",
+    "description": "Semantic substitution (analyte)",
+    "n_pairs": 8
+  },
+  "semantic_location": {
+    "source": "template",
+    "description": "Semantic substitution (location)",
+    "n_pairs": 8
+  },
+  "semantic_outcome": {
+    "source": "template",
+    "description": "Semantic substitution (outcome)",
+    "n_pairs": 8
+  },
+  "semantic_pathology": {
+    "source": "template",
+    "description": "Semantic substitution (pathology)",
+    "n_pairs": 8
+  },
+  "semantic_procedure": {
+    "source": "template",
+    "description": "Semantic substitution (procedure)",
+    "n_pairs": 8
+  },
+  "semantic_profession": {
+    "source": "template",
+    "description": "Semantic substitution (profession)",
+    "n_pairs": 8
+  },
+  "semantic_risk": {
+    "source": "template",
+    "description": "Semantic substitution (risk)",
+    "n_pairs": 8
+  },
+  "semantic_route": {
+    "source": "template",
+    "description": "Semantic substitution (route)",
+    "n_pairs": 8
+  },
+  "semantic_size": {
+    "source": "template",
+    "description": "Semantic substitution (size)",
+    "n_pairs": 8
+  },
+  "semantic_social": {
+    "source": "template",
+    "description": "Semantic substitution (social)",
+    "n_pairs": 8
+  },
+  "semantic_specimen": {
+    "source": "template",
+    "description": "Semantic substitution (specimen)",
+    "n_pairs": 8
+  },
+  "semantic_sub_shard_00": {
+    "source": "template",
+    "description": "Semantic-substitution shard (seed 0)",
+    "n_pairs": 12
+  },
+  "semantic_sub_shard_01": {
+    "source": "template",
+    "description": "Semantic-substitution shard (seed 1)",
+    "n_pairs": 12
+  },
+  "semantic_sub_shard_02": {
+    "source": "template",
+    "description": "Semantic-substitution shard (seed 2)",
+    "n_pairs": 12
+  },
+  "semantic_sub_shard_03": {
+    "source": "template",
+    "description": "Semantic-substitution shard (seed 3)",
+    "n_pairs": 12
+  },
+  "semantic_sub_shard_04": {
+    "source": "template",
+    "description": "Semantic-substitution shard (seed 4)",
+    "n_pairs": 12
+  },
+  "semantic_substitution": {
+    "source": "paper",
+    "description": "Similar-meaning word swap",
+    "n_pairs": 30
+  },
+  "semantic_symptom": {
+    "source": "template",
+    "description": "Semantic substitution (symptom)",
+    "n_pairs": 8
+  },
+  "semantic_vital": {
+    "source": "template",
+    "description": "Semantic substitution (vital)",
+    "n_pairs": 8
+  },
+  "semantic_weather": {
+    "source": "template",
+    "description": "Semantic substitution (weather)",
+    "n_pairs": 8
+  },
+  "severity_change": {
+    "source": "medical_auto",
+    "description": "Change severity level (mild→severe, minor→major, etc.)",
+    "n_pairs": 30
+  },
+  "spelling_variant": {
+    "source": "template",
+    "description": "US/UK spelling variant (single word)",
+    "n_pairs": 30
+  },
+  "synonym": {
+    "source": "paper",
+    "description": "True synonym swap",
+    "n_pairs": 30
+  },
+  "synonym_shard_00": {
+    "source": "template",
+    "description": "Synonym shard (seed 0)",
+    "n_pairs": 16
+  },
+  "synonym_shard_01": {
+    "source": "template",
+    "description": "Synonym shard (seed 1)",
+    "n_pairs": 16
+  },
+  "synonym_shard_02": {
+    "source": "template",
+    "description": "Synonym shard (seed 2)",
+    "n_pairs": 16
+  },
+  "synonym_shard_03": {
+    "source": "template",
+    "description": "Synonym shard (seed 3)",
+    "n_pairs": 16
+  },
+  "synonym_shard_04": {
+    "source": "template",
+    "description": "Synonym shard (seed 4)",
+    "n_pairs": 16
+  },
+  "synonym_shard_05": {
+    "source": "template",
+    "description": "Synonym shard (seed 5)",
+    "n_pairs": 16
+  },
+  "synonym_shard_06": {
+    "source": "template",
+    "description": "Synonym shard (seed 6)",
+    "n_pairs": 16
+  },
+  "synonym_shard_07": {
+    "source": "template",
+    "description": "Synonym shard (seed 7)",
+    "n_pairs": 16
+  },
+  "tense_shift": {
+    "source": "template",
+    "description": "Change verb tense only",
+    "n_pairs": 30
+  },
+  "typo": {
+    "source": "paper",
+    "description": "Adjacent character transposition",
+    "n_pairs": 30
+  },
+  "typo_shard_00": {
+    "source": "template",
+    "description": "Typo shard (seed 0)",
+    "n_pairs": 30
+  },
+  "typo_shard_01": {
+    "source": "template",
+    "description": "Typo shard (seed 1)",
+    "n_pairs": 30
+  },
+  "typo_shard_02": {
+    "source": "template",
+    "description": "Typo shard (seed 2)",
+    "n_pairs": 30
+  },
+  "typo_shard_03": {
+    "source": "template",
+    "description": "Typo shard (seed 3)",
+    "n_pairs": 30
+  },
+  "typo_shard_04": {
+    "source": "template",
+    "description": "Typo shard (seed 4)",
+    "n_pairs": 30
+  },
+  "typo_shard_05": {
+    "source": "template",
+    "description": "Typo shard (seed 5)",
+    "n_pairs": 30
+  },
+  "typo_shard_06": {
+    "source": "template",
+    "description": "Typo shard (seed 6)",
+    "n_pairs": 30
+  },
+  "typo_shard_07": {
+    "source": "template",
+    "description": "Typo shard (seed 7)",
+    "n_pairs": 30
+  },
+  "unit_of_measure": {
+    "source": "medical_auto",
+    "description": "Change the unit of measure (mg→g, cm→mm, etc.)",
+    "n_pairs": 30
+  },
+  "voice_swap": {
+    "source": "template",
+    "description": "Active/passive voice swap",
+    "n_pairs": 30
+  },
+  "word_order": {
+    "source": "paper",
+    "description": "Adjacent word swap",
+    "n_pairs": 30
+  },
+  "word_order_shard_00": {
+    "source": "template",
+    "description": "Word-order shard (seed 0)",
+    "n_pairs": 9
+  },
+  "word_order_shard_01": {
+    "source": "template",
+    "description": "Word-order shard (seed 1)",
+    "n_pairs": 6
+  },
+  "word_order_shard_02": {
+    "source": "template",
+    "description": "Word-order shard (seed 2)",
+    "n_pairs": 9
+  },
+  "word_order_shard_03": {
+    "source": "template",
+    "description": "Word-order shard (seed 3)",
+    "n_pairs": 9
+  }
+}

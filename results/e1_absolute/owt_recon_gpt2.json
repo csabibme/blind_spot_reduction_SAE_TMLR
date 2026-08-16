@@ -1,0 +1,37 @@
+{
+  "profile": "gpt2",
+  "owt_cache": "<REPO_ROOT>",
+  "n_samples": 1000,
+  "seed": 42,
+  "h_norm_mean": 240.43740844726562,
+  "standard": {
+    "mse": 0.006671829614788294,
+    "nmse": 8.180189976307128e-05,
+    "explained_variance": 0.9999181472055738,
+    "cosine_sim_mean": 0.9999501852750488,
+    "cosine_sim_min": 0.9984518044053083,
+    "cosine_sim_q05": 0.9999070664195224,
+    "L0_mean": 2361.194,
+    "code_norm_mean": 121.86363501319444,
+    "density_mean": 0.57646337890625,
+    "inactive_frac_mean": 0.42353662109375
+  },
+  "vreg": {
+    "mse": 0.008659741841256618,
+    "nmse": 0.00010617527672990939,
+    "explained_variance": 0.9998936741039927,
+    "cosine_sim_mean": 0.9999466017485316,
+    "cosine_sim_min": 0.9978264070917743,
+    "cosine_sim_q05": 0.9998987132343363,
+    "L0_mean": 2385.349,
+    "code_norm_mean": 122.35171958489008,
+    "density_mean": 0.582360595703125,
+    "inactive_frac_mean": 0.417639404296875
+  },
+  "comparison": {
+    "mse_ratio": 1.2979560840049191,
+    "nmse_ratio": 1.297956107859064,
+    "ev_drop": 2.447310158115723e-05,
+    "cos_drop": 3.5835265171924036e-06
+  }
+}

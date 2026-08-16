@@ -1,0 +1,5232 @@
+{
+  "experiment": "numeric_orientation_stress_raw_logprob",
+  "model": "Qwen/Qwen2.5-3B",
+  "device": "mps",
+  "dtype": "float16",
+  "dataset": "data/numeric_orientation_stress.json",
+  "split": "test",
+  "n_items": 300,
+  "summary": {
+    "overall": {
+      "n": 300,
+      "accuracy": 0.7033333333333334,
+      "correct_margin_mean": 0.5408333354194959,
+      "correct_margin_l20": -0.6682291616996129,
+      "trap_surface_error_rate": 0.2483221476510067
+    },
+    "by_family": {
+      "change_direction": {
+        "n": 100,
+        "accuracy": 1.0,
+        "correct_margin_mean": 1.479218755364418,
+        "correct_margin_l20": 0.708593738079071,
+        "trap_surface_error_rate": 0.0
+      },
+      "concentration_volume": {
+        "n": 66,
+        "accuracy": 0.5454545454545454,
+        "correct_margin_mean": 0.05397727724277612,
+        "correct_margin_l20": -0.43303569725581575,
+        "trap_surface_error_rate": 0.48484848484848486
+      },
+      "total_daily_dose": {
+        "n": 67,
+        "accuracy": 0.5074626865671642,
+        "correct_margin_mean": 0.07672574315498125,
+        "correct_margin_l20": -1.0111607270581382,
+        "trap_surface_error_rate": 0.48484848484848486
+      },
+      "unit_conversion": {
+        "n": 67,
+        "accuracy": 0.6119402985074627,
+        "correct_margin_mean": 0.08395522388059702,
+        "correct_margin_l20": -0.3035714328289032,
+        "trap_surface_error_rate": 0.15151515151515152
+      }
+    },
+    "by_regime": {
+      "easy": {
+        "n": 151,
+        "accuracy": 0.6556291390728477,
+        "correct_margin_mean": 0.43108443609926084,
+        "correct_margin_l20": -0.592237897457615,
+        "trap_surface_error_rate": null
+      },
+      "trap": {
+        "n": 149,
+        "accuracy": 0.7516778523489933,
+        "correct_margin_mean": 0.652055374327922,
+        "correct_margin_l20": -0.7322916626930237,
+        "trap_surface_error_rate": 0.2483221476510067
+      }
+    },
+    "by_family_regime": {
+      "change_direction": {
+        "easy": {
+          "n": 50,
+          "accuracy": 1.0,
+          "correct_margin_mean": 1.106875,
+          "correct_margin_l20": 0.615625,
+          "trap_surface_error_rate": null
+        },
+        "trap": {
+          "n": 50,
+          "accuracy": 1.0,
+          "correct_margin_mean": 1.851562510728836,
+          "correct_margin_l20": 1.243749988079071,
+          "trap_surface_error_rate": 0.0
+        }
+      },
+      "concentration_volume": {
+        "easy": {
+          "n": 33,
+          "accuracy": 0.5757575757575758,
+          "correct_margin_mean": 0.15624999819379864,
+          "correct_margin_l20": -0.2968749829701015,
+          "trap_surface_error_rate": null
+        },
+        "trap": {
+          "n": 33,
+          "accuracy": 0.5151515151515151,
+          "correct_margin_mean": -0.048295443708246406,
+          "correct_margin_l20": -0.47544641154153006,
+          "trap_surface_error_rate": 0.48484848484848486
+        }
+      },
+      "total_daily_dose": {
+        "easy": {
+          "n": 34,
+          "accuracy": 0.5,
+          "correct_margin_mean": 0.1741727897349526,
+          "correct_margin_l20": -0.8727678571428571,
+          "trap_surface_error_rate": null
+        },
+        "trap": {
+          "n": 33,
+          "accuracy": 0.5151515151515151,
+          "correct_margin_mean": -0.023674244230443783,
+          "correct_margin_l20": -1.060267882687705,
+          "trap_surface_error_rate": 0.48484848484848486
+        }
+      },
+      "unit_conversion": {
+        "easy": {
+          "n": 34,
+          "accuracy": 0.38235294117647056,
+          "correct_margin_mean": -0.03906249824692221,
+          "correct_margin_l20": -0.34375000851494925,
+          "trap_surface_error_rate": null
+        },
+        "trap": {
+          "n": 33,
+          "accuracy": 0.8484848484848485,
+          "correct_margin_mean": 0.21070075576955621,
+          "correct_margin_l20": -0.033482142857142856,
+          "trap_surface_error_rate": 0.15151515151515152
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "concentration_volume_easy_00147",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7240279316902161,
+        -1.1615278720855713
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.4374999403953552
+    },
+    {
+      "id": "total_daily_dose_trap_00068",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5776461958885193,
+        -1.546396255493164
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9687500596046448
+    },
+    {
+      "id": "change_direction_easy_00074",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6407428979873657,
+        -1.0469928979873657
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.59375
+    },
+    {
+      "id": "change_direction_easy_00062",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.913949966430664,
+        -0.8983249664306641
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.015625
+    },
+    {
+      "id": "unit_conversion_easy_00079",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6981303095817566,
+        -0.9168803095817566
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.21875
+    },
+    {
+      "id": "total_daily_dose_easy_00109",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.522307813167572,
+        -1.7254328727722168
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.2031250596046448
+    },
+    {
+      "id": "unit_conversion_trap_00080",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9629486203193665,
+        -0.7754486203193665
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.1875
+    },
+    {
+      "id": "concentration_volume_trap_00106",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6971259713172913,
+        -1.1971259117126465
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4999999403953552
+    },
+    {
+      "id": "total_daily_dose_trap_00092",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5837454199790955,
+        -1.5837454795837402
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.0000000596046448
+    },
+    {
+      "id": "concentration_volume_trap_00178",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7070528268814087,
+        -1.1601778268814087
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.453125
+    },
+    {
+      "id": "total_daily_dose_easy_00085",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5296381711959839,
+        -1.7171381711959839
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1875
+    },
+    {
+      "id": "total_daily_dose_easy_00031",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6291055679321289,
+        -1.441605567932129
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8125
+    },
+    {
+      "id": "total_daily_dose_easy_00175",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6659270524978638,
+        -1.3534270524978638
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.6875
+    },
+    {
+      "id": "total_daily_dose_trap_00164",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5776461958885193,
+        -1.546396255493164
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9687500596046448
+    },
+    {
+      "id": "change_direction_trap_00158",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.3882038593292236,
+        -1.0288288593292236
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.359375
+    },
+    {
+      "id": "concentration_volume_trap_00058",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6973608732223511,
+        -1.134860873222351
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4375
+    },
+    {
+      "id": "total_daily_dose_trap_00074",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5912434458732605,
+        -1.5756185054779053
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.9843750596046448
+    },
+    {
+      "id": "total_daily_dose_trap_00062",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6190998554229736,
+        -1.4315998554229736
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.8125
+    },
+    {
+      "id": "change_direction_trap_00070",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4059205055236816,
+        -1.0309205055236816
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.375
+    },
+    {
+      "id": "change_direction_easy_00070",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9333484768867493,
+        -1.8395984172821045
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.9062499403953552
+    },
+    {
+      "id": "change_direction_easy_00174",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7795203924179077,
+        -2.2951455116271973
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156251192092896
+    },
+    {
+      "id": "unit_conversion_trap_00056",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.917631983757019,
+        -0.683256983757019
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.234375
+    },
+    {
+      "id": "concentration_volume_trap_00148",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7595559358596802,
+        -1.0564309358596802
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.296875
+    },
+    {
+      "id": "unit_conversion_trap_00074",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6883500814437866,
+        -0.9852250814437866
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.296875
+    },
+    {
+      "id": "concentration_volume_easy_00093",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9483553171157837,
+        -0.8702303171157837
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.078125
+    },
+    {
+      "id": "total_daily_dose_trap_00176",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5565916895866394,
+        -1.6034667491912842
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.0468750596046448
+    },
+    {
+      "id": "concentration_volume_easy_00117",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7955835461616516,
+        -1.0768334865570068
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.2812499403953552
+    },
+    {
+      "id": "unit_conversion_trap_00098",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6570644378662109,
+        -0.9226894378662109
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "total_daily_dose_trap_00104",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.572250247001648,
+        -1.509750247001648
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9375
+    },
+    {
+      "id": "unit_conversion_easy_00133",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8995460271835327,
+        -0.7120460271835327
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.1875
+    },
+    {
+      "id": "change_direction_trap_00126",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4725265502929688,
+        -0.9881516695022583
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4843748807907104
+    },
+    {
+      "id": "change_direction_easy_00170",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.732553243637085,
+        -2.482553243637085
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.75
+    },
+    {
+      "id": "change_direction_trap_00038",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.818300187587738,
+        -3.240175247192383
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.4218750596046448
+    },
+    {
+      "id": "unit_conversion_easy_00145",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6812058687210083,
+        -0.9624558687210083
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.28125
+    },
+    {
+      "id": "change_direction_easy_00050",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6962999105453491,
+        -1.0087999105453491
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.6875
+    },
+    {
+      "id": "change_direction_easy_00194",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.572302222251892,
+        -1.041052222251892
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.53125
+    },
+    {
+      "id": "unit_conversion_easy_00007",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6381571292877197,
+        -0.9819071292877197
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.34375
+    },
+    {
+      "id": "change_direction_easy_00118",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6693836450576782,
+        -1.0287586450576782
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.640625
+    },
+    {
+      "id": "concentration_volume_easy_00195",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.671805202960968,
+        -1.2030551433563232
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5312499403953552
+    },
+    {
+      "id": "unit_conversion_easy_00001",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6344816088676453,
+        -1.13448166847229
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5000000596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00043",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6484108567237854,
+        -1.4296607971191406
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.7812499403953552
+    },
+    {
+      "id": "change_direction_trap_00198",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.392683506011963,
+        -1.080183506011963
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3125
+    },
+    {
+      "id": "change_direction_easy_00186",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6725338697433472,
+        -1.0006588697433472
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.671875
+    },
+    {
+      "id": "total_daily_dose_trap_00050",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5928213596343994,
+        -1.5459463596343994
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.953125
+    },
+    {
+      "id": "change_direction_easy_00142",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8636724948883057,
+        -1.9886724948883057
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.125
+    },
+    {
+      "id": "unit_conversion_trap_00014",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.604701578617096,
+        -1.0265765190124512
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.4218749403953552
+    },
+    {
+      "id": "concentration_volume_trap_00112",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7271167635917664,
+        -1.0708668231964111
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.3437500596046448
+    },
+    {
+      "id": "concentration_volume_easy_00021",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8281962275505066,
+        -1.0000712871551514
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.17187505960464478
+    },
+    {
+      "id": "change_direction_easy_00106",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7307076454162598,
+        -2.4338326454162598
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.703125
+    },
+    {
+      "id": "total_daily_dose_trap_00020",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6085241436958313,
+        -1.5772740840911865
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9687499403953552
+    },
+    {
+      "id": "total_daily_dose_easy_00133",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.579412043094635,
+        -1.5794119834899902
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.9999999403953552
+    },
+    {
+      "id": "change_direction_easy_00162",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6998279690742493,
+        -2.5123279094696045
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.8124999403953552
+    },
+    {
+      "id": "unit_conversion_easy_00055",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6170644164085388,
+        -1.0076894760131836
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.3906250596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00079",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.640434980392456,
+        -1.390434980392456
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.75
+    },
+    {
+      "id": "concentration_volume_easy_00105",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8218491077423096,
+        -1.0249741077423096
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.203125
+    },
+    {
+      "id": "change_direction_trap_00002",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4150447845458984,
+        -1.0400446653366089
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3750001192092896
+    },
+    {
+      "id": "concentration_volume_easy_00135",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.697044312953949,
+        -1.1345443725585938
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.4375000596046448
+    },
+    {
+      "id": "change_direction_trap_00178",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.256178855895996,
+        -1.099928855895996
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.15625
+    },
+    {
+      "id": "total_daily_dose_easy_00091",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6484628915786743,
+        -1.4140878915786743
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.765625
+    },
+    {
+      "id": "unit_conversion_easy_00115",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7539808750152588,
+        -0.8946058750152588
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.140625
+    },
+    {
+      "id": "concentration_volume_easy_00159",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7038604617118835,
+        -1.1882355213165283
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.4843750596046448
+    },
+    {
+      "id": "unit_conversion_easy_00091",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6431102752685547,
+        -0.9399852752685547
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.296875
+    },
+    {
+      "id": "unit_conversion_trap_00092",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9858954548835754,
+        -0.5952704548835754
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.390625
+    },
+    {
+      "id": "concentration_volume_trap_00034",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7351186871528625,
+        -1.1101186275482178
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.3749999403953552
+    },
+    {
+      "id": "concentration_volume_easy_00177",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7452071309089661,
+        -1.1045820713043213
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.3593749403953552
+    },
+    {
+      "id": "total_daily_dose_trap_00080",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6115268468856812,
+        -1.4552768468856812
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.84375
+    },
+    {
+      "id": "change_direction_easy_00154",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6810720562934875,
+        -2.6654469966888428
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.9843749403953552
+    },
+    {
+      "id": "unit_conversion_trap_00032",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.020679235458374,
+        -0.708179235458374
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "concentration_volume_easy_00051",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7079787850379944,
+        -1.2079787254333496
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.4999999403953552
+    },
+    {
+      "id": "change_direction_easy_00134",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6693836450576782,
+        -1.0287586450576782
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.640625
+    },
+    {
+      "id": "unit_conversion_trap_00146",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6963028907775879,
+        -0.9619278907775879
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "change_direction_easy_00190",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.0319803953170776,
+        -1.7663553953170776
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.734375
+    },
+    {
+      "id": "concentration_volume_trap_00136",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7710779309272766,
+        -1.0523278713226318
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.2812499403953552
+    },
+    {
+      "id": "concentration_volume_trap_00184",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7847375273704529,
+        -0.9878625273704529
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.203125
+    },
+    {
+      "id": "total_daily_dose_easy_00055",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6088500022888184,
+        -1.5151000022888184
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.90625
+    },
+    {
+      "id": "unit_conversion_easy_00199",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9023429155349731,
+        -0.7773429155349731
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.125
+    },
+    {
+      "id": "concentration_volume_trap_00082",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7345914840698242,
+        -1.1252164840698242
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.390625
+    },
+    {
+      "id": "unit_conversion_easy_00067",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7362589240074158,
+        -0.8768839240074158
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.140625
+    },
+    {
+      "id": "change_direction_trap_00062",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8908320069313049,
+        -3.42208194732666
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.5312499403953552
+    },
+    {
+      "id": "concentration_volume_easy_00069",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8741442561149597,
+        -0.9210192561149597
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.046875
+    },
+    {
+      "id": "unit_conversion_easy_00175",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6381571292877197,
+        -0.9819071292877197
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.34375
+    },
+    {
+      "id": "change_direction_easy_00058",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9544918537139893,
+        -1.8294918537139893
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.875
+    },
+    {
+      "id": "concentration_volume_trap_00154",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6775985956192017,
+        -1.2088485956192017
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.53125
+    },
+    {
+      "id": "change_direction_trap_00106",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.328026056289673,
+        -1.0624010562896729
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.265625
+    },
+    {
+      "id": "total_daily_dose_trap_00188",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5837658047676086,
+        -1.5212657451629639
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9374999403953552
+    },
+    {
+      "id": "unit_conversion_trap_00116",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8929268717765808,
+        -0.7523018717765808
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.140625
+    },
+    {
+      "id": "change_direction_easy_00150",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.8276174068450928,
+        -0.9369924664497375
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.8906249403953552
+    },
+    {
+      "id": "change_direction_trap_00114",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8428000807762146,
+        -3.1396751403808594
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.2968750596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00157",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5363836884498596,
+        -1.6770086288452148
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1406249403953552
+    },
+    {
+      "id": "concentration_volume_trap_00046",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6883211731910706,
+        -1.1570711135864258
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4687499403953552
+    },
+    {
+      "id": "concentration_volume_trap_00070",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7529503703117371,
+        -1.1592004299163818
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4062500596046448
+    },
+    {
+      "id": "change_direction_trap_00042",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.297475814819336,
+        -1.0787259340286255
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.2187498807907104
+    },
+    {
+      "id": "total_daily_dose_easy_00163",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5984992384910583,
+        -1.4891242980957031
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8906250596046448
+    },
+    {
+      "id": "unit_conversion_trap_00002",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6083314418792725,
+        -0.9833314418792725
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.375
+    },
+    {
+      "id": "unit_conversion_easy_00049",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5795910954475403,
+        -0.9858410954475403
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.40625
+    },
+    {
+      "id": "change_direction_trap_00078",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8906946182250977,
+        -2.7500696182250977
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.859375
+    },
+    {
+      "id": "unit_conversion_easy_00109",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9200319051742554,
+        -0.6856569051742554
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.234375
+    },
+    {
+      "id": "change_direction_trap_00054",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8580479621887207,
+        -3.4674229621887207
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.609375
+    },
+    {
+      "id": "total_daily_dose_easy_00169",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5356647968292236,
+        -1.7387897968292236
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.203125
+    },
+    {
+      "id": "concentration_volume_trap_00094",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7436836957931519,
+        -1.1343086957931519
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.390625
+    },
+    {
+      "id": "unit_conversion_trap_00050",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6909812688827515,
+        -0.9566062688827515
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "unit_conversion_easy_00103",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7335631251335144,
+        -0.8898131251335144
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.15625
+    },
+    {
+      "id": "unit_conversion_trap_00104",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.823738694190979,
+        -0.886238694190979
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.0625
+    },
+    {
+      "id": "unit_conversion_easy_00043",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9023429155349731,
+        -0.7773429155349731
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.125
+    },
+    {
+      "id": "total_daily_dose_easy_00145",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5082066655158997,
+        -1.7738316059112549
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.2656249403953552
+    },
+    {
+      "id": "total_daily_dose_easy_00199",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6152161359786987,
+        -1.4745911359786987
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.859375
+    },
+    {
+      "id": "concentration_volume_easy_00063",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6488285660743713,
+        -1.2269535064697266
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5781249403953552
+    },
+    {
+      "id": "total_daily_dose_trap_00032",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5922970175743103,
+        -1.561047077178955
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9687500596046448
+    },
+    {
+      "id": "unit_conversion_trap_00128",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8578726053237915,
+        -0.7641226053237915
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.09375
+    },
+    {
+      "id": "change_direction_trap_00174",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8627572655677795,
+        -3.1908822059631348
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.3281249403953552
+    },
+    {
+      "id": "change_direction_trap_00182",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9371428489685059,
+        -3.140267848968506
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.203125
+    },
+    {
+      "id": "change_direction_trap_00110",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4946281909942627,
+        -0.9790032505989075
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156249403953552
+    },
+    {
+      "id": "concentration_volume_easy_00015",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7221116423606873,
+        -1.128361701965332
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.4062500596046448
+    },
+    {
+      "id": "concentration_volume_trap_00088",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7599191665649414,
+        -1.0255441665649414
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "change_direction_trap_00122",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8425353765487671,
+        -3.2019104957580566
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.3593751192092896
+    },
+    {
+      "id": "total_daily_dose_trap_00194",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.593328058719635,
+        -1.5777029991149902
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.9843749403953552
+    },
+    {
+      "id": "unit_conversion_easy_00073",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.950892984867096,
+        -0.638392984867096
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.3125
+    },
+    {
+      "id": "concentration_volume_easy_00129",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7482454180717468,
+        -1.0763704776763916
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.3281250596046448
+    },
+    {
+      "id": "change_direction_easy_00122",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7933472990989685,
+        -2.2464723587036133
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4531250596046448
+    },
+    {
+      "id": "unit_conversion_easy_00127",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7669981718063354,
+        -0.8763731718063354
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.109375
+    },
+    {
+      "id": "total_daily_dose_trap_00056",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5464054942131042,
+        -1.624530553817749
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.0781250596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00097",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5504608750343323,
+        -1.6442108154296875
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.0937499403953552
+    },
+    {
+      "id": "change_direction_easy_00022",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.8758946657180786,
+        -0.9227696657180786
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.953125
+    },
+    {
+      "id": "change_direction_easy_00054",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7265541553497314,
+        -2.4453041553497314
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.71875
+    },
+    {
+      "id": "unit_conversion_easy_00013",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6344816088676453,
+        -1.13448166847229
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5000000596046448
+    },
+    {
+      "id": "concentration_volume_trap_00052",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8500592708587646,
+        -1.0063092708587646
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.15625
+    },
+    {
+      "id": "change_direction_trap_00050",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.818997323513031,
+        -3.592434883117676
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.7734375596046448
+    },
+    {
+      "id": "concentration_volume_easy_00075",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7101469039916992,
+        -1.1007719039916992
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.390625
+    },
+    {
+      "id": "concentration_volume_easy_00087",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.665579617023468,
+        -1.2280795574188232
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5624999403953552
+    },
+    {
+      "id": "unit_conversion_trap_00044",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.0004993677139282,
+        -0.7348743677139282
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "change_direction_easy_00034",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.993431568145752,
+        -0.852806568145752
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.140625
+    },
+    {
+      "id": "concentration_volume_trap_00160",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7406520247459412,
+        -1.084402084350586
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.3437500596046448
+    },
+    {
+      "id": "unit_conversion_easy_00169",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6572517156600952,
+        -0.9853767156600952
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.328125
+    },
+    {
+      "id": "change_direction_trap_00034",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.392683506011963,
+        -1.080183506011963
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3125
+    },
+    {
+      "id": "concentration_volume_trap_00172",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7390499114990234,
+        -1.1296749114990234
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.390625
+    },
+    {
+      "id": "change_direction_easy_00042",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6693836450576782,
+        -1.0287586450576782
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.640625
+    },
+    {
+      "id": "change_direction_trap_00154",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4946281909942627,
+        -0.9790032505989075
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156249403953552
+    },
+    {
+      "id": "concentration_volume_trap_00040",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.729509711265564,
+        -1.088884711265564
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.359375
+    },
+    {
+      "id": "total_daily_dose_trap_00008",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5640379786491394,
+        -1.5484130382537842
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9843750596046448
+    },
+    {
+      "id": "change_direction_trap_00102",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.818997323513031,
+        -3.592434883117676
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.7734375596046448
+    },
+    {
+      "id": "unit_conversion_easy_00085",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6812058687210083,
+        -0.9624558687210083
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.28125
+    },
+    {
+      "id": "change_direction_trap_00046",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8605783581733704,
+        -3.2824532985687256
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.4218749403953552
+    },
+    {
+      "id": "concentration_volume_trap_00076",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7112652659416199,
+        -1.1175153255462646
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.4062500596046448
+    },
+    {
+      "id": "concentration_volume_trap_00010",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6777508854866028,
+        -1.209000825881958
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.5312499403953552
+    },
+    {
+      "id": "concentration_volume_easy_00081",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8100944757461548,
+        -0.9975944757461548
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.1875
+    },
+    {
+      "id": "total_daily_dose_easy_00181",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5703567862510681,
+        -1.585981845855713
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.0156250596046448
+    },
+    {
+      "id": "change_direction_easy_00166",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -2.0972301959991455,
+        -0.8316052556037903
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.2656249403953552
+    },
+    {
+      "id": "change_direction_trap_00194",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.1241438388824463,
+        -1.1553938388824463
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.96875
+    },
+    {
+      "id": "unit_conversion_easy_00139",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8308206796646118,
+        -0.6901956796646118
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.140625
+    },
+    {
+      "id": "concentration_volume_trap_00118",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7437940835952759,
+        -1.1500440835952759
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.40625
+    },
+    {
+      "id": "total_daily_dose_easy_00007",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6169580817222595,
+        -1.4607081413269043
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8437500596046448
+    },
+    {
+      "id": "change_direction_easy_00014",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -2.0972301959991455,
+        -0.8316052556037903
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.2656249403953552
+    },
+    {
+      "id": "unit_conversion_trap_00140",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.020679235458374,
+        -0.708179235458374
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "total_daily_dose_trap_00014",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6461241245269775,
+        -1.3804991245269775
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.734375
+    },
+    {
+      "id": "change_direction_trap_00082",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.3882038593292236,
+        -1.0288288593292236
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.359375
+    },
+    {
+      "id": "total_daily_dose_easy_00127",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.635508120059967,
+        -1.3855080604553223
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.7499999403953552
+    },
+    {
+      "id": "change_direction_trap_00146",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8425353765487671,
+        -3.2019104957580566
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.3593751192092896
+    },
+    {
+      "id": "concentration_volume_easy_00057",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7730937004089355,
+        -1.0543437004089355
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.28125
+    },
+    {
+      "id": "change_direction_easy_00006",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6407428979873657,
+        -1.0469928979873657
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.59375
+    },
+    {
+      "id": "concentration_volume_trap_00190",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8021347522735596,
+        -1.0677597522735596
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.265625
+    },
+    {
+      "id": "change_direction_easy_00030",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7795203924179077,
+        -2.2951455116271973
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156251192092896
+    },
+    {
+      "id": "unit_conversion_trap_00164",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8865814208984375,
+        -0.7615814208984375
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.125
+    },
+    {
+      "id": "total_daily_dose_trap_00122",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5706595778465271,
+        -1.5862846374511719
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 1.0156250596046448
+    },
+    {
+      "id": "concentration_volume_easy_00153",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7669065594673157,
+        -1.063781499862671
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.2968749403953552
+    },
+    {
+      "id": "concentration_volume_trap_00016",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7530362606048584,
+        -1.0655362606048584
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "total_daily_dose_easy_00103",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6410660743713379,
+        -1.453566074371338
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8125
+    },
+    {
+      "id": "unit_conversion_easy_00181",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.63747638463974,
+        -0.99685138463974
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.359375
+    },
+    {
+      "id": "unit_conversion_trap_00176",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.917631983757019,
+        -0.683256983757019
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.234375
+    },
+    {
+      "id": "change_direction_easy_00198",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7391607761383057,
+        -2.5204107761383057
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.78125
+    },
+    {
+      "id": "unit_conversion_easy_00151",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.76511150598526,
+        -0.73386150598526
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.03125
+    },
+    {
+      "id": "unit_conversion_trap_00062",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9008132815361023,
+        -0.8070632815361023
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.09375
+    },
+    {
+      "id": "concentration_volume_trap_00100",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7568827867507935,
+        -1.0693827867507935
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "unit_conversion_trap_00020",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9532027244567871,
+        -0.6719527244567871
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.28125
+    },
+    {
+      "id": "change_direction_easy_00182",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.7266737222671509,
+        -1.0079237222671509
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.71875
+    },
+    {
+      "id": "change_direction_easy_00010",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.7266737222671509,
+        -1.0079237222671509
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.71875
+    },
+    {
+      "id": "total_daily_dose_easy_00115",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6325204968452454,
+        -1.4606454372406006
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8281249403953552
+    },
+    {
+      "id": "change_direction_trap_00086",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.3882038593292236,
+        -1.0288288593292236
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.359375
+    },
+    {
+      "id": "total_daily_dose_trap_00182",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6370920538902283,
+        -1.402717113494873
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.7656250596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00061",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.4938980042934418,
+        -1.8063980340957642
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.3125000298023224
+    },
+    {
+      "id": "unit_conversion_trap_00158",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6869392395019531,
+        -0.9369392395019531
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.25
+    },
+    {
+      "id": "total_daily_dose_easy_00049",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5664044618606567,
+        -1.5976544618606567
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.03125
+    },
+    {
+      "id": "total_daily_dose_trap_00170",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5873655080795288,
+        -1.5717405080795288
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.984375
+    },
+    {
+      "id": "concentration_volume_easy_00039",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6345843076705933,
+        -1.2595843076705933
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.625
+    },
+    {
+      "id": "total_daily_dose_easy_00139",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.62576824426651,
+        -1.4851431846618652
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8593749403953552
+    },
+    {
+      "id": "change_direction_easy_00126",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.8276174068450928,
+        -0.9369924664497375
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.8906249403953552
+    },
+    {
+      "id": "unit_conversion_easy_00097",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5546196699142456,
+        -1.0233696699142456
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.46875
+    },
+    {
+      "id": "concentration_volume_easy_00165",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7863460779190063,
+        -1.0363460779190063
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.25
+    },
+    {
+      "id": "unit_conversion_trap_00134",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6763386726379395,
+        -0.9888386726379395
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "total_daily_dose_easy_00121",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5333154797554016,
+        -1.7051904201507568
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1718749403953552
+    },
+    {
+      "id": "change_direction_trap_00094",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.3421735763549805,
+        -1.029673457145691
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3125001192092896
+    },
+    {
+      "id": "change_direction_trap_00018",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8138322234153748,
+        -3.1419572830200195
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.3281250596046448
+    },
+    {
+      "id": "change_direction_trap_00130",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.758199155330658,
+        -3.5238242149353027
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.7656250596046448
+    },
+    {
+      "id": "total_daily_dose_trap_00128",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5622459053993225,
+        -1.5466208457946777
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9843749403953552
+    },
+    {
+      "id": "unit_conversion_trap_00152",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9627761244773865,
+        -0.7752761244773865
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.1875
+    },
+    {
+      "id": "change_direction_easy_00158",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.8951420783996582,
+        -0.9263920783996582
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.96875
+    },
+    {
+      "id": "change_direction_easy_00094",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.942000150680542,
+        -0.926375150680542
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.015625
+    },
+    {
+      "id": "concentration_volume_easy_00027",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6528242826461792,
+        -1.2153242826461792
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.5625
+    },
+    {
+      "id": "change_direction_trap_00022",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8766595721244812,
+        -3.204784631729126
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.3281250596046448
+    },
+    {
+      "id": "unit_conversion_easy_00121",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6697774529457092,
+        -0.9822774529457092
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "concentration_volume_trap_00124",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7712517380714417,
+        -1.0368766784667969
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.2656249403953552
+    },
+    {
+      "id": "unit_conversion_trap_00122",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6570644378662109,
+        -0.9226894378662109
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "change_direction_trap_00014",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.758199155330658,
+        -3.5238242149353027
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.7656250596046448
+    },
+    {
+      "id": "unit_conversion_trap_00086",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8909990787506104,
+        -0.8128740787506104
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.078125
+    },
+    {
+      "id": "change_direction_trap_00190",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.511636734008789,
+        -1.042886734008789
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.46875
+    },
+    {
+      "id": "total_daily_dose_easy_00193",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5440540909767151,
+        -1.6690540313720703
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1249999403953552
+    },
+    {
+      "id": "total_daily_dose_trap_00134",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6309449672698975,
+        -1.3965699672698975
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.765625
+    },
+    {
+      "id": "unit_conversion_easy_00163",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7335631251335144,
+        -0.8898131251335144
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.15625
+    },
+    {
+      "id": "total_daily_dose_easy_00013",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5231260061264038,
+        -1.7418760061264038
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.21875
+    },
+    {
+      "id": "change_direction_easy_00146",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.7957487106323242,
+        -0.983248770236969
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.8124999403953552
+    },
+    {
+      "id": "change_direction_trap_00026",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4725265502929688,
+        -0.9881516695022583
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4843748807907104
+    },
+    {
+      "id": "change_direction_trap_00098",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9120568037033081,
+        -3.3183069229125977
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.4062501192092896
+    },
+    {
+      "id": "unit_conversion_trap_00038",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6879158020019531,
+        -0.9691658020019531
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.28125
+    },
+    {
+      "id": "change_direction_trap_00150",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4816465377807617,
+        -1.0441465377807617
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4375
+    },
+    {
+      "id": "unit_conversion_trap_00008",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.020679235458374,
+        -0.708179235458374
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.3125
+    },
+    {
+      "id": "total_daily_dose_easy_00001",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5268422365188599,
+        -1.6987172365188599
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.171875
+    },
+    {
+      "id": "total_daily_dose_easy_00019",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6102961301803589,
+        -1.4696711301803589
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.859375
+    },
+    {
+      "id": "unit_conversion_trap_00110",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6963028907775879,
+        -0.9619278907775879
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "total_daily_dose_trap_00038",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6376565098762512,
+        -1.4189064502716064
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.7812499403953552
+    },
+    {
+      "id": "concentration_volume_easy_00099",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7078065872192383,
+        -1.1140565872192383
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.40625
+    },
+    {
+      "id": "change_direction_easy_00086",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6693836450576782,
+        -1.0287586450576782
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.640625
+    },
+    {
+      "id": "change_direction_trap_00118",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8819679021835327,
+        -2.9132180213928223
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.0312501192092896
+    },
+    {
+      "id": "change_direction_easy_00082",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8115761280059814,
+        -2.0928261280059814
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.28125
+    },
+    {
+      "id": "total_daily_dose_easy_00187",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6413590908050537,
+        -1.4382340908050537
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.796875
+    },
+    {
+      "id": "change_direction_trap_00066",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.260880947113037,
+        -1.0421310663223267
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.2187498807907104
+    },
+    {
+      "id": "change_direction_easy_00018",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7546918392181396,
+        -2.3171918392181396
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5625
+    },
+    {
+      "id": "total_daily_dose_trap_00002",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6051245927810669,
+        -1.511374592781067
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.90625
+    },
+    {
+      "id": "change_direction_trap_00186",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.818300187587738,
+        -3.240175247192383
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.4218750596046448
+    },
+    {
+      "id": "total_daily_dose_easy_00067",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6604877710342407,
+        -1.3792377710342407
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.71875
+    },
+    {
+      "id": "concentration_volume_trap_00130",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7693361043930054,
+        -1.0974611043930054
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.328125
+    },
+    {
+      "id": "concentration_volume_easy_00003",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7001215219497681,
+        -1.153246521949768
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.453125
+    },
+    {
+      "id": "total_daily_dose_trap_00044",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5977657437324524,
+        -1.5040156841278076
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.9062499403953552
+    },
+    {
+      "id": "change_direction_easy_00046",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.894601821899414,
+        -0.9258518218994141
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.96875
+    },
+    {
+      "id": "change_direction_trap_00030",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.666069746017456,
+        -0.9941946864128113
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.6718750596046448
+    },
+    {
+      "id": "change_direction_trap_00166",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.897864818572998,
+        -0.8509897589683533
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 2.0468750596046448
+    },
+    {
+      "id": "unit_conversion_easy_00187",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6381571292877197,
+        -0.9819071292877197
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.34375
+    },
+    {
+      "id": "change_direction_easy_00138",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.894601821899414,
+        -0.9258518218994141
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.96875
+    },
+    {
+      "id": "unit_conversion_easy_00193",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9200319051742554,
+        -0.6856569051742554
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.234375
+    },
+    {
+      "id": "concentration_volume_trap_00166",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7601523995399475,
+        -1.1195273399353027
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.3593749403953552
+    },
+    {
+      "id": "unit_conversion_trap_00026",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8960725665092468,
+        -0.7866975665092468
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.109375
+    },
+    {
+      "id": "change_direction_easy_00002",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7795203924179077,
+        -2.2951455116271973
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156251192092896
+    },
+    {
+      "id": "change_direction_easy_00066",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.942000150680542,
+        -0.926375150680542
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.015625
+    },
+    {
+      "id": "unit_conversion_easy_00031",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6431102752685547,
+        -0.9399852752685547
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.296875
+    },
+    {
+      "id": "change_direction_easy_00110",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.6407428979873657,
+        -1.0469928979873657
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.59375
+    },
+    {
+      "id": "unit_conversion_trap_00194",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.9053899049758911,
+        -0.7960149049758911
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.109375
+    },
+    {
+      "id": "concentration_volume_easy_00033",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7736716270446777,
+        -1.0549216270446777
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.28125
+    },
+    {
+      "id": "total_daily_dose_trap_00116",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.525752604007721,
+        -1.7288775444030762
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.2031249403953552
+    },
+    {
+      "id": "change_direction_easy_00098",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8292069435119629,
+        -2.063581943511963
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.234375
+    },
+    {
+      "id": "concentration_volume_trap_00028",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7744678854942322,
+        -1.071342945098877
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.2968750596046448
+    },
+    {
+      "id": "concentration_volume_trap_00142",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7410481572151184,
+        -1.1472980976104736
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4062499403953552
+    },
+    {
+      "id": "change_direction_trap_00162",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8787828087806702,
+        -3.1756577491760254
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.2968749403953552
+    },
+    {
+      "id": "unit_conversion_trap_00068",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.0004993677139282,
+        -0.7348743677139282
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "total_daily_dose_trap_00086",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5950862169265747,
+        -1.5482112169265747
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.953125
+    },
+    {
+      "id": "total_daily_dose_easy_00073",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5048533082008362,
+        -1.7861032485961914
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.2812499403953552
+    },
+    {
+      "id": "concentration_volume_trap_00004",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8172035217285156,
+        -1.0359535217285156
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.21875
+    },
+    {
+      "id": "total_daily_dose_easy_00151",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6120408177375793,
+        -1.5026657581329346
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.8906249403953552
+    },
+    {
+      "id": "change_direction_easy_00114",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8591189384460449,
+        -2.109118938446045
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.25
+    },
+    {
+      "id": "concentration_volume_easy_00141",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9280738234519958,
+        -0.9124488234519958
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.015625
+    },
+    {
+      "id": "total_daily_dose_trap_00146",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5826570987701416,
+        -1.5670320987701416
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.984375
+    },
+    {
+      "id": "total_daily_dose_trap_00098",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6278050541877747,
+        -1.4403049945831299
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.8124999403953552
+    },
+    {
+      "id": "change_direction_easy_00130",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.970165491104126,
+        -1.845165491104126
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.875
+    },
+    {
+      "id": "change_direction_trap_00090",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.538252353668213,
+        -1.0382522344589233
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5000001192092896
+    },
+    {
+      "id": "change_direction_trap_00138",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8548952341079712,
+        -3.2767701148986816
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.4218748807907104
+    },
+    {
+      "id": "unit_conversion_trap_00182",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7017766833305359,
+        -0.9517766833305359
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.25
+    },
+    {
+      "id": "concentration_volume_easy_00009",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9140210151672363,
+        -0.9296460151672363
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.015625
+    },
+    {
+      "id": "total_daily_dose_trap_00158",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6095117330551147,
+        -1.5470117330551147
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.9375
+    },
+    {
+      "id": "total_daily_dose_trap_00140",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5598412752151489,
+        -1.637966275215149
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.078125
+    },
+    {
+      "id": "concentration_volume_easy_00111",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6963244676589966,
+        -1.2431994676589966
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.546875
+    },
+    {
+      "id": "unit_conversion_easy_00037",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9472487568855286,
+        -0.6659987568855286
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.28125
+    },
+    {
+      "id": "change_direction_trap_00074",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8906946182250977,
+        -2.7500696182250977
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 1.859375
+    },
+    {
+      "id": "unit_conversion_trap_00188",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -1.0004993677139282,
+        -0.7348743677139282
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "total_daily_dose_trap_00152",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5765315294265747,
+        -1.6077815294265747
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -1.03125
+    },
+    {
+      "id": "unit_conversion_easy_00019",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6194700002670288,
+        -0.9788450002670288
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.359375
+    },
+    {
+      "id": "change_direction_trap_00134",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.392683506011963,
+        -1.080183506011963
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3125
+    },
+    {
+      "id": "change_direction_easy_00102",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.7957487106323242,
+        -0.983248770236969
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 0.8124999403953552
+    },
+    {
+      "id": "change_direction_trap_00006",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.442572832107544,
+        -1.020697832107544
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.421875
+    },
+    {
+      "id": "change_direction_easy_00090",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -1.0435540676116943,
+        -1.6529290676116943
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 0.609375
+    },
+    {
+      "id": "change_direction_trap_00142",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.8369121551513672,
+        -3.211912155151367
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "decreased",
+      "is_correct": true,
+      "correct_margin": 2.375
+    },
+    {
+      "id": "concentration_volume_easy_00171",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7094410061836243,
+        -1.0844409465789795
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.3749999403953552
+    },
+    {
+      "id": "concentration_volume_easy_00045",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8049935102462769,
+        -1.0237435102462769
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.21875
+    },
+    {
+      "id": "total_daily_dose_trap_00026",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.5993356108665466,
+        -1.5524606704711914
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.9531250596046448
+    },
+    {
+      "id": "change_direction_easy_00078",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6810720562934875,
+        -2.6654469966888428
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.9843749403953552
+    },
+    {
+      "id": "unit_conversion_easy_00157",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.9422436356544495,
+        -0.6609936356544495
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.28125
+    },
+    {
+      "id": "concentration_volume_trap_00022",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.724444568157196,
+        -1.1306946277618408
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.4062500596046448
+    },
+    {
+      "id": "unit_conversion_trap_00170",
+      "family": "unit_conversion",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.645737886428833,
+        -0.926987886428833
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.28125
+    },
+    {
+      "id": "unit_conversion_easy_00025",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.950892984867096,
+        -0.638392984867096
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.3125
+    },
+    {
+      "id": "concentration_volume_easy_00123",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.6781231164932251,
+        -1.193748116493225
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.515625
+    },
+    {
+      "id": "change_direction_easy_00178",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.795254647731781,
+        -2.217129707336426
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4218750596046448
+    },
+    {
+      "id": "total_daily_dose_trap_00110",
+      "family": "total_daily_dose",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.6416354179382324,
+        -1.4385104179382324
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.796875
+    },
+    {
+      "id": "total_daily_dose_easy_00025",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.5440540909767151,
+        -1.6690540313720703
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1249999403953552
+    },
+    {
+      "id": "concentration_volume_trap_00196",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.7451410293579102,
+        -1.0888910293579102
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.34375
+    },
+    {
+      "id": "change_direction_trap_00170",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4059205055236816,
+        -1.0309205055236816
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.375
+    },
+    {
+      "id": "unit_conversion_easy_00061",
+      "family": "unit_conversion",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.839433491230011,
+        -0.792558491230011
+      ],
+      "predicted_index": 1,
+      "predicted": "B",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": false,
+      "correct_margin": -0.046875
+    },
+    {
+      "id": "change_direction_trap_00058",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.4150447845458984,
+        -1.0400446653366089
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.3750001192092896
+    },
+    {
+      "id": "concentration_volume_easy_00189",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.8086181282997131,
+        -1.0117430686950684
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 1,
+      "correct": "B",
+      "surface_heuristic": "B",
+      "is_correct": false,
+      "correct_margin": -0.20312494039535522
+    },
+    {
+      "id": "concentration_volume_trap_00064",
+      "family": "concentration_volume",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -0.776066780090332,
+        -1.041691780090332
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "B",
+      "is_correct": true,
+      "correct_margin": 0.265625
+    },
+    {
+      "id": "total_daily_dose_easy_00037",
+      "family": "total_daily_dose",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.533798336982727,
+        -1.721298336982727
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 1.1875
+    },
+    {
+      "id": "change_direction_easy_00026",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7795203924179077,
+        -2.2951455116271973
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5156251192092896
+    },
+    {
+      "id": "concentration_volume_easy_00183",
+      "family": "concentration_volume",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7164578437805176,
+        -1.0914578437805176
+      ],
+      "predicted_index": 0,
+      "predicted": "A",
+      "correct_index": 0,
+      "correct": "A",
+      "surface_heuristic": "A",
+      "is_correct": true,
+      "correct_margin": 0.375
+    },
+    {
+      "id": "change_direction_easy_00038",
+      "family": "change_direction",
+      "regime": "easy",
+      "split": "test",
+      "scores": [
+        -0.7546918392181396,
+        -2.3171918392181396
+      ],
+      "predicted_index": 0,
+      "predicted": "increased",
+      "correct_index": 0,
+      "correct": "increased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.5625
+    },
+    {
+      "id": "change_direction_trap_00010",
+      "family": "change_direction",
+      "regime": "trap",
+      "split": "test",
+      "scores": [
+        -2.445298671722412,
+        -1.0077987909317017
+      ],
+      "predicted_index": 1,
+      "predicted": "decreased",
+      "correct_index": 1,
+      "correct": "decreased",
+      "surface_heuristic": "increased",
+      "is_correct": true,
+      "correct_margin": 1.4374998807907104
+    }
+  ]
+}

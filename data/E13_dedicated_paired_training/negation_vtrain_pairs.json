@@ -1,0 +1,345 @@
+{
+  "families": {
+    "negation": {
+      "description": "clinical negation minimal pairs (TRAIN templates only, for V-loss)",
+      "pairs": [
+        [
+          "The patient has pneumothorax.",
+          "The patient does not have pneumothorax."
+        ],
+        [
+          "The patient has pleural effusion.",
+          "The patient does not have pleural effusion."
+        ],
+        [
+          "The patient has consolidation.",
+          "The patient does not have consolidation."
+        ],
+        [
+          "The patient has a rib fracture.",
+          "The patient does not have a rib fracture."
+        ],
+        [
+          "The patient has acute hemorrhage.",
+          "The patient does not have acute hemorrhage."
+        ],
+        [
+          "The patient has pulmonary edema.",
+          "The patient does not have pulmonary edema."
+        ],
+        [
+          "The patient has a lung mass.",
+          "The patient does not have a lung mass."
+        ],
+        [
+          "The patient has airway inflammation.",
+          "The patient does not have airway inflammation."
+        ],
+        [
+          "The patient has arterial stenosis.",
+          "The patient does not have arterial stenosis."
+        ],
+        [
+          "The patient has a pericardial effusion.",
+          "The patient does not have a pericardial effusion."
+        ],
+        [
+          "The patient has bowel obstruction.",
+          "The patient does not have bowel obstruction."
+        ],
+        [
+          "The patient has an aortic aneurysm.",
+          "The patient does not have an aortic aneurysm."
+        ],
+        [
+          "The report indicates pneumothorax.",
+          "The report indicates no pneumothorax."
+        ],
+        [
+          "The report indicates pleural effusion.",
+          "The report indicates no pleural effusion."
+        ],
+        [
+          "The report indicates consolidation.",
+          "The report indicates no consolidation."
+        ],
+        [
+          "The report indicates a rib fracture.",
+          "The report indicates no a rib fracture."
+        ],
+        [
+          "The report indicates acute hemorrhage.",
+          "The report indicates no acute hemorrhage."
+        ],
+        [
+          "The report indicates pulmonary edema.",
+          "The report indicates no pulmonary edema."
+        ],
+        [
+          "The report indicates a lung mass.",
+          "The report indicates no a lung mass."
+        ],
+        [
+          "The report indicates airway inflammation.",
+          "The report indicates no airway inflammation."
+        ],
+        [
+          "The report indicates arterial stenosis.",
+          "The report indicates no arterial stenosis."
+        ],
+        [
+          "The report indicates a pericardial effusion.",
+          "The report indicates no a pericardial effusion."
+        ],
+        [
+          "The report indicates bowel obstruction.",
+          "The report indicates no bowel obstruction."
+        ],
+        [
+          "The report indicates an aortic aneurysm.",
+          "The report indicates no an aortic aneurysm."
+        ],
+        [
+          "Examination revealed pneumothorax.",
+          "Examination revealed no pneumothorax."
+        ],
+        [
+          "Examination revealed pleural effusion.",
+          "Examination revealed no pleural effusion."
+        ],
+        [
+          "Examination revealed consolidation.",
+          "Examination revealed no consolidation."
+        ],
+        [
+          "Examination revealed a rib fracture.",
+          "Examination revealed no a rib fracture."
+        ],
+        [
+          "Examination revealed acute hemorrhage.",
+          "Examination revealed no acute hemorrhage."
+        ],
+        [
+          "Examination revealed pulmonary edema.",
+          "Examination revealed no pulmonary edema."
+        ],
+        [
+          "Examination revealed a lung mass.",
+          "Examination revealed no a lung mass."
+        ],
+        [
+          "Examination revealed airway inflammation.",
+          "Examination revealed no airway inflammation."
+        ],
+        [
+          "Examination revealed arterial stenosis.",
+          "Examination revealed no arterial stenosis."
+        ],
+        [
+          "Examination revealed a pericardial effusion.",
+          "Examination revealed no a pericardial effusion."
+        ],
+        [
+          "Examination revealed bowel obstruction.",
+          "Examination revealed no bowel obstruction."
+        ],
+        [
+          "Examination revealed an aortic aneurysm.",
+          "Examination revealed no an aortic aneurysm."
+        ],
+        [
+          "The CT scan demonstrates pneumothorax.",
+          "The CT scan does not demonstrate pneumothorax."
+        ],
+        [
+          "The CT scan demonstrates pleural effusion.",
+          "The CT scan does not demonstrate pleural effusion."
+        ],
+        [
+          "The CT scan demonstrates consolidation.",
+          "The CT scan does not demonstrate consolidation."
+        ],
+        [
+          "The CT scan demonstrates a rib fracture.",
+          "The CT scan does not demonstrate a rib fracture."
+        ],
+        [
+          "The CT scan demonstrates acute hemorrhage.",
+          "The CT scan does not demonstrate acute hemorrhage."
+        ],
+        [
+          "The CT scan demonstrates pulmonary edema.",
+          "The CT scan does not demonstrate pulmonary edema."
+        ],
+        [
+          "The CT scan demonstrates a lung mass.",
+          "The CT scan does not demonstrate a lung mass."
+        ],
+        [
+          "The CT scan demonstrates airway inflammation.",
+          "The CT scan does not demonstrate airway inflammation."
+        ],
+        [
+          "The CT scan demonstrates arterial stenosis.",
+          "The CT scan does not demonstrate arterial stenosis."
+        ],
+        [
+          "The CT scan demonstrates a pericardial effusion.",
+          "The CT scan does not demonstrate a pericardial effusion."
+        ],
+        [
+          "The CT scan demonstrates bowel obstruction.",
+          "The CT scan does not demonstrate bowel obstruction."
+        ],
+        [
+          "The CT scan demonstrates an aortic aneurysm.",
+          "The CT scan does not demonstrate an aortic aneurysm."
+        ],
+        [
+          "Clinical signs of pneumothorax are present.",
+          "Clinical signs of pneumothorax are not present."
+        ],
+        [
+          "Clinical signs of pleural effusion are present.",
+          "Clinical signs of pleural effusion are not present."
+        ],
+        [
+          "Clinical signs of consolidation are present.",
+          "Clinical signs of consolidation are not present."
+        ],
+        [
+          "Clinical signs of a rib fracture are present.",
+          "Clinical signs of a rib fracture are not present."
+        ],
+        [
+          "Clinical signs of acute hemorrhage are present.",
+          "Clinical signs of acute hemorrhage are not present."
+        ],
+        [
+          "Clinical signs of pulmonary edema are present.",
+          "Clinical signs of pulmonary edema are not present."
+        ],
+        [
+          "Clinical signs of a lung mass are present.",
+          "Clinical signs of a lung mass are not present."
+        ],
+        [
+          "Clinical signs of airway inflammation are present.",
+          "Clinical signs of airway inflammation are not present."
+        ],
+        [
+          "Clinical signs of arterial stenosis are present.",
+          "Clinical signs of arterial stenosis are not present."
+        ],
+        [
+          "Clinical signs of a pericardial effusion are present.",
+          "Clinical signs of a pericardial effusion are not present."
+        ],
+        [
+          "Clinical signs of bowel obstruction are present.",
+          "Clinical signs of bowel obstruction are not present."
+        ],
+        [
+          "Clinical signs of an aortic aneurysm are present.",
+          "Clinical signs of an aortic aneurysm are not present."
+        ],
+        [
+          "The physician noted pneumothorax during the visit.",
+          "The physician noted no pneumothorax during the visit."
+        ],
+        [
+          "The physician noted pleural effusion during the visit.",
+          "The physician noted no pleural effusion during the visit."
+        ],
+        [
+          "The physician noted consolidation during the visit.",
+          "The physician noted no consolidation during the visit."
+        ],
+        [
+          "The physician noted a rib fracture during the visit.",
+          "The physician noted no a rib fracture during the visit."
+        ],
+        [
+          "The physician noted acute hemorrhage during the visit.",
+          "The physician noted no acute hemorrhage during the visit."
+        ],
+        [
+          "The physician noted pulmonary edema during the visit.",
+          "The physician noted no pulmonary edema during the visit."
+        ],
+        [
+          "The physician noted a lung mass during the visit.",
+          "The physician noted no a lung mass during the visit."
+        ],
+        [
+          "The physician noted airway inflammation during the visit.",
+          "The physician noted no airway inflammation during the visit."
+        ],
+        [
+          "The physician noted arterial stenosis during the visit.",
+          "The physician noted no arterial stenosis during the visit."
+        ],
+        [
+          "The physician noted a pericardial effusion during the visit.",
+          "The physician noted no a pericardial effusion during the visit."
+        ],
+        [
+          "The physician noted bowel obstruction during the visit.",
+          "The physician noted no bowel obstruction during the visit."
+        ],
+        [
+          "The physician noted an aortic aneurysm during the visit.",
+          "The physician noted no an aortic aneurysm during the visit."
+        ],
+        [
+          "The biopsy showed pneumothorax.",
+          "The biopsy showed no pneumothorax."
+        ],
+        [
+          "The biopsy showed pleural effusion.",
+          "The biopsy showed no pleural effusion."
+        ],
+        [
+          "The biopsy showed consolidation.",
+          "The biopsy showed no consolidation."
+        ],
+        [
+          "The biopsy showed a rib fracture.",
+          "The biopsy showed no a rib fracture."
+        ],
+        [
+          "The biopsy showed acute hemorrhage.",
+          "The biopsy showed no acute hemorrhage."
+        ],
+        [
+          "The biopsy showed pulmonary edema.",
+          "The biopsy showed no pulmonary edema."
+        ],
+        [
+          "The biopsy showed a lung mass.",
+          "The biopsy showed no a lung mass."
+        ],
+        [
+          "The biopsy showed airway inflammation.",
+          "The biopsy showed no airway inflammation."
+        ],
+        [
+          "The biopsy showed arterial stenosis.",
+          "The biopsy showed no arterial stenosis."
+        ],
+        [
+          "The biopsy showed a pericardial effusion.",
+          "The biopsy showed no a pericardial effusion."
+        ],
+        [
+          "The biopsy showed bowel obstruction.",
+          "The biopsy showed no bowel obstruction."
+        ],
+        [
+          "The biopsy showed an aortic aneurysm.",
+          "The biopsy showed no an aortic aneurysm."
+        ]
+      ]
+    }
+  }
+}

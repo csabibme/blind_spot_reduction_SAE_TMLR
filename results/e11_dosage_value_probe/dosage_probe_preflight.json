@@ -1,0 +1,80 @@
+{
+  "dataset": {
+    "dataset_json": "data/heldout_dosage_numeric_probe.json",
+    "smoke": false,
+    "summary": {
+      "n_pairs": 3825,
+      "n_templates": 24,
+      "splits": {
+        "train": {
+          "n_pairs": 1830,
+          "n_templates": 12,
+          "n_clusters": 12
+        },
+        "dev": {
+          "n_pairs": 915,
+          "n_templates": 6,
+          "n_clusters": 6
+        },
+        "test": {
+          "n_pairs": 1080,
+          "n_templates": 6,
+          "n_clusters": 6
+        }
+      },
+      "labels": {
+        "train": {
+          "critical_numeric_change": 610,
+          "nuisance": 1220
+        },
+        "dev": {
+          "critical_numeric_change": 305,
+          "nuisance": 610
+        },
+        "test": {
+          "critical_numeric_change": 360,
+          "nuisance": 720
+        }
+      },
+      "families": {
+        "train": {
+          "dose_count": 1080,
+          "dose_amount": 750
+        },
+        "dev": {
+          "dose_count": 540,
+          "dose_amount": 375
+        },
+        "test": {
+          "dose_count": 540,
+          "dose_amount": 540
+        }
+      }
+    },
+    "checks": {
+      "status_frozen": true,
+      "not_in_v_loss": true,
+      "n_templates": true,
+      "n_pairs": true,
+      "train_templates": true,
+      "dev_templates": true,
+      "test_templates": true,
+      "template_disjoint_test_train": true,
+      "template_disjoint_test_dev": true,
+      "both_labels_present": true,
+      "no_identical_pairs": true,
+      "both_families_in_each_split": true,
+      "representations": true
+    },
+    "all_pass": true
+  },
+  "feature_cache": {
+    "checks": {
+      "cache_file_exists": true,
+      "cache_load_not_none": true,
+      "cache_all_representations": true
+    },
+    "all_pass": true
+  },
+  "all_pass": true
+}

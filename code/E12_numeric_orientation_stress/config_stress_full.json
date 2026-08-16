@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "items_per_family_regime": 200,
+  "train_template_frac": 0.60,
+  "dev_template_frac": 0.20,
+  "families": ["total_daily_dose", "concentration_volume", "unit_conversion", "change_direction"]
+}

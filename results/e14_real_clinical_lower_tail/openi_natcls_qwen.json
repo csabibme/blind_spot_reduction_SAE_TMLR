@@ -1,0 +1,68 @@
+{
+  "profile": "qwen-2.5-3b",
+  "split_json": "../../REVISION_1/E3b_external_negation/results/openi_natural_classification_split.json",
+  "n": 979,
+  "label_counts": {
+    "negated": 556,
+    "affirmed": 423
+  },
+  "results": {
+    "hidden": {
+      "test_auroc": 0.9995,
+      "test_ba": 0.9779,
+      "n_test": 124
+    },
+    "std_code": {
+      "test_auroc": 0.9824,
+      "test_ba": 0.9601,
+      "n_test": 124
+    },
+    "vreg_code": {
+      "test_auroc": 0.9989,
+      "test_ba": 0.9853,
+      "n_test": 124
+    }
+  },
+  "vreg_vs_std_code_bootstrap": {
+    "n_reports": 58,
+    "n_boot_valid": 5000,
+    "delta_auroc_ci_lo_hi_mean": [
+      0.0,
+      0.0534,
+      0.0166
+    ],
+    "delta_ba_ci_lo_hi_mean": [
+      0.0,
+      0.0591,
+      0.0254
+    ]
+  },
+  "grouped_cv": {
+    "n_folds": 5,
+    "hidden": {
+      "auroc": 0.9966
+    },
+    "std_code": {
+      "auroc": 0.9923,
+      "ba": 0.9714
+    },
+    "vreg_code": {
+      "auroc": 0.9944,
+      "ba": 0.9717
+    },
+    "vreg_vs_std_bootstrap": {
+      "n_reports": 444,
+      "n_boot_valid": 5000,
+      "delta_auroc_ci_lo_hi_mean": [
+        -0.0015,
+        0.0078,
+        0.0021
+      ],
+      "delta_ba_ci_lo_hi_mean": [
+        -0.0101,
+        0.0103,
+        0.0003
+      ]
+    }
+  }
+}

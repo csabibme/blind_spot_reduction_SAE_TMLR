@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the associated TMLR paper."
+title: "Perturbation-Awareness SAE Experiments (E1-E17)"
+type: software
+authors:
+  - family-names: Balogh
+    given-names: Csaba
+date-released: 2026-08-16
+version: 1.0.0
+url: "https://openreview.net/forum?id=NWWpKC9CZH"
+preferred-citation:
+  type: article
+  title: "A Symmetry-Matching Approach to Blind-Spot Reduction in Sparse Autoencoders"
+  authors:
+    - family-names: Balogh
+      given-names: Csaba
+  year: 2026
+  journal: "Transactions on Machine Learning Research"
+  url: "https://openreview.net/forum?id=NWWpKC9CZH"

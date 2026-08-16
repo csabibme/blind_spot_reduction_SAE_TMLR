@@ -1,0 +1,187 @@
+{
+  "experiment": "E3c_targeted_laterality_repair",
+  "analysis": "targeted_repair_probe_evaluation",
+  "status": "complete",
+  "split_json": "E3b_external_negation/results/openi_laterality_minimal_pair_split.json",
+  "split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+  "feature_cache_npz": "E3b_external_negation/results/feature_cache_laterality/gemma-2-2b_cadc6ce3f8c1ec8d_0726cab7bed0ce0e.npz",
+  "feature_cache_metadata": {
+    "profile": "gemma-2-2b",
+    "task_split_sha256": "cadc6ce3f8c1ec8d6199faa98af732d6229e4ccdb8a1a47dccbc8a7dddfb2778",
+    "model_id": "google/gemma-2-2b",
+    "layer": 13,
+    "dtype": "float16",
+    "hidden_batch_size": 16,
+    "max_length": 128,
+    "extraction_protocol": "true_last",
+    "standard_checkpoint": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/standard_joint16_owt",
+    "vreg_checkpoint": "<REPO_ROOT>/FINAL/REVISION_1/E1R_gemma_protocol_repair/checkpoints/gemma-2-2b/joint/vreg_joint16_owt_true_last",
+    "standard_checkpoint_sha256": "390d1e17ebb4d74c617e93e995a28bea41c7c768b66b7f28b7d884f846c3556d",
+    "vreg_checkpoint_sha256": "22c40386d99e3490f0284fbefab15890822a768058ba846fe273599213c9d032",
+    "deduplication_unit": "split_template_text_label",
+    "deduplicated_examples": 914
+  },
+  "profile": "gemma-2-2b",
+  "standard_checkpoint_id": "gemma-2-2b_standard_joint16_owt",
+  "target_checkpoint": "E3c_targeted_laterality_repair/checkpoints/gemma-2-2b/gemma_laterality_certificate_rel002_seed42",
+  "selection_metric": "pair_margin_l20",
+  "representations": {
+    "_omitted": "raw per-pair code arrays removed from supplementary (large dump). Headline deltas and CIs are in 'comparisons' and the companion .md. Regenerate via code/E3c_targeted_laterality_repair/."
+  },
+  "comparisons": {
+    "zero_shot_vreg_code_minus_standard": {
+      "n_test_reports": 50,
+      "n_test_pairs": 79,
+      "point": {
+        "standard": {
+          "probability_l20": 0.08232084878623196,
+          "logit_l20": 0.6346030779746079,
+          "geometric_l20": 0.553048207924211,
+          "pairwise_accuracy": 0.9746835443037974,
+          "balanced_accuracy": 0.7658227848101267,
+          "macro_f1": 0.765588034804924,
+          "auroc": 0.8253485018426534
+        },
+        "candidate": {
+          "probability_l20": 0.007668434930180719,
+          "logit_l20": -0.6315700361335543,
+          "geometric_l20": -0.5510812646685739,
+          "pairwise_accuracy": 0.9240506329113924,
+          "balanced_accuracy": 0.7531645569620253,
+          "macro_f1": 0.7531546689099868,
+          "auroc": 0.7920205095337285
+        },
+        "delta": {
+          "probability_l20": -0.07465241385605123,
+          "logit_l20": -1.2661731141081622,
+          "geometric_l20": -1.1041294725927848,
+          "pairwise_accuracy": -0.050632911392405,
+          "balanced_accuracy": -0.012658227848101333,
+          "macro_f1": -0.012433365894937154,
+          "auroc": -0.033327992308924914
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": -0.07527842960359356,
+          "ci_low": -0.163033281883864,
+          "ci_high": -0.011991237706951487,
+          "positive_fraction": 0.008
+        },
+        "logit_l20": {
+          "bootstrap_mean": -1.273081796874236,
+          "ci_low": -3.5993507807033676,
+          "ci_high": -0.10336136344754861,
+          "positive_fraction": 0.0
+        },
+        "geometric_l20": {
+          "bootstrap_mean": -1.1101428551569252,
+          "ci_low": -3.1397467494174616,
+          "ci_high": -0.08943610021024057,
+          "positive_fraction": 0.0
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": -0.05019912045853704,
+          "ci_low": -0.11011722731906218,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": -0.014503643856963186,
+          "ci_low": -0.0714285714285714,
+          "ci_high": 0.0357142857142857,
+          "positive_fraction": 0.2692
+        },
+        "macro_f1": {
+          "bootstrap_mean": -0.01441618809091965,
+          "ci_low": -0.0712514430817757,
+          "ci_high": 0.0361791285068975,
+          "positive_fraction": 0.3054
+        },
+        "auroc": {
+          "bootstrap_mean": -0.033873627803272785,
+          "ci_low": -0.07596581929630604,
+          "ci_high": 0.005227475021050068,
+          "positive_fraction": 0.0448
+        }
+      }
+    },
+    "targeted_repair_code_minus_standard": {
+      "n_test_reports": 50,
+      "n_test_pairs": 79,
+      "point": {
+        "standard": {
+          "probability_l20": 0.08232084878623196,
+          "logit_l20": 0.6346030779746079,
+          "geometric_l20": 0.553048207924211,
+          "pairwise_accuracy": 0.9746835443037974,
+          "balanced_accuracy": 0.7658227848101267,
+          "macro_f1": 0.765588034804924,
+          "auroc": 0.8253485018426534
+        },
+        "candidate": {
+          "probability_l20": 0.08505168045966463,
+          "logit_l20": 0.5496592458319834,
+          "geometric_l20": 0.47589787943702033,
+          "pairwise_accuracy": 0.9620253164556962,
+          "balanced_accuracy": 0.7468354430379747,
+          "macro_f1": 0.7464698331193838,
+          "auroc": 0.846018266303477
+        },
+        "delta": {
+          "probability_l20": 0.0027308316734326737,
+          "logit_l20": -0.08494383214262446,
+          "geometric_l20": -0.07715032848719072,
+          "pairwise_accuracy": -0.012658227848101222,
+          "balanced_accuracy": -0.018987341772152,
+          "macro_f1": -0.019118201685540237,
+          "auroc": 0.02066976446082358
+        }
+      },
+      "bootstrap": {
+        "probability_l20": {
+          "bootstrap_mean": 0.002029795151856316,
+          "ci_low": -0.04587033929288866,
+          "ci_high": 0.03981060799777251,
+          "positive_fraction": 0.568
+        },
+        "logit_l20": {
+          "bootstrap_mean": -0.07541176664681917,
+          "ci_low": -0.31254527262681037,
+          "ci_high": 0.07371741944630517,
+          "positive_fraction": 0.3044
+        },
+        "geometric_l20": {
+          "bootstrap_mean": -0.06897615914391253,
+          "ci_low": -0.27493387084541876,
+          "ci_high": 0.06002025578037607,
+          "positive_fraction": 0.2912
+        },
+        "pairwise_accuracy": {
+          "bootstrap_mean": -0.013018929387223063,
+          "ci_low": -0.04256079027355629,
+          "ci_high": 0.0,
+          "positive_fraction": 0.0
+        },
+        "balanced_accuracy": {
+          "bootstrap_mean": -0.01992907768892357,
+          "ci_low": -0.060810810810810745,
+          "ci_high": 0.016853932584269597,
+          "positive_fraction": 0.1156
+        },
+        "macro_f1": {
+          "bootstrap_mean": -0.020030707836193564,
+          "ci_low": -0.061100045498307325,
+          "ci_high": 0.01731939636201056,
+          "positive_fraction": 0.1482
+        },
+        "auroc": {
+          "bootstrap_mean": 0.020129568492238552,
+          "ci_low": -0.0034715543405767625,
+          "ci_high": 0.045524805500767075,
+          "positive_fraction": 0.9526
+        }
+      }
+    }
+  }
+}

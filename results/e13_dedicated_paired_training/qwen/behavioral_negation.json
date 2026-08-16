@@ -1,0 +1,22 @@
+{
+  "readout": {
+    "trained_on": "true hidden (train split)",
+    "C": 0.01,
+    "dev_acc": 1.0
+  },
+  "test_accuracy": {
+    "hidden": 1.0,
+    "std_recon": 1.0,
+    "vreg_recon": 1.0
+  },
+  "test_balanced_accuracy": {
+    "hidden": 1.0,
+    "std_recon": 1.0,
+    "vreg_recon": 1.0
+  },
+  "n_test_pairs": 36,
+  "pairs_collapsed_by_standard_recon": 0,
+  "pairs_collapsed_by_vreg_recon": 0,
+  "n_vreg_saves_over_standard": 0,
+  "vreg_save_examples": []
+}

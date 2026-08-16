@@ -1,0 +1,83 @@
+{
+  "profile": "qwen-2.5-3b",
+  "model_id": "Qwen/Qwen2.5-3B",
+  "layer": 18,
+  "std_ckpt": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt",
+  "vreg_ckpt": "<REPO_ROOT>/FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt",
+  "max_pairs": 80,
+  "families": {
+    "negation": {
+      "n_pairs": 80,
+      "n_reports": 77,
+      "L20_std": 0.029769,
+      "L20_vreg": 0.039657,
+      "delta_L20_s": 0.009887,
+      "delta_L20_ci": [
+        0.008065,
+        0.012315
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.4266,
+      "V_gini_vreg": 0.4237,
+      "delta_mean_s": 0.038485,
+      "nmse_std": 0.006425,
+      "nmse_vreg": 0.044393
+    },
+    "laterality": {
+      "n_pairs": 80,
+      "n_reports": 79,
+      "L20_std": 0.003404,
+      "L20_vreg": 0.004292,
+      "delta_L20_s": 0.000888,
+      "delta_L20_ci": [
+        0.0007,
+        0.001204
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.5689,
+      "V_gini_vreg": 0.5654,
+      "delta_mean_s": 0.004691,
+      "nmse_std": 0.00752,
+      "nmse_vreg": 0.040802
+    },
+    "severity": {
+      "n_pairs": 80,
+      "n_reports": 79,
+      "L20_std": 0.011747,
+      "L20_vreg": 0.015252,
+      "delta_L20_s": 0.003506,
+      "delta_L20_ci": [
+        0.002624,
+        0.004609
+      ],
+      "ci_kind": "cluster",
+      "V_gini_std": 0.4498,
+      "V_gini_vreg": 0.4488,
+      "delta_mean_s": 0.015942,
+      "nmse_std": 0.00715,
+      "nmse_vreg": 0.04234
+    },
+    "anatomical_direction": {
+      "n_pairs": 80,
+      "n_reports": 80,
+      "L20_std": 0.002149,
+      "L20_vreg": 0.002705,
+      "delta_L20_s": 0.000556,
+      "delta_L20_ci": [
+        0.000384,
+        0.000784
+      ],
+      "ci_kind": "pair",
+      "V_gini_std": 0.553,
+      "V_gini_vreg": 0.5503,
+      "delta_mean_s": 0.003082,
+      "nmse_std": 0.007305,
+      "nmse_vreg": 0.044074
+    }
+  },
+  "macro": {
+    "mean_delta_L20_s": 0.003709,
+    "frac_families_positive": 1.0,
+    "n_families": 4
+  }
+}

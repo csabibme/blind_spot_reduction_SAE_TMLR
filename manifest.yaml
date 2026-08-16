@@ -1,0 +1,122 @@
+# Portable provenance registry for TMLR Revision 1.
+# Resolve paths via shared/path_registry.py (SAE_REPO_ROOT env var).
+# Never store absolute paths in versioned manifests.
+
+schema_version: 1
+path_root_env: SAE_REPO_ROOT
+
+sources:
+  owt_hybrid_checkpoints:
+    rel_root: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt
+    description: Fair OWT-hybrid Standard vs V-reg joint-16 SAEs (15k steps, d_sae=4096)
+  joint16_pairs:
+    rel_root: FINAL/phase2_joint16_gemma_sweep/data
+    description: 16 perturbation families used in joint training/eval
+  sae_code:
+    rel_root: SAE_scaling
+    description: Read-only eval/training utilities (eval_joint_checkpoints, v_gini_loss_v2)
+
+models:
+  gpt2:
+    model_id: gpt2
+    profile: gpt2
+    hf_hidden_state_index: 12
+    transformer_lens_hook_block: 11
+    d_in: 768
+    d_sae: 4096
+    trust_remote_code: false
+  gemma-2-2b:
+    model_id: google/gemma-2-2b
+    profile: gemma-2-2b
+    hf_hidden_state_index: 13
+    transformer_lens_hook_block: 12
+    d_in: 2304
+    d_sae: 4096
+    trust_remote_code: true
+  qwen-2.5-3b:
+    model_id: Qwen/Qwen2.5-3B
+    profile: qwen-2.5-3b
+    hf_hidden_state_index: 18
+    transformer_lens_hook_block: 17
+    d_in: 2048
+    d_sae: 4096
+    trust_remote_code: true
+
+data_files:
+  joint16_pairs:
+    rel_path: FINAL/phase2_joint16_gemma_sweep/data/joint16_pairs.json
+    sha256: ce94899d7c6c6e02a5c50be03cde2fad2c3580aba649158765eb6b068bb97c4a
+    n_families: 16
+
+checkpoints:
+  # training_seed: not logged in meta.json for these runs (single-seed legacy)
+  gpt2_standard_joint16_owt:
+    profile: gpt2
+    method: standard
+    run_name: standard_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/standard_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: a00f184378e6e74885b792839e19213f08daab6b7eec65351b334744607719d8
+    training_protocol: hybrid_owt_cache_recon_pair_v
+    training_steps: 15000
+    lambda_v: 0.0
+    lambda_l1: 0.001
+    dtype: float32
+    source_note: experiment_101_hybrid_owt (2026-06)
+  gpt2_vreg_joint16_owt:
+    profile: gpt2
+    method: vreg
+    run_name: vreg_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gpt2/joint/vreg_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: edf708cbb2c5933992f8bcacc7c8d53e477879cbc4270beae083143ebcf662e1
+    training_protocol: hybrid_owt_cache_recon_pair_v
+    training_steps: 15000
+    lambda_v: 0.2
+    lambda_l1: 0.001
+    dtype: float32
+  gemma-2-2b_standard_joint16_owt:
+    profile: gemma-2-2b
+    method: standard
+    run_name: standard_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/standard_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: 390d1e17ebb4d74c617e93e995a28bea41c7c768b66b7f28b7d884f846c3556d
+    training_steps: 15000
+    lambda_v: 0.0
+    lambda_l1: 0.001
+  gemma-2-2b_vreg_joint16_owt:
+    profile: gemma-2-2b
+    method: vreg
+    run_name: vreg_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/gemma-2-2b/joint/vreg_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: 8e9a0ab8afcc3c6ab61d5ea1d3485c312194d5bd810fba13608cb45a771fb67c
+    training_steps: 15000
+    lambda_v: 0.2
+    lambda_l1: 0.001
+  qwen-2.5-3b_standard_joint16_owt:
+    profile: qwen-2.5-3b
+    method: standard
+    run_name: standard_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/standard_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: 3bb65c319592777642f47cbbce2deacf42b8262890be69eeb92fb9259a9925d5
+    training_steps: 15000
+    lambda_v: 0.0
+    lambda_l1: 0.001
+  qwen-2.5-3b_vreg_joint16_owt:
+    profile: qwen-2.5-3b
+    method: vreg
+    run_name: vreg_joint16_owt
+    rel_path: FINAL/tmlr_revision/prepare/experiment_101_hybrid_owt/checkpoints/qwen-2.5-3b/joint/vreg_joint16_owt
+    sae_pt: sae.pt
+    sha256_sae_pt: 442710c76d8c4aa47e8c1377474d204d585c5470ba64b0fbdb0b98cf4d51e9d8
+    training_steps: 15000
+    lambda_v: 0.2
+    lambda_l1: 0.001
+
+offline_inference:
+  HF_HUB_OFFLINE: "1"
+  TRANSFORMERS_OFFLINE: "1"
+  local_files_only: true

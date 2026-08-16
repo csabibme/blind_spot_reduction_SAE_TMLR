@@ -1,0 +1,1408 @@
+{
+  "experiment": "E3_heldout_probes",
+  "analysis": "cached_negation_template_inference",
+  "status": "complete",
+  "source_analysis_json": "E3_heldout_probes/results/e3_negation_cached_analysis.json",
+  "source_analysis_sha256": "96f32d2e51d8ed26d42694af5ad9707c894f83164384dcec0813f90230e74dfa",
+  "inference_script_sha256": "4594c176b36ff99c058d9cc9abad58a1064d4615800a5661fd7b30e33000df71",
+  "task_split_sha256": "70f78770026d89ac7c0cdf390476f467d4baeac824a8f6ad36c26cdcb26b1eda",
+  "primary_scaling": "standard",
+  "primary_representations": {
+    "standard": "sae_standard_code",
+    "vreg": "sae_vreg_code"
+  },
+  "primary_endpoint": "delta_probability_l20",
+  "n_boot": 5000,
+  "seed": 42,
+  "profiles": {
+    "gpt2": {
+      "profile": "gpt2",
+      "n_test_templates": 9,
+      "readout": {
+        "selected_C": {
+          "standard": 10.0,
+          "vreg": 10.0
+        },
+        "standard": {
+          "probability_l20": 0.005165714913444355,
+          "logit_l20": 4.049793607079901,
+          "geometric_l20": 2.3244010821865864,
+          "balanced_accuracy": 0.8888888888888888,
+          "auroc": 0.9753086419753086,
+          "macro_f1": 0.8875,
+          "pairwise_accuracy": 1.0
+        },
+        "vreg": {
+          "probability_l20": 0.36266579120078896,
+          "logit_l20": 13.775847748642796,
+          "geometric_l20": 8.653560398406187,
+          "balanced_accuracy": 0.9444444444444444,
+          "auroc": 0.9259259259259259,
+          "macro_f1": 0.9442724458204335,
+          "pairwise_accuracy": 1.0
+        },
+        "delta": {
+          "probability_l20": 0.3575000762873446,
+          "logit_l20": 9.726054141562894,
+          "geometric_l20": 6.3291593162196005,
+          "balanced_accuracy": 0.05555555555555558,
+          "auroc": -0.04938271604938271,
+          "macro_f1": 0.056772445820433504,
+          "pairwise_accuracy": 0.0
+        },
+        "scaling_signs": {
+          "raw": {
+            "probability_l20": {
+              "delta": 0.03119452925932322,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 5.30730198299774,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 4.057118383062126,
+              "positive": true
+            }
+          },
+          "standard": {
+            "probability_l20": {
+              "delta": 0.3575000762873446,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 9.726054141562894,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 6.3291593162196005,
+              "positive": true
+            }
+          },
+          "standard_no_mean": {
+            "probability_l20": {
+              "delta": 0.2937894271701447,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": -3.6449115438117063,
+              "positive": false
+            },
+            "geometric_l20": {
+              "delta": 6.2647775444367255,
+              "positive": true
+            }
+          },
+          "train_rms": {
+            "probability_l20": {
+              "delta": 0.1664741243381947,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": -3.130978984165259,
+              "positive": false
+            },
+            "geometric_l20": {
+              "delta": 2.7381467145213803,
+              "positive": true
+            }
+          }
+        },
+        "random_label_l20_summary": {
+          "standard": {
+            "probability_l20": {
+              "min": -0.674929204806787,
+              "max": -0.0001610359387009533,
+              "mean": -0.24213112073662985,
+              "values_by_seed": {
+                "11": -0.0001610359387009533,
+                "23": -0.674929204806787,
+                "37": -0.005483518367737441,
+                "53": -0.2333072970248057,
+                "71": -0.29677454754511834
+              }
+            },
+            "logit_l20": {
+              "min": -8.412579667025636,
+              "max": -0.010808610328907564,
+              "mean": -3.0147623270712645,
+              "values_by_seed": {
+                "11": -8.412579667025636,
+                "23": -4.0541818748484655,
+                "37": -0.010808610328907564,
+                "53": -1.226353809327159,
+                "71": -1.369887673826152
+              }
+            },
+            "geometric_l20": {
+              "min": -4.25221708915435,
+              "max": -0.005016385891421726,
+              "mean": -2.866466092431268,
+              "values_by_seed": {
+                "11": -2.1942705140629672,
+                "23": -4.205436272718404,
+                "37": -0.005016385891421726,
+                "53": -3.675390200329197,
+                "71": -4.25221708915435
+              }
+            }
+          },
+          "vreg": {
+            "probability_l20": {
+              "min": -0.5300054999021675,
+              "max": -0.18357083165658533,
+              "mean": -0.37515345886123697,
+              "values_by_seed": {
+                "11": -0.49742669985699817,
+                "23": -0.42831240331194664,
+                "37": -0.23645185957848694,
+                "53": -0.18357083165658533,
+                "71": -0.5300054999021675
+              }
+            },
+            "logit_l20": {
+              "min": -52.352255660923795,
+              "max": -1.0403246914815192,
+              "mean": -16.260392569580354,
+              "values_by_seed": {
+                "11": -24.06164976177563,
+                "23": -2.763963439584728,
+                "37": -1.0403246914815192,
+                "53": -1.083769294136085,
+                "71": -52.352255660923795
+              }
+            },
+            "geometric_l20": {
+              "min": -11.993841082324307,
+              "max": -3.2259497144052065,
+              "mean": -6.70958553759137,
+              "values_by_seed": {
+                "11": -6.093638871588062,
+                "23": -8.871276342049537,
+                "37": -3.3632216775897357,
+                "53": -3.2259497144052065,
+                "71": -11.993841082324307
+              }
+            }
+          }
+        },
+        "per_template_margins": [
+          {
+            "template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::22",
+            "standard_probability_l20": 0.9895487419253589,
+            "vreg_probability_l20": 0.7222759677002932,
+            "delta_probability_l20": -0.2672727742250657,
+            "standard_logit_l20": 14.936660690863455,
+            "vreg_logit_l20": 13.753869509099932,
+            "delta_logit_l20": -1.1827911817635233,
+            "standard_geometric_l20": 8.572977697777246,
+            "vreg_geometric_l20": 8.639754349819917,
+            "delta_geometric_l20": 0.06677665204267136
+          },
+          {
+            "template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::29",
+            "standard_probability_l20": 0.9949945149230526,
+            "vreg_probability_l20": 0.766669580726748,
+            "delta_probability_l20": -0.22832493419630462,
+            "standard_logit_l20": 16.183578329170103,
+            "vreg_logit_l20": 16.664728736959187,
+            "delta_logit_l20": 0.4811504077890838,
+            "standard_geometric_l20": 9.288652862756173,
+            "vreg_geometric_l20": 10.468265857724738,
+            "delta_geometric_l20": 1.179612994968565
+          },
+          {
+            "template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::1",
+            "standard_probability_l20": 0.01024193961428208,
+            "vreg_probability_l20": 0.003055614701284675,
+            "delta_probability_l20": -0.007186324912997405,
+            "standard_logit_l20": 5.711298056039022,
+            "vreg_logit_l20": 13.797825988185663,
+            "delta_logit_l20": 8.086527932146641,
+            "standard_geometric_l20": 3.2780306035693063,
+            "vreg_geometric_l20": 8.667366446992457,
+            "delta_geometric_l20": 5.389335843423151
+          },
+          {
+            "template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::4",
+            "standard_probability_l20": 0.996593788892752,
+            "vreg_probability_l20": 0.8300643869114444,
+            "delta_probability_l20": -0.1665294019813076,
+            "standard_logit_l20": 21.89226416463079,
+            "vreg_logit_l20": 17.38359084745254,
+            "delta_logit_l20": -4.508673317178253,
+            "standard_geometric_l20": 12.565184168107276,
+            "vreg_geometric_l20": 10.919832745279285,
+            "delta_geometric_l20": -1.645351422827991
+          },
+          {
+            "template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::9",
+            "standard_probability_l20": 8.949021260662904e-05,
+            "vreg_probability_l20": 0.9939812024474755,
+            "delta_probability_l20": 0.9938917122348688,
+            "standard_logit_l20": 2.388289158120781,
+            "vreg_logit_l20": 24.627421296582078,
+            "delta_logit_l20": 22.239132138461297,
+            "standard_geometric_l20": 1.370771560803866,
+            "vreg_geometric_l20": 15.47018241893418,
+            "delta_geometric_l20": 14.099410858130312
+          },
+          {
+            "template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "global_pair_id": "negation::8",
+            "standard_probability_l20": 0.9936016814673129,
+            "vreg_probability_l20": 0.9906523357216108,
+            "delta_probability_l20": -0.0029493457457020478,
+            "standard_logit_l20": 12.958130231643501,
+            "vreg_logit_l20": 17.135994201370348,
+            "delta_logit_l20": 4.177863969726847,
+            "standard_geometric_l20": 7.437389372359839,
+            "vreg_geometric_l20": 10.764300209611843,
+            "delta_geometric_l20": 3.3269108372520035
+          },
+          {
+            "template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "global_pair_id": "negation::10",
+            "standard_probability_l20": 0.9998983554076054,
+            "vreg_probability_l20": 0.9998918460435631,
+            "delta_probability_l20": -6.509364042339705e-06,
+            "standard_logit_l20": 23.926823268242394,
+            "vreg_logit_l20": 21.78915585429158,
+            "delta_logit_l20": -2.1376674139508154,
+            "standard_geometric_l20": 13.732930438914718,
+            "vreg_geometric_l20": 13.687272076157662,
+            "delta_geometric_l20": -0.045658362757055926
+          },
+          {
+            "template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "global_pair_id": "negation::16",
+            "standard_probability_l20": 0.829850209598501,
+            "vreg_probability_l20": 0.912521204045595,
+            "delta_probability_l20": 0.08267099444709403,
+            "standard_logit_l20": 11.885637877413169,
+            "vreg_logit_l20": 19.37609823410987,
+            "delta_logit_l20": 7.490460356696703,
+            "standard_geometric_l20": 6.821826548503408,
+            "vreg_geometric_l20": 12.171464102515243,
+            "delta_geometric_l20": 5.349637554011835
+          },
+          {
+            "template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "global_pair_id": "negation::1",
+            "standard_probability_l20": 0.9982941156927347,
+            "vreg_probability_l20": 0.9533353898111488,
+            "delta_probability_l20": -0.04495872588158589,
+            "standard_logit_l20": 17.80391395428695,
+            "vreg_logit_l20": 15.1974965702391,
+            "delta_logit_l20": -2.6064173840478517,
+            "standard_geometric_l20": 10.218653313629218,
+            "vreg_geometric_l20": 9.546596106079322,
+            "delta_geometric_l20": -0.6720572075498961
+          }
+        ]
+      },
+      "bootstrap": {
+        "n_boot": 5000,
+        "seed": 42,
+        "family_group_sizes": {
+          "condition_negation": 5,
+          "negation": 4
+        },
+        "metrics": {
+          "probability_l20": {
+            "mean": 0.20591460111785773,
+            "ci_low": -0.21715186341912102,
+            "ci_high": 0.7982774936064895,
+            "positive_fraction": 0.5636
+          },
+          "logit_l20": {
+            "mean": 8.556361565149569,
+            "ci_low": 1.0645337555312047,
+            "ci_high": 13.542823495478363,
+            "positive_fraction": 0.9894
+          },
+          "geometric_l20": {
+            "mean": 5.680100019942837,
+            "ci_low": 1.395773104809292,
+            "ci_high": 8.636659421098162,
+            "positive_fraction": 0.9998
+          },
+          "balanced_accuracy": {
+            "mean": 0.05506666666666669,
+            "ci_low": 0.0,
+            "ci_high": 0.16666666666666674,
+            "positive_fraction": 0.6642
+          },
+          "auroc": {
+            "mean": -0.042439506172839515,
+            "ci_low": -0.1728395061728395,
+            "ci_high": 0.07407407407407407,
+            "positive_fraction": 0.2578
+          },
+          "macro_f1": {
+            "mean": 0.05715939026009663,
+            "ci_low": 0.0,
+            "ci_high": 0.1780386795866672,
+            "positive_fraction": 0.6642
+          },
+          "pairwise_accuracy": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "positive_fraction": 0.0
+          }
+        }
+      },
+      "exact_permutation": {
+        "probability_l20": {
+          "observed_delta": 0.3575000762873446,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.5,
+          "two_sided_p_abs_ge_observed": 1.0,
+          "null_min": -0.4598090193729929,
+          "null_max": 0.4598090193729929
+        },
+        "logit_l20": {
+          "observed_delta": 9.726054141562894,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.0625,
+          "two_sided_p_abs_ge_observed": 0.125,
+          "null_min": -10.317449732444658,
+          "null_max": 10.317449732444658
+        },
+        "geometric_l20": {
+          "observed_delta": 6.3291593162196005,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.03125,
+          "two_sided_p_abs_ge_observed": 0.0625,
+          "null_min": -6.3291593162196005,
+          "null_max": 6.3291593162196005
+        }
+      },
+      "leave_one_template_out": {
+        "summary": {
+          "probability_l20": {
+            "min": -0.05738028340560258,
+            "max": 0.37969688280057196,
+            "all_positive": false
+          },
+          "logit_l20": {
+            "min": 4.977379781916701,
+            "max": 10.447867672132478,
+            "all_positive": true
+          },
+          "geometric_l20": {
+            "min": 3.60363182236983,
+            "max": 6.782580194349304,
+            "all_positive": true
+          }
+        },
+        "rows": [
+          {
+            "held_out_template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.37969688280057196,
+            "delta_logit_l20": 10.447867672132478,
+            "delta_geometric_l20": 6.782580194349304
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.32950292430796685,
+            "delta_logit_l20": 7.338719521902541,
+            "delta_geometric_l20": 4.996876173295982
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "delta_probability_l20": -0.05738028340560258,
+            "delta_logit_l20": 4.977379781916701,
+            "delta_geometric_l20": 3.60363182236983
+          },
+          {
+            "held_out_template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          },
+          {
+            "held_out_template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          },
+          {
+            "held_out_template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          },
+          {
+            "held_out_template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "delta_probability_l20": 0.3575000762873446,
+            "delta_logit_l20": 9.726054141562894,
+            "delta_geometric_l20": 6.3291593162196005
+          }
+        ]
+      }
+    },
+    "gemma-2-2b": {
+      "profile": "gemma-2-2b",
+      "n_test_templates": 9,
+      "readout": {
+        "selected_C": {
+          "standard": 0.1,
+          "vreg": 0.1
+        },
+        "standard": {
+          "probability_l20": 0.15902986870919866,
+          "logit_l20": 1.9679878348470212,
+          "geometric_l20": 2.560578110073249,
+          "balanced_accuracy": 0.8333333333333333,
+          "auroc": 1.0,
+          "macro_f1": 0.8285714285714285,
+          "pairwise_accuracy": 1.0
+        },
+        "vreg": {
+          "probability_l20": 0.36459898892646225,
+          "logit_l20": 2.152771270090893,
+          "geometric_l20": 2.8353814593767748,
+          "balanced_accuracy": 0.8333333333333333,
+          "auroc": 0.962962962962963,
+          "macro_f1": 0.8328173374613003,
+          "pairwise_accuracy": 1.0
+        },
+        "delta": {
+          "probability_l20": 0.2055691202172636,
+          "logit_l20": 0.18478343524387197,
+          "geometric_l20": 0.27480334930352557,
+          "balanced_accuracy": 0.0,
+          "auroc": -0.03703703703703698,
+          "macro_f1": 0.004245908889871752,
+          "pairwise_accuracy": 0.0
+        },
+        "scaling_signs": {
+          "raw": {
+            "probability_l20": {
+              "delta": 0.1790586042121145,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": -0.48546525457236966,
+              "positive": false
+            },
+            "geometric_l20": {
+              "delta": 1.9361365007754006,
+              "positive": true
+            }
+          },
+          "standard": {
+            "probability_l20": {
+              "delta": 0.2055691202172636,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 0.18478343524387197,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 0.27480334930352557,
+              "positive": true
+            }
+          },
+          "standard_no_mean": {
+            "probability_l20": {
+              "delta": 0.206501876169305,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 0.18451405123676246,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 0.2721805563595585,
+              "positive": true
+            }
+          },
+          "train_rms": {
+            "probability_l20": {
+              "delta": 0.11134894596766243,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 0.49726681276146967,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 0.6672669392721582,
+              "positive": true
+            }
+          }
+        },
+        "random_label_l20_summary": {
+          "standard": {
+            "probability_l20": {
+              "min": -0.7049021784077472,
+              "max": -0.1160103191441341,
+              "mean": -0.3212692990361133,
+              "values_by_seed": {
+                "11": -0.1160103191441341,
+                "23": -0.3792479958335599,
+                "37": -0.1786394064347114,
+                "53": -0.7049021784077472,
+                "71": -0.22754659536041388
+              }
+            },
+            "logit_l20": {
+              "min": -9.156085338951247,
+              "max": -0.7711764258056117,
+              "mean": -2.7698687913343405,
+              "values_by_seed": {
+                "11": -0.7711764258056117,
+                "23": -1.900689479803649,
+                "37": -0.9554526553410092,
+                "53": -9.156085338951247,
+                "71": -1.0659400567701864
+              }
+            },
+            "geometric_l20": {
+              "min": -5.650875145426195,
+              "max": -0.2381210926323263,
+              "mean": -3.050553350925997,
+              "values_by_seed": {
+                "11": -0.2381210926323263,
+                "23": -5.650875145426195,
+                "37": -2.767588044280682,
+                "53": -3.2778620209861167,
+                "71": -3.318320451304664
+              }
+            }
+          },
+          "vreg": {
+            "probability_l20": {
+              "min": -0.7503121863358609,
+              "max": -0.03331543105916738,
+              "mean": -0.30575117575479926,
+              "values_by_seed": {
+                "11": -0.03331543105916738,
+                "23": -0.3353405081079329,
+                "37": -0.2289679107899572,
+                "53": -0.7503121863358609,
+                "71": -0.18081984248107777
+              }
+            },
+            "logit_l20": {
+              "min": -10.750496297439206,
+              "max": -0.8773809035341608,
+              "mean": -4.406252883704642,
+              "values_by_seed": {
+                "11": -3.628243806541758,
+                "23": -1.6284390097357644,
+                "37": -5.1467044012723235,
+                "53": -10.750496297439206,
+                "71": -0.8773809035341608
+              }
+            },
+            "geometric_l20": {
+              "min": -4.719160739653031,
+              "max": -1.2757351549219509,
+              "mean": -2.8040773207282124,
+              "values_by_seed": {
+                "11": -1.2757351549219509,
+                "23": -4.719160739653031,
+                "37": -1.8878496641013163,
+                "53": -3.474638906594145,
+                "71": -2.6630021383706186
+              }
+            }
+          }
+        },
+        "per_template_margins": [
+          {
+            "template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::22",
+            "standard_probability_l20": 0.7688883707060155,
+            "vreg_probability_l20": 0.9433258321191512,
+            "delta_probability_l20": 0.17443746141313576,
+            "standard_logit_l20": 4.382216128591091,
+            "vreg_logit_l20": 7.133434199699159,
+            "delta_logit_l20": 2.7512180711080676,
+            "standard_geometric_l20": 5.701766288282233,
+            "vreg_geometric_l20": 9.395334912035139,
+            "delta_geometric_l20": 3.693568623752906
+          },
+          {
+            "template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::29",
+            "standard_probability_l20": 0.2146775659961905,
+            "vreg_probability_l20": 0.3550487067946926,
+            "delta_probability_l20": 0.14037114079850208,
+            "standard_logit_l20": 1.2960169092617173,
+            "vreg_logit_l20": 2.1556223627162217,
+            "delta_logit_l20": 0.8596054534545043,
+            "standard_geometric_l20": 1.6862667895496948,
+            "vreg_geometric_l20": 2.839136589000221,
+            "delta_geometric_l20": 1.1528697994505261
+          },
+          {
+            "template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::1",
+            "standard_probability_l20": 0.876733139481539,
+            "vreg_probability_l20": 0.8725257078798264,
+            "delta_probability_l20": -0.004207431601712552,
+            "standard_logit_l20": 7.428963435251148,
+            "vreg_logit_l20": 5.592410099198471,
+            "delta_logit_l20": -1.8365533360526776,
+            "standard_geometric_l20": 9.665934319313179,
+            "vreg_geometric_l20": 7.365676107257453,
+            "delta_geometric_l20": -2.3002582120557253
+          },
+          {
+            "template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::4",
+            "standard_probability_l20": 0.157911247809834,
+            "vreg_probability_l20": 0.3741492710582319,
+            "delta_probability_l20": 0.21623802324839791,
+            "standard_logit_l20": 3.3625688661612383,
+            "vreg_logit_l20": 3.2442920361642607,
+            "delta_logit_l20": -0.11827682999697764,
+            "standard_geometric_l20": 4.375088138172149,
+            "vreg_geometric_l20": 4.27300643405348,
+            "delta_geometric_l20": -0.10208170411866924
+          },
+          {
+            "template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::9",
+            "standard_probability_l20": 0.5471252178649497,
+            "vreg_probability_l20": 0.492251557821683,
+            "delta_probability_l20": -0.054873660043266714,
+            "standard_logit_l20": 2.639958760432325,
+            "vreg_logit_l20": 2.650672307402328,
+            "delta_logit_l20": 0.01071354697000304,
+            "standard_geometric_l20": 3.4348894305968036,
+            "vreg_geometric_l20": 3.491159149004573,
+            "delta_geometric_l20": 0.056269718407769176
+          },
+          {
+            "template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "global_pair_id": "negation::8",
+            "standard_probability_l20": 0.16014848960856334,
+            "vreg_probability_l20": 0.6222566482013616,
+            "delta_probability_l20": 0.4621081585927983,
+            "standard_logit_l20": 3.582251839402767,
+            "vreg_logit_l20": 5.080798951457007,
+            "delta_logit_l20": 1.49854711205424,
+            "standard_geometric_l20": 4.660920907296858,
+            "vreg_geometric_l20": 6.6918410450423345,
+            "delta_geometric_l20": 2.0309201377454764
+          },
+          {
+            "template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "global_pair_id": "negation::10",
+            "standard_probability_l20": 0.9506410511488265,
+            "vreg_probability_l20": 0.9006693534149912,
+            "delta_probability_l20": -0.04997169773383525,
+            "standard_logit_l20": 8.805261386856847,
+            "vreg_logit_l20": 7.20708115794492,
+            "delta_logit_l20": -1.598180228911927,
+            "standard_geometric_l20": 11.456655961702877,
+            "vreg_geometric_l20": 9.49233417194291,
+            "delta_geometric_l20": -1.9643217897599676
+          },
+          {
+            "template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "global_pair_id": "negation::16",
+            "standard_probability_l20": 0.8360387776336083,
+            "vreg_probability_l20": 0.4299544515318595,
+            "delta_probability_l20": -0.4060843261017488,
+            "standard_logit_l20": 5.000599214316132,
+            "vreg_logit_l20": 5.979063774652985,
+            "delta_logit_l20": 0.9784645603368531,
+            "standard_geometric_l20": 6.506353676938614,
+            "vreg_geometric_l20": 7.874931631899106,
+            "delta_geometric_l20": 1.3685779549604913
+          },
+          {
+            "template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "global_pair_id": "negation::1",
+            "standard_probability_l20": 0.763872328850815,
+            "vreg_probability_l20": 0.491019818093107,
+            "delta_probability_l20": -0.272852510757708,
+            "standard_logit_l20": 4.025844442934582,
+            "vreg_logit_l20": 2.1499201774655647,
+            "delta_logit_l20": -1.875924265469017,
+            "standard_geometric_l20": 5.238085811612571,
+            "vreg_geometric_l20": 2.8316263297533286,
+            "delta_geometric_l20": -2.406459481859242
+          }
+        ]
+      },
+      "bootstrap": {
+        "n_boot": 5000,
+        "seed": 42,
+        "family_group_sizes": {
+          "condition_negation": 5,
+          "negation": 4
+        },
+        "metrics": {
+          "probability_l20": {
+            "mean": 0.1798930593059323,
+            "ci_low": -0.08663808305246645,
+            "ci_high": 0.2735546758664708,
+            "positive_fraction": 0.9592
+          },
+          "logit_l20": {
+            "mean": 0.15942671678668313,
+            "ci_low": -1.1829814242178887,
+            "ci_high": 0.8596054534545043,
+            "positive_fraction": 0.6362
+          },
+          "geometric_l20": {
+            "mean": 0.24485618858179906,
+            "ci_low": -1.504861291351359,
+            "ci_high": 1.1528697994505261,
+            "positive_fraction": 0.6362
+          },
+          "balanced_accuracy": {
+            "mean": 0.001166666666666656,
+            "ci_low": -0.16666666666666663,
+            "ci_high": 0.16666666666666663,
+            "positive_fraction": 0.3694
+          },
+          "auroc": {
+            "mean": -0.03442716049382715,
+            "ci_low": -0.11111111111111105,
+            "ci_high": 0.0,
+            "positive_fraction": 0.0
+          },
+          "macro_f1": {
+            "mean": 0.00766741286631736,
+            "ci_low": -0.16190476190476188,
+            "ci_high": 0.1780386795866672,
+            "positive_fraction": 0.569
+          },
+          "pairwise_accuracy": {
+            "mean": 0.0,
+            "ci_low": 0.0,
+            "ci_high": 0.0,
+            "positive_fraction": 0.0
+          }
+        }
+      },
+      "exact_permutation": {
+        "probability_l20": {
+          "observed_delta": 0.2055691202172636,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.125,
+          "two_sided_p_abs_ge_observed": 0.25,
+          "null_min": -0.2055691202172636,
+          "null_max": 0.2055691202172636
+        },
+        "logit_l20": {
+          "observed_delta": 0.18478343524387197,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.375,
+          "two_sided_p_abs_ge_observed": 0.75,
+          "null_min": -0.6801787916956341,
+          "null_max": 0.6801787916956341
+        },
+        "geometric_l20": {
+          "observed_delta": 0.27480334930352557,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.375,
+          "two_sided_p_abs_ge_observed": 0.75,
+          "null_min": -0.9062013093508852,
+          "null_max": 0.9062013093508852
+        }
+      },
+      "leave_one_template_out": {
+        "summary": {
+          "probability_l20": {
+            "min": 0.17830458202345,
+            "max": 0.24302199258584706,
+            "all_positive": true
+          },
+          "logit_l20": {
+            "min": -0.600967570862835,
+            "max": 0.4351595002122539,
+            "all_positive": false
+          },
+          "geometric_l20": {
+            "min": -0.7435960450055257,
+            "max": 0.6045697589291477,
+            "all_positive": false
+          }
+        },
+        "rows": [
+          {
+            "held_out_template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.24302199258584706,
+            "delta_logit_l20": -0.600967570862835,
+            "delta_geometric_l20": -0.7435960450055257
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.20508855136089912,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": -0.1765216176205846,
+            "delta_geometric_l20": -0.1952960044841472
+          },
+          {
+            "held_out_template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "delta_probability_l20": 0.17830458202345,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": 0.18478343524387197,
+            "delta_geometric_l20": 0.27480334930352557
+          },
+          {
+            "held_out_template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "delta_probability_l20": 0.2055691202172636,
+            "delta_logit_l20": 0.4351595002122539,
+            "delta_geometric_l20": 0.6045697589291477
+          }
+        ]
+      }
+    },
+    "qwen-2.5-3b": {
+      "profile": "qwen-2.5-3b",
+      "n_test_templates": 9,
+      "readout": {
+        "selected_C": {
+          "standard": 0.01,
+          "vreg": 0.01
+        },
+        "standard": {
+          "probability_l20": 0.08460823816351021,
+          "logit_l20": -0.7443206805798311,
+          "geometric_l20": -1.9688669378896375,
+          "balanced_accuracy": 0.8888888888888888,
+          "auroc": 0.8518518518518519,
+          "macro_f1": 0.8875,
+          "pairwise_accuracy": 0.8888888888888888
+        },
+        "vreg": {
+          "probability_l20": 0.14404272014317288,
+          "logit_l20": 1.7343823757914274,
+          "geometric_l20": 4.637983775879559,
+          "balanced_accuracy": 0.9444444444444444,
+          "auroc": 0.9135802469135802,
+          "macro_f1": 0.9442724458204335,
+          "pairwise_accuracy": 1.0
+        },
+        "delta": {
+          "probability_l20": 0.05943448197966267,
+          "logit_l20": 2.4787030563712587,
+          "geometric_l20": 6.606850713769196,
+          "balanced_accuracy": 0.05555555555555558,
+          "auroc": 0.061728395061728336,
+          "macro_f1": 0.056772445820433504,
+          "pairwise_accuracy": 0.11111111111111116
+        },
+        "scaling_signs": {
+          "raw": {
+            "probability_l20": {
+              "delta": -0.07232174244755435,
+              "positive": false
+            },
+            "logit_l20": {
+              "delta": -2.813683065424842,
+              "positive": false
+            },
+            "geometric_l20": {
+              "delta": 1.6072515568196284,
+              "positive": true
+            }
+          },
+          "standard": {
+            "probability_l20": {
+              "delta": 0.05943448197966267,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 2.4787030563712587,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 6.606850713769196,
+              "positive": true
+            }
+          },
+          "standard_no_mean": {
+            "probability_l20": {
+              "delta": 0.05923768591825336,
+              "positive": true
+            },
+            "logit_l20": {
+              "delta": 2.4801722986705985,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 6.611303430853793,
+              "positive": true
+            }
+          },
+          "train_rms": {
+            "probability_l20": {
+              "delta": -0.1270588733173348,
+              "positive": false
+            },
+            "logit_l20": {
+              "delta": 25.174104472820954,
+              "positive": true
+            },
+            "geometric_l20": {
+              "delta": 7.302085882583898,
+              "positive": true
+            }
+          }
+        },
+        "random_label_l20_summary": {
+          "standard": {
+            "probability_l20": {
+              "min": -0.9039233729499434,
+              "max": 0.013665497089983302,
+              "mean": -0.3230000881428021,
+              "values_by_seed": {
+                "11": 0.013665497089983302,
+                "23": -0.9039233729499434,
+                "37": -0.3042715839078285,
+                "53": -0.28323408037455255,
+                "71": -0.13723690057166965
+              }
+            },
+            "logit_l20": {
+              "min": -39.26358074935557,
+              "max": -0.7534254993801233,
+              "mean": -14.324469638883158,
+              "values_by_seed": {
+                "11": -0.7534254993801233,
+                "23": -39.26358074935557,
+                "37": -2.577279725137695,
+                "53": -25.622633745139257,
+                "71": -3.4054284754031516
+              }
+            },
+            "geometric_l20": {
+              "min": -10.525095700387626,
+              "max": -2.2967899958151134,
+              "mean": -7.670127058034062,
+              "values_by_seed": {
+                "11": -2.2967899958151134,
+                "23": -10.018385707385013,
+                "37": -7.432764104809295,
+                "53": -8.077599781773266,
+                "71": -10.525095700387626
+              }
+            }
+          },
+          "vreg": {
+            "probability_l20": {
+              "min": -0.5824151782956826,
+              "max": 0.03527071996724229,
+              "mean": -0.23910411645840712,
+              "values_by_seed": {
+                "11": 0.03527071996724229,
+                "23": -0.5824151782956826,
+                "37": -0.1269524836908283,
+                "53": -0.40077504535405495,
+                "71": -0.12064859491871213
+              }
+            },
+            "logit_l20": {
+              "min": -6.299576783154394,
+              "max": 0.21977986398488292,
+              "mean": -3.3963510167861157,
+              "values_by_seed": {
+                "11": 0.21977986398488292,
+                "23": -5.452216434029372,
+                "37": -1.4328465124253456,
+                "53": -6.299576783154394,
+                "71": -4.01689521830635
+              }
+            },
+            "geometric_l20": {
+              "min": -18.063687348956314,
+              "max": 0.6577370001092289,
+              "mean": -9.828497421942515,
+              "values_by_seed": {
+                "11": 0.6577370001092289,
+                "23": -15.731274426810337,
+                "37": -4.081608394635148,
+                "53": -18.063687348956314,
+                "71": -11.923653939420005
+              }
+            }
+          }
+        },
+        "per_template_margins": [
+          {
+            "template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::22",
+            "standard_probability_l20": 0.46395755847459674,
+            "vreg_probability_l20": 0.5951167396240011,
+            "delta_probability_l20": 0.1311591811494044,
+            "standard_logit_l20": 2.3399819178208148,
+            "vreg_logit_l20": 2.9934431532597587,
+            "delta_logit_l20": 0.653461235438944,
+            "standard_geometric_l20": 6.189688333888581,
+            "vreg_geometric_l20": 8.004890370556964,
+            "delta_geometric_l20": 1.8152020366683832
+          },
+          {
+            "template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::29",
+            "standard_probability_l20": 0.17189758616887327,
+            "vreg_probability_l20": 0.9584715543847042,
+            "delta_probability_l20": 0.7865739682158309,
+            "standard_logit_l20": 1.828926389172568,
+            "vreg_logit_l20": 10.378388515508004,
+            "delta_logit_l20": 8.549462126335435,
+            "standard_geometric_l20": 4.837851202348173,
+            "vreg_geometric_l20": 27.753278761689536,
+            "delta_geometric_l20": 22.915427559341364
+          },
+          {
+            "template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::1",
+            "standard_probability_l20": 0.6155767987285368,
+            "vreg_probability_l20": 0.6534285439204303,
+            "delta_probability_l20": 0.03785174519189349,
+            "standard_logit_l20": 2.8798718326497017,
+            "vreg_logit_l20": 3.358570589096753,
+            "delta_logit_l20": 0.4786987564470513,
+            "standard_geometric_l20": 7.617797791466176,
+            "vreg_geometric_l20": 8.981292775919123,
+            "delta_geometric_l20": 1.363494984452947
+          },
+          {
+            "template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::4",
+            "standard_probability_l20": 0.29698372160072806,
+            "vreg_probability_l20": 0.27897793397005655,
+            "delta_probability_l20": -0.01800578763067151,
+            "standard_logit_l20": 1.2960217343448568,
+            "vreg_logit_l20": 1.152600074054419,
+            "delta_logit_l20": -0.14342166029043768,
+            "standard_geometric_l20": 3.4282190594921906,
+            "vreg_geometric_l20": 3.082215616439613,
+            "delta_geometric_l20": -0.3460034430525778
+          },
+          {
+            "template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "global_pair_id": "condition_negation::9",
+            "standard_probability_l20": -0.0026811098418528406,
+            "vreg_probability_l20": 0.009107506316289204,
+            "delta_probability_l20": 0.011788616158142045,
+            "standard_logit_l20": -2.784663095504519,
+            "vreg_logit_l20": 6.629900437766403,
+            "delta_logit_l20": 9.414563533270922,
+            "standard_geometric_l20": -7.365952935271466,
+            "vreg_geometric_l20": 17.72929147300976,
+            "delta_geometric_l20": 25.095244408281225
+          },
+          {
+            "template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "global_pair_id": "negation::8",
+            "standard_probability_l20": 0.5356729005956372,
+            "vreg_probability_l20": 0.5083846674444428,
+            "delta_probability_l20": -0.02728823315119444,
+            "standard_logit_l20": 3.1104322321865885,
+            "vreg_logit_l20": 3.4289785879748047,
+            "delta_logit_l20": 0.3185463557882162,
+            "standard_geometric_l20": 8.227673023578735,
+            "vreg_geometric_l20": 9.169573723100415,
+            "delta_geometric_l20": 0.9419006995216801
+          },
+          {
+            "template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "global_pair_id": "negation::10",
+            "standard_probability_l20": 0.7129914797550067,
+            "vreg_probability_l20": 0.7296728710382492,
+            "delta_probability_l20": 0.01668139128324253,
+            "standard_logit_l20": 3.7233468458813332,
+            "vreg_logit_l20": 4.636540703704949,
+            "delta_logit_l20": 0.9131938578236154,
+            "standard_geometric_l20": 9.848946421105344,
+            "vreg_geometric_l20": 12.398765612557625,
+            "delta_geometric_l20": 2.549819191452281
+          },
+          {
+            "template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "global_pair_id": "negation::16",
+            "standard_probability_l20": 0.44390380782594624,
+            "vreg_probability_l20": 0.5283255970769577,
+            "delta_probability_l20": 0.08442178925101146,
+            "standard_logit_l20": 1.9885579264383764,
+            "vreg_logit_l20": 4.133302400238076,
+            "delta_logit_l20": 2.1447444737996997,
+            "standard_geometric_l20": 5.260106372958656,
+            "vreg_geometric_l20": 11.053035213391487,
+            "delta_geometric_l20": 5.792928840432831
+          },
+          {
+            "template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "global_pair_id": "negation::1",
+            "standard_probability_l20": 0.6252939354609425,
+            "vreg_probability_l20": 0.5200322510955446,
+            "delta_probability_l20": -0.10526168436539785,
+            "standard_logit_l20": 2.985963758943666,
+            "vreg_logit_l20": 2.3161646775284357,
+            "delta_logit_l20": -0.6697990814152304,
+            "standard_geometric_l20": 7.898430711532954,
+            "vreg_geometric_l20": 6.193751935319505,
+            "delta_geometric_l20": -1.7046787762134485
+          }
+        ]
+      },
+      "bootstrap": {
+        "n_boot": 5000,
+        "seed": 42,
+        "family_group_sizes": {
+          "condition_negation": 5,
+          "negation": 4
+        },
+        "metrics": {
+          "probability_l20": {
+            "mean": 0.0798413665731943,
+            "ci_low": -0.01800578763067151,
+            "ci_high": 0.3423108731011204,
+            "positive_fraction": 0.8492
+          },
+          "logit_l20": {
+            "mean": 2.4114353735886804,
+            "ci_low": -0.14342166029043768,
+            "ci_high": 5.960669966682775,
+            "positive_fraction": 0.8684
+          },
+          "geometric_l20": {
+            "mean": 6.435052806252781,
+            "ci_low": -0.3460034430525778,
+            "ci_high": 15.859044508509509,
+            "positive_fraction": 0.8702
+          },
+          "balanced_accuracy": {
+            "mean": 0.05524444444444446,
+            "ci_low": 0.0,
+            "ci_high": 0.16666666666666674,
+            "positive_fraction": 0.6736
+          },
+          "auroc": {
+            "mean": 0.06359506172839507,
+            "ci_low": 0.0,
+            "ci_high": 0.1728395061728395,
+            "positive_fraction": 0.9198
+          },
+          "macro_f1": {
+            "mean": 0.057228757828858466,
+            "ci_low": 0.0,
+            "ci_high": 0.1780386795866672,
+            "positive_fraction": 0.6736
+          },
+          "pairwise_accuracy": {
+            "mean": 0.11013333333333335,
+            "ci_low": 0.0,
+            "ci_high": 0.33333333333333337,
+            "positive_fraction": 0.6642
+          }
+        }
+      },
+      "exact_permutation": {
+        "probability_l20": {
+          "observed_delta": 0.05943448197966267,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.25,
+          "two_sided_p_abs_ge_observed": 0.5,
+          "null_min": -0.06843737579499842,
+          "null_max": 0.06843737579499842
+        },
+        "logit_l20": {
+          "observed_delta": 2.4787030563712587,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.125,
+          "two_sided_p_abs_ge_observed": 0.25,
+          "null_min": -2.9570242573693113,
+          "null_max": 2.9570242573693113
+        },
+        "geometric_l20": {
+          "observed_delta": 6.606850713769196,
+          "n_permutations": 512,
+          "one_sided_p_ge_observed": 0.09375,
+          "two_sided_p_abs_ge_observed": 0.1875,
+          "null_min": -7.805193544928498,
+          "null_max": 7.805193544928498
+        }
+      },
+      "leave_one_template_out": {
+        "summary": {
+          "probability_l20": {
+            "min": -0.0031085857362647407,
+            "max": 0.17413784871685578,
+            "all_positive": false
+          },
+          "logit_l20": {
+            "min": 0.17190831403271511,
+            "max": 3.1326722685600727,
+            "all_positive": true
+          },
+          "geometric_l20": {
+            "min": 0.5049486449593772,
+            "max": 8.36337201939988,
+            "all_positive": true
+          }
+        },
+        "rows": [
+          {
+            "held_out_template_id": "condition_negation::tpl_0cdf77417b",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_94cda57a52",
+            "family": "condition_negation",
+            "delta_probability_l20": -0.0031085857362647407,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_e2a0186a48",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_ea9ca2508d",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.17413784871685578,
+            "delta_logit_l20": 3.1326722685600727,
+            "delta_geometric_l20": 8.36337201939988
+          },
+          {
+            "held_out_template_id": "condition_negation::tpl_f3a9c7712e",
+            "family": "condition_negation",
+            "delta_probability_l20": 0.15924064682244898,
+            "delta_logit_l20": 0.17190831403271511,
+            "delta_geometric_l20": 0.5049486449593772
+          },
+          {
+            "held_out_template_id": "negation::tpl_0025558886",
+            "family": "negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "negation::tpl_0482921b82",
+            "family": "negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "negation::tpl_2688c3ab51",
+            "family": "negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.4787030563712587,
+            "delta_geometric_l20": 6.606850713769196
+          },
+          {
+            "held_out_template_id": "negation::tpl_cfee0e6952",
+            "family": "negation",
+            "delta_probability_l20": 0.05943448197966267,
+            "delta_logit_l20": 2.81734229423692,
+            "delta_geometric_l20": 7.512419931387925
+          }
+        ]
+      }
+    }
+  }
+}

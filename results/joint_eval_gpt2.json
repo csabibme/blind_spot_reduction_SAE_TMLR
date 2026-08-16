@@ -1,0 +1,674 @@
+{
+  "profile": "gpt2",
+  "model": "gpt2",
+  "layer": 12,
+  "pairs_file": "data/joint16_pairs.json",
+  "families": [
+    "anatomical_direction",
+    "body_part_swap",
+    "causal_reversal",
+    "condition_negation",
+    "date_time_change",
+    "drug_name_swap",
+    "frequency_change",
+    "gender_swap",
+    "negation",
+    "number_swap",
+    "semantic_substitution",
+    "severity_change",
+    "synonym",
+    "typo",
+    "unit_of_measure",
+    "word_order"
+  ],
+  "runs": {
+    "standard": {
+      "semantic_substitution": {
+        "V_gini_raw": 0.43470001220703125,
+        "V_gini_gain": 0.05590000003576279,
+        "V_gini": 0.43470001220703125,
+        "mean_sensitivity_raw": 0.045061,
+        "mean_sensitivity_gain": 1.152897,
+        "sigma_h": 0.034404,
+        "input_perturbation_cv": 0.9138,
+        "n_pairs": 50
+      },
+      "typo": {
+        "V_gini_raw": 0.30730000138282776,
+        "V_gini_gain": 0.042899999767541885,
+        "V_gini": 0.30730000138282776,
+        "mean_sensitivity_raw": 0.067331,
+        "mean_sensitivity_gain": 1.163292,
+        "sigma_h": 0.033533,
+        "input_perturbation_cv": 0.5825,
+        "n_pairs": 50
+      },
+      "negation": {
+        "V_gini_raw": 0.21889999508857727,
+        "V_gini_gain": 0.051899999380111694,
+        "V_gini": 0.21889999508857727,
+        "mean_sensitivity_raw": 0.073,
+        "mean_sensitivity_gain": 1.195455,
+        "sigma_h": 0.034022,
+        "input_perturbation_cv": 0.53,
+        "n_pairs": 50
+      },
+      "synonym": {
+        "V_gini_raw": 0.30720001459121704,
+        "V_gini_gain": 0.05079999938607216,
+        "V_gini": 0.30720001459121704,
+        "mean_sensitivity_raw": 0.042961,
+        "mean_sensitivity_gain": 1.09648,
+        "sigma_h": 0.025908,
+        "input_perturbation_cv": 0.6396,
+        "n_pairs": 50
+      },
+      "number_swap": {
+        "V_gini_raw": 0.26350000500679016,
+        "V_gini_gain": 0.03009999915957451,
+        "V_gini": 0.26350000500679016,
+        "mean_sensitivity_raw": 0.021355,
+        "mean_sensitivity_gain": 1.045406,
+        "sigma_h": 0.012058,
+        "input_perturbation_cv": 0.5805,
+        "n_pairs": 50
+      },
+      "word_order": {
+        "V_gini_raw": 0.28060001134872437,
+        "V_gini_gain": 0.03460000082850456,
+        "V_gini": 0.28060001134872437,
+        "mean_sensitivity_raw": 0.042541,
+        "mean_sensitivity_gain": 1.149536,
+        "sigma_h": 0.023676,
+        "input_perturbation_cv": 0.6223,
+        "n_pairs": 50
+      },
+      "unit_of_measure": {
+        "V_gini_raw": 0.29600000381469727,
+        "V_gini_gain": 0.027799999341368675,
+        "V_gini": 0.29600000381469727,
+        "mean_sensitivity_raw": 0.048092,
+        "mean_sensitivity_gain": 1.08049,
+        "sigma_h": 0.027731,
+        "input_perturbation_cv": 0.613,
+        "n_pairs": 30
+      },
+      "gender_swap": {
+        "V_gini_raw": 0.3368000090122223,
+        "V_gini_gain": 0.03319999948143959,
+        "V_gini": 0.3368000090122223,
+        "mean_sensitivity_raw": 0.027188,
+        "mean_sensitivity_gain": 1.100762,
+        "sigma_h": 0.033921,
+        "input_perturbation_cv": 1.2603,
+        "n_pairs": 30
+      },
+      "drug_name_swap": {
+        "V_gini_raw": 0.26579999923706055,
+        "V_gini_gain": 0.032499998807907104,
+        "V_gini": 0.26579999923706055,
+        "mean_sensitivity_raw": 0.035018,
+        "mean_sensitivity_gain": 1.035944,
+        "sigma_h": 0.021188,
+        "input_perturbation_cv": 0.6195,
+        "n_pairs": 30
+      },
+      "date_time_change": {
+        "V_gini_raw": 0.35030001401901245,
+        "V_gini_gain": 0.018799999728798866,
+        "V_gini": 0.35030001401901245,
+        "mean_sensitivity_raw": 0.030802,
+        "mean_sensitivity_gain": 1.055436,
+        "sigma_h": 0.022685,
+        "input_perturbation_cv": 0.7631,
+        "n_pairs": 30
+      },
+      "body_part_swap": {
+        "V_gini_raw": 0.23770000040531158,
+        "V_gini_gain": 0.017500000074505806,
+        "V_gini": 0.23770000040531158,
+        "mean_sensitivity_raw": 0.020973,
+        "mean_sensitivity_gain": 1.012989,
+        "sigma_h": 0.012372,
+        "input_perturbation_cv": 0.5928,
+        "n_pairs": 30
+      },
+      "severity_change": {
+        "V_gini_raw": 0.42750000953674316,
+        "V_gini_gain": 0.04619999974966049,
+        "V_gini": 0.42750000953674316,
+        "mean_sensitivity_raw": 0.110813,
+        "mean_sensitivity_gain": 1.060196,
+        "sigma_h": 0.118577,
+        "input_perturbation_cv": 1.0527,
+        "n_pairs": 30
+      },
+      "frequency_change": {
+        "V_gini_raw": 0.376800000667572,
+        "V_gini_gain": 0.01209999993443489,
+        "V_gini": 0.376800000667572,
+        "mean_sensitivity_raw": 0.042038,
+        "mean_sensitivity_gain": 1.049352,
+        "sigma_h": 0.042003,
+        "input_perturbation_cv": 1.0233,
+        "n_pairs": 30
+      },
+      "causal_reversal": {
+        "V_gini_raw": 0.35179999470710754,
+        "V_gini_gain": 0.02250000089406967,
+        "V_gini": 0.35179999470710754,
+        "mean_sensitivity_raw": 0.126176,
+        "mean_sensitivity_gain": 1.113775,
+        "sigma_h": 0.07804,
+        "input_perturbation_cv": 0.6818,
+        "n_pairs": 30
+      },
+      "condition_negation": {
+        "V_gini_raw": 0.2937999963760376,
+        "V_gini_gain": 0.03139999881386757,
+        "V_gini": 0.2937999963760376,
+        "mean_sensitivity_raw": 0.088825,
+        "mean_sensitivity_gain": 1.128057,
+        "sigma_h": 0.060448,
+        "input_perturbation_cv": 0.7314,
+        "n_pairs": 30
+      },
+      "anatomical_direction": {
+        "V_gini_raw": 0.2786000072956085,
+        "V_gini_gain": 0.027699999511241913,
+        "V_gini": 0.2786000072956085,
+        "mean_sensitivity_raw": 0.028911,
+        "mean_sensitivity_gain": 1.089357,
+        "sigma_h": 0.016562,
+        "input_perturbation_cv": 0.6173,
+        "n_pairs": 30
+      }
+    },
+    "vreg_paper": {
+      "semantic_substitution": {
+        "V_gini_raw": 0.045099999755620956,
+        "V_gini_gain": 0.3181000053882599,
+        "V_gini": 0.045099999755620956,
+        "mean_sensitivity_raw": 0.045348,
+        "mean_sensitivity_gain": 1.946115,
+        "sigma_h": 0.034404,
+        "input_perturbation_cv": 0.9138,
+        "n_pairs": 50
+      },
+      "typo": {
+        "V_gini_raw": 0.014399999752640724,
+        "V_gini_gain": 0.2680000066757202,
+        "V_gini": 0.014399999752640724,
+        "mean_sensitivity_raw": 0.081166,
+        "mean_sensitivity_gain": 1.885016,
+        "sigma_h": 0.033533,
+        "input_perturbation_cv": 0.5825,
+        "n_pairs": 50
+      },
+      "negation": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.24480000138282776,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.115307,
+        "mean_sensitivity_gain": 2.312522,
+        "sigma_h": 0.034022,
+        "input_perturbation_cv": 0.53,
+        "n_pairs": 50
+      },
+      "synonym": {
+        "V_gini_raw": 0.017500000074505806,
+        "V_gini_gain": 0.30399999022483826,
+        "V_gini": 0.017500000074505806,
+        "mean_sensitivity_raw": 0.05016,
+        "mean_sensitivity_gain": 1.804055,
+        "sigma_h": 0.025908,
+        "input_perturbation_cv": 0.6396,
+        "n_pairs": 50
+      },
+      "number_swap": {
+        "V_gini_raw": 0.03420000150799751,
+        "V_gini_gain": 0.25600001215934753,
+        "V_gini": 0.03420000150799751,
+        "mean_sensitivity_raw": 0.022619,
+        "mean_sensitivity_gain": 1.425141,
+        "sigma_h": 0.012058,
+        "input_perturbation_cv": 0.5805,
+        "n_pairs": 50
+      },
+      "word_order": {
+        "V_gini_raw": 0.04410000145435333,
+        "V_gini_gain": 0.2484000027179718,
+        "V_gini": 0.04410000145435333,
+        "mean_sensitivity_raw": 0.056747,
+        "mean_sensitivity_gain": 1.961528,
+        "sigma_h": 0.023676,
+        "input_perturbation_cv": 0.6223,
+        "n_pairs": 50
+      },
+      "unit_of_measure": {
+        "V_gini_raw": 0.2551000118255615,
+        "V_gini_gain": 0.13030000030994415,
+        "V_gini": 0.2551000118255615,
+        "mean_sensitivity_raw": 0.058695,
+        "mean_sensitivity_gain": 1.426701,
+        "sigma_h": 0.027731,
+        "input_perturbation_cv": 0.613,
+        "n_pairs": 30
+      },
+      "gender_swap": {
+        "V_gini_raw": 0.21699999272823334,
+        "V_gini_gain": 0.16179999709129333,
+        "V_gini": 0.21699999272823334,
+        "mean_sensitivity_raw": 0.036309,
+        "mean_sensitivity_gain": 1.758211,
+        "sigma_h": 0.033921,
+        "input_perturbation_cv": 1.2603,
+        "n_pairs": 30
+      },
+      "drug_name_swap": {
+        "V_gini_raw": 0.22429999709129333,
+        "V_gini_gain": 0.11339999735355377,
+        "V_gini": 0.22429999709129333,
+        "mean_sensitivity_raw": 0.043759,
+        "mean_sensitivity_gain": 1.378412,
+        "sigma_h": 0.021188,
+        "input_perturbation_cv": 0.6195,
+        "n_pairs": 30
+      },
+      "date_time_change": {
+        "V_gini_raw": 0.29420000314712524,
+        "V_gini_gain": 0.08969999849796295,
+        "V_gini": 0.29420000314712524,
+        "mean_sensitivity_raw": 0.036995,
+        "mean_sensitivity_gain": 1.376069,
+        "sigma_h": 0.022685,
+        "input_perturbation_cv": 0.7631,
+        "n_pairs": 30
+      },
+      "body_part_swap": {
+        "V_gini_raw": 0.22259999811649323,
+        "V_gini_gain": 0.07069999724626541,
+        "V_gini": 0.22259999811649323,
+        "mean_sensitivity_raw": 0.026091,
+        "mean_sensitivity_gain": 1.295413,
+        "sigma_h": 0.012372,
+        "input_perturbation_cv": 0.5928,
+        "n_pairs": 30
+      },
+      "severity_change": {
+        "V_gini_raw": 0.37459999322891235,
+        "V_gini_gain": 0.14820000529289246,
+        "V_gini": 0.37459999322891235,
+        "mean_sensitivity_raw": 0.1349,
+        "mean_sensitivity_gain": 1.499272,
+        "sigma_h": 0.118577,
+        "input_perturbation_cv": 1.0527,
+        "n_pairs": 30
+      },
+      "frequency_change": {
+        "V_gini_raw": 0.34689998626708984,
+        "V_gini_gain": 0.07660000026226044,
+        "V_gini": 0.34689998626708984,
+        "mean_sensitivity_raw": 0.049733,
+        "mean_sensitivity_gain": 1.315666,
+        "sigma_h": 0.042003,
+        "input_perturbation_cv": 1.0233,
+        "n_pairs": 30
+      },
+      "causal_reversal": {
+        "V_gini_raw": 0.32100000977516174,
+        "V_gini_gain": 0.1282999962568283,
+        "V_gini": 0.32100000977516174,
+        "mean_sensitivity_raw": 0.144634,
+        "mean_sensitivity_gain": 1.409123,
+        "sigma_h": 0.07804,
+        "input_perturbation_cv": 0.6818,
+        "n_pairs": 30
+      },
+      "condition_negation": {
+        "V_gini_raw": 0.1949000060558319,
+        "V_gini_gain": 0.1606999933719635,
+        "V_gini": 0.1949000060558319,
+        "mean_sensitivity_raw": 0.117126,
+        "mean_sensitivity_gain": 1.704156,
+        "sigma_h": 0.060448,
+        "input_perturbation_cv": 0.7314,
+        "n_pairs": 30
+      },
+      "anatomical_direction": {
+        "V_gini_raw": 0.250900000333786,
+        "V_gini_gain": 0.08879999816417694,
+        "V_gini": 0.250900000333786,
+        "mean_sensitivity_raw": 0.033669,
+        "mean_sensitivity_gain": 1.327525,
+        "sigma_h": 0.016562,
+        "input_perturbation_cv": 0.6173,
+        "n_pairs": 30
+      }
+    },
+    "vreg_joint6": {
+      "semantic_substitution": {
+        "V_gini_raw": 0.046799998730421066,
+        "V_gini_gain": 0.31859999895095825,
+        "V_gini": 0.046799998730421066,
+        "mean_sensitivity_raw": 0.045245,
+        "mean_sensitivity_gain": 1.938829,
+        "sigma_h": 0.034404,
+        "input_perturbation_cv": 0.9138,
+        "n_pairs": 50
+      },
+      "typo": {
+        "V_gini_raw": 0.00930000003427267,
+        "V_gini_gain": 0.2696000039577484,
+        "V_gini": 0.00930000003427267,
+        "mean_sensitivity_raw": 0.080825,
+        "mean_sensitivity_gain": 1.88357,
+        "sigma_h": 0.033533,
+        "input_perturbation_cv": 0.5825,
+        "n_pairs": 50
+      },
+      "negation": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.24539999663829803,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.116085,
+        "mean_sensitivity_gain": 2.329133,
+        "sigma_h": 0.034022,
+        "input_perturbation_cv": 0.53,
+        "n_pairs": 50
+      },
+      "synonym": {
+        "V_gini_raw": 0.01730000041425228,
+        "V_gini_gain": 0.3028999865055084,
+        "V_gini": 0.01730000041425228,
+        "mean_sensitivity_raw": 0.049693,
+        "mean_sensitivity_gain": 1.784772,
+        "sigma_h": 0.025908,
+        "input_perturbation_cv": 0.6396,
+        "n_pairs": 50
+      },
+      "number_swap": {
+        "V_gini_raw": 0.03060000017285347,
+        "V_gini_gain": 0.26010000705718994,
+        "V_gini": 0.03060000017285347,
+        "mean_sensitivity_raw": 0.022187,
+        "mean_sensitivity_gain": 1.40432,
+        "sigma_h": 0.012058,
+        "input_perturbation_cv": 0.5805,
+        "n_pairs": 50
+      },
+      "word_order": {
+        "V_gini_raw": 0.0421999990940094,
+        "V_gini_gain": 0.24879999458789825,
+        "V_gini": 0.0421999990940094,
+        "mean_sensitivity_raw": 0.056176,
+        "mean_sensitivity_gain": 1.945064,
+        "sigma_h": 0.023676,
+        "input_perturbation_cv": 0.6223,
+        "n_pairs": 50
+      },
+      "unit_of_measure": {
+        "V_gini_raw": 0.25119999051094055,
+        "V_gini_gain": 0.13030000030994415,
+        "V_gini": 0.25119999051094055,
+        "mean_sensitivity_raw": 0.057008,
+        "mean_sensitivity_gain": 1.391704,
+        "sigma_h": 0.027731,
+        "input_perturbation_cv": 0.613,
+        "n_pairs": 30
+      },
+      "gender_swap": {
+        "V_gini_raw": 0.21310000121593475,
+        "V_gini_gain": 0.1678999960422516,
+        "V_gini": 0.21310000121593475,
+        "mean_sensitivity_raw": 0.036324,
+        "mean_sensitivity_gain": 1.771182,
+        "sigma_h": 0.033921,
+        "input_perturbation_cv": 1.2603,
+        "n_pairs": 30
+      },
+      "drug_name_swap": {
+        "V_gini_raw": 0.22679999470710754,
+        "V_gini_gain": 0.11089999973773956,
+        "V_gini": 0.22679999470710754,
+        "mean_sensitivity_raw": 0.043039,
+        "mean_sensitivity_gain": 1.352381,
+        "sigma_h": 0.021188,
+        "input_perturbation_cv": 0.6195,
+        "n_pairs": 30
+      },
+      "date_time_change": {
+        "V_gini_raw": 0.29339998960494995,
+        "V_gini_gain": 0.09229999780654907,
+        "V_gini": 0.29339998960494995,
+        "mean_sensitivity_raw": 0.036632,
+        "mean_sensitivity_gain": 1.36441,
+        "sigma_h": 0.022685,
+        "input_perturbation_cv": 0.7631,
+        "n_pairs": 30
+      },
+      "body_part_swap": {
+        "V_gini_raw": 0.22290000319480896,
+        "V_gini_gain": 0.07490000128746033,
+        "V_gini": 0.22290000319480896,
+        "mean_sensitivity_raw": 0.025981,
+        "mean_sensitivity_gain": 1.29063,
+        "sigma_h": 0.012372,
+        "input_perturbation_cv": 0.5928,
+        "n_pairs": 30
+      },
+      "severity_change": {
+        "V_gini_raw": 0.3774999976158142,
+        "V_gini_gain": 0.14309999346733093,
+        "V_gini": 0.3774999976158142,
+        "mean_sensitivity_raw": 0.133416,
+        "mean_sensitivity_gain": 1.472301,
+        "sigma_h": 0.118577,
+        "input_perturbation_cv": 1.0527,
+        "n_pairs": 30
+      },
+      "frequency_change": {
+        "V_gini_raw": 0.3382999897003174,
+        "V_gini_gain": 0.08219999819993973,
+        "V_gini": 0.3382999897003174,
+        "mean_sensitivity_raw": 0.048813,
+        "mean_sensitivity_gain": 1.307321,
+        "sigma_h": 0.042003,
+        "input_perturbation_cv": 1.0233,
+        "n_pairs": 30
+      },
+      "causal_reversal": {
+        "V_gini_raw": 0.31779998540878296,
+        "V_gini_gain": 0.13609999418258667,
+        "V_gini": 0.31779998540878296,
+        "mean_sensitivity_raw": 0.141401,
+        "mean_sensitivity_gain": 1.390719,
+        "sigma_h": 0.07804,
+        "input_perturbation_cv": 0.6818,
+        "n_pairs": 30
+      },
+      "condition_negation": {
+        "V_gini_raw": 0.1923999935388565,
+        "V_gini_gain": 0.1657000035047531,
+        "V_gini": 0.1923999935388565,
+        "mean_sensitivity_raw": 0.119105,
+        "mean_sensitivity_gain": 1.739027,
+        "sigma_h": 0.060448,
+        "input_perturbation_cv": 0.7314,
+        "n_pairs": 30
+      },
+      "anatomical_direction": {
+        "V_gini_raw": 0.2492000013589859,
+        "V_gini_gain": 0.08889999985694885,
+        "V_gini": 0.2492000013589859,
+        "mean_sensitivity_raw": 0.032872,
+        "mean_sensitivity_gain": 1.298384,
+        "sigma_h": 0.016562,
+        "input_perturbation_cv": 0.6173,
+        "n_pairs": 30
+      }
+    },
+    "vreg_joint16": {
+      "semantic_substitution": {
+        "V_gini_raw": 0.034699998795986176,
+        "V_gini_gain": 0.3206000030040741,
+        "V_gini": 0.034699998795986176,
+        "mean_sensitivity_raw": 0.061631,
+        "mean_sensitivity_gain": 2.654001,
+        "sigma_h": 0.034404,
+        "input_perturbation_cv": 0.9138,
+        "n_pairs": 50
+      },
+      "typo": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.2809000015258789,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.10391,
+        "mean_sensitivity_gain": 2.462201,
+        "sigma_h": 0.033533,
+        "input_perturbation_cv": 0.5825,
+        "n_pairs": 50
+      },
+      "negation": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.24560000002384186,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.152217,
+        "mean_sensitivity_gain": 3.05493,
+        "sigma_h": 0.034022,
+        "input_perturbation_cv": 0.53,
+        "n_pairs": 50
+      },
+      "synonym": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.3327000141143799,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.061244,
+        "mean_sensitivity_gain": 2.282582,
+        "sigma_h": 0.025908,
+        "input_perturbation_cv": 0.6396,
+        "n_pairs": 50
+      },
+      "number_swap": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.28360000252723694,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.026404,
+        "mean_sensitivity_gain": 1.720852,
+        "sigma_h": 0.012058,
+        "input_perturbation_cv": 0.5805,
+        "n_pairs": 50
+      },
+      "word_order": {
+        "V_gini_raw": 0.000699999975040555,
+        "V_gini_gain": 0.26080000400543213,
+        "V_gini": 0.000699999975040555,
+        "mean_sensitivity_raw": 0.067865,
+        "mean_sensitivity_gain": 2.402695,
+        "sigma_h": 0.023676,
+        "input_perturbation_cv": 0.6223,
+        "n_pairs": 50
+      },
+      "unit_of_measure": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.33489999175071716,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.064073,
+        "mean_sensitivity_gain": 2.168129,
+        "sigma_h": 0.027731,
+        "input_perturbation_cv": 0.613,
+        "n_pairs": 30
+      },
+      "gender_swap": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.21739999949932098,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.046474,
+        "mean_sensitivity_gain": 2.759884,
+        "sigma_h": 0.033921,
+        "input_perturbation_cv": 1.2603,
+        "n_pairs": 30
+      },
+      "drug_name_swap": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.22519999742507935,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.050739,
+        "mean_sensitivity_gain": 1.943403,
+        "sigma_h": 0.021188,
+        "input_perturbation_cv": 0.6195,
+        "n_pairs": 30
+      },
+      "date_time_change": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.2944999933242798,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.039377,
+        "mean_sensitivity_gain": 2.0917,
+        "sigma_h": 0.022685,
+        "input_perturbation_cv": 0.7631,
+        "n_pairs": 30
+      },
+      "body_part_swap": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.23420000076293945,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.031653,
+        "mean_sensitivity_gain": 1.956148,
+        "sigma_h": 0.012372,
+        "input_perturbation_cv": 0.5928,
+        "n_pairs": 30
+      },
+      "severity_change": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.48539999127388,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.101802,
+        "mean_sensitivity_gain": 2.383825,
+        "sigma_h": 0.118577,
+        "input_perturbation_cv": 1.0527,
+        "n_pairs": 30
+      },
+      "frequency_change": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.31369999051094055,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.048331,
+        "mean_sensitivity_gain": 1.999802,
+        "sigma_h": 0.042003,
+        "input_perturbation_cv": 1.0233,
+        "n_pairs": 30
+      },
+      "causal_reversal": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.44040000438690186,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.092016,
+        "mean_sensitivity_gain": 1.593752,
+        "sigma_h": 0.07804,
+        "input_perturbation_cv": 0.6818,
+        "n_pairs": 30
+      },
+      "condition_negation": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.2994999885559082,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.133245,
+        "mean_sensitivity_gain": 2.423526,
+        "sigma_h": 0.060448,
+        "input_perturbation_cv": 0.7314,
+        "n_pairs": 30
+      },
+      "anatomical_direction": {
+        "V_gini_raw": 0.0,
+        "V_gini_gain": 0.27059999108314514,
+        "V_gini": 0.0,
+        "mean_sensitivity_raw": 0.036212,
+        "mean_sensitivity_gain": 1.866524,
+        "sigma_h": 0.016562,
+        "input_perturbation_cv": 0.6173,
+        "n_pairs": 30
+      }
+    }
+  }
+}

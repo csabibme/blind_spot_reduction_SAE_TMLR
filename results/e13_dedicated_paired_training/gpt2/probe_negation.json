@@ -1,0 +1,37 @@
+{
+  "hidden": {
+    "C": 0.01,
+    "dev_auroc": 1.0,
+    "test_auroc": 0.9954,
+    "test_ba": 0.8333,
+    "n_test": 72
+  },
+  "std_code": {
+    "C": 0.01,
+    "dev_auroc": 1.0,
+    "test_auroc": 0.9954,
+    "test_ba": 0.8611,
+    "n_test": 72
+  },
+  "vreg_code": {
+    "C": 0.01,
+    "dev_auroc": 1.0,
+    "test_auroc": 0.9799,
+    "test_ba": 0.8333,
+    "n_test": 72
+  },
+  "std_recon": {
+    "C": 0.01,
+    "dev_auroc": 1.0,
+    "test_auroc": 0.9954,
+    "test_ba": 0.8333,
+    "n_test": 72
+  },
+  "vreg_recon": {
+    "C": 0.01,
+    "dev_auroc": 1.0,
+    "test_auroc": 0.9684,
+    "test_ba": 0.8333,
+    "n_test": 72
+  }
+}

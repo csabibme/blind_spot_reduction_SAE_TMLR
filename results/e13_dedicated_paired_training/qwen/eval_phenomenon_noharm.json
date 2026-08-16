@@ -1,0 +1,65 @@
+{
+  "phenomenon_V_gini": {
+    "standard": {
+      "train": {
+        "n_pairs": 84,
+        "V_gini": 0.1134,
+        "mean_sensitivity": 0.259
+      },
+      "dev": {
+        "n_pairs": 24,
+        "V_gini": 0.081,
+        "mean_sensitivity": 0.2646
+      },
+      "test": {
+        "n_pairs": 36,
+        "V_gini": 0.1306,
+        "mean_sensitivity": 0.2329
+      },
+      "all": {
+        "n_pairs": 144,
+        "V_gini": 0.1166,
+        "mean_sensitivity": 0.2534
+      }
+    },
+    "vreg": {
+      "train": {
+        "n_pairs": 84,
+        "V_gini": 0.0008,
+        "mean_sensitivity": 0.5078
+      },
+      "dev": {
+        "n_pairs": 24,
+        "V_gini": 0.0618,
+        "mean_sensitivity": 0.3966
+      },
+      "test": {
+        "n_pairs": 36,
+        "V_gini": 0.1145,
+        "mean_sensitivity": 0.4662
+      },
+      "all": {
+        "n_pairs": 144,
+        "V_gini": 0.0663,
+        "mean_sensitivity": 0.4788
+      }
+    }
+  },
+  "owt_no_harm": {
+    "owt_n": 5000,
+    "standard": {
+      "mse": 568.3879,
+      "nmse": 0.004887,
+      "ev": 0.995,
+      "cosine": 0.9977
+    },
+    "vreg": {
+      "mse": 470.7276,
+      "nmse": 0.004047,
+      "ev": 0.9958,
+      "cosine": 0.9978
+    }
+  },
+  "std_ckpt": "checkpoints/negation_qwen_standard",
+  "vreg_ckpt": "checkpoints/negation_qwen_vreg"
+}

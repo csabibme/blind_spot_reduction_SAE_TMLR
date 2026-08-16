@@ -1,0 +1,49 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "alphas": [
+    0.2,
+    0.4,
+    0.6,
+    0.8,
+    1.0
+  ],
+  "d_in": 96,
+  "d_sae": 192,
+  "n_templates": 30,
+  "n_drugs": 10,
+  "n_repeats": 8,
+  "noise_std": 0.1,
+  "template_scale": 3.0,
+  "drug_scale": 2.0,
+  "orientation_jitter": 0.2,
+  "train_template_frac": 0.6,
+  "dev_template_frac": 0.2,
+  "sae_steps": 5000,
+  "batch_size": 512,
+  "lr": 0.001,
+  "l1_weight": 0.001,
+  "lambda_v": 0.2,
+  "v_pair_batch": 256,
+  "probe_c_grid": [
+    0.01,
+    0.03,
+    0.1,
+    0.3,
+    1.0,
+    3.0,
+    10.0,
+    30.0
+  ],
+  "bootstrap_n": 1000
+}
